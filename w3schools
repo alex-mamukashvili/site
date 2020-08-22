@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 5px solid DodgerBlue;
+}
+</style>
+</head>
+<body>
+
+
+
+<p style="color:red">hello what is your first name and last name please enter and we will know who are you,</p>
+<p style="color:blue">welcome to alex table element</p>
+<p style="color:red">press the submit if you write your first name and last name</p>
+<p style="color:blue">you can see everything what i have you can edite everything this is alex small security.</p>
+
+
+
+<h1>The table element</h1>
+
+<table>
+  <tr>
+    <th>სახელი</th>
+    <th>გვარი</th>
+    <th>ტელეფონის ნომერი</th>
+  </tr>
+  <tr>
+    <td>alex</td>
+    <td>mamukashvili</td>
+    <td><input type="" id="lname" name="lname" value="511"></td>
+  </tr>
+  <tr>
+    <td>password down</td>
+    <td>emile down</td>
+    <td><img src="img_girl.jpg"width="190" height="140"></td>
+    
+  <tr>
+  <tr>
+  border: 5px solid DodgerBlue;
+  <td><input type="password" id="lname" name="lname" value="OalexL091011"><br>
+  <td><input type="emile" id="lname" name="lname" value="alexander.mamukashvili.2011@gmail.com"><br>
+  <tr/>
+  
+  <audio controls>
+  <source src="horse.ogg" type="audio/ogg">
+  <source src="horse.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+
+<input type="datetime-local">
+
+
+<input type="number">
+
+
+<input type="time">
+<br>
+<br>
+<br>
+<form action="/action_page.php">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="rusiko"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="mikava"><br><br>
+  <input type="submit" value="Submit">
+  <input type="reset">
+</form> 
+  <br>
+  <br>
+  <form action="/action_page.php">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="alex"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="aloxandro"><br><br>
+  <input type="submit" value="Submit">
+  <input type="reset">
+</form> 
+
+
+  
+  
+  <p style="color:red">This is a paragraph.</p>
+<p style="color:blue">This is another paragraph.</p>
+
+  
+  
+  
+</video>
+  
+</form>
+  
+</table>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+
+ 
+</body>
+</html>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<object width="100%" height="500px" data="snippet.html"></object>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<h1>videos down and languakes cauntris up<h1/>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<!DOCTYPE html> 
+<html> 
+<body> 
+
+<video width="400" controls>
+  <source src="mov_bbb.mp4" type="video/mp4">
+  <source src="mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML video.
+</video>
+
+<p>
+Video courtesy of 
+<a href="https://www.bigbuckbunny.org/" target="_blank">Big Buck Bunny</a>.
+</p>
+
+<video width="320" height="240" controls>
+  <source src="movie.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+  Your browser does not support the video tag.
+
+</body> 
+</html>
