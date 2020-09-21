@@ -1,22 +1,93 @@
 <html>
-  <head>
-  </head>
+<head>
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+        }
+
+            li a, .dropbtn {
+                display: inline-block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+                li a:hover, .dropdown:hover .dropbtn {
+                    background-color: red;
+                }
+
+            li.dropdown {
+                display: inline-block;
+            }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+            }
+
+                .dropdown-content a:hover {
+                    background-color: #f1f1f1;
+                }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }   
+    </style>
+</head>
   <body>
-    Hello, this is <b>Alex</b>
-    <a href='https://www.facebook.com/'>go to facebook</a>
-    <br>
-    <hr>
-    <a href='https://earth.google.com/web/'> press this</a> to go to <h2>google earth</h2>
-    <br>
-    <a href='photos.htm'>See my photos here two for see my photos</a>	
-    <a href='khan academy'>see links what i like</a>
-	   
-    
-	<a href='https://www.youtube.com/results?search_query=linken+park'>press this to see linken park musics in youtube.</a>
-	<br>
-	<hr>
-	  <a href='SummerHolidays2020.html'>Summer holidays 2020</a>
-     <h2>daddy i love you</h2>
+      Hello, this is <b>Alex</b>
+
+      <ul>
+          <li><a href="default.asp">Home</a></li>
+          <li class="dropdown">
+              <a href="news.asp" class="dropbtn">News</a>
+              <div class="dropdown-content">
+                  <ul>
+                      <li><a style="color: white; background-color: #f1f1f1;" href="SummerHolidays2020.html">Summer holidays 2020</a></li>
+                      <li><a href="#">Link 2</a></li>
+                      <li><a href="#">Link 3</a></li>
+                  </ul>
+              </div>
+          </li>
+          <li><a href="contact.asp">Contact</a></li>
+          <li><a href="about.asp">About</a></li>
+      </ul>
+
+      <a href='https://www.facebook.com/'>go to facebook</a>
+      <br>
+      <hr>
+      <a href='https://earth.google.com/web/'> press this</a> to go to <h2>google earth</h2>
+      <br>
+      <a href='photos.htm'>See my photos here two for see my photos</a>
+      <a href='khan academy'>see links what i like</a>
+
+
+      <a href='https://www.youtube.com/results?search_query=linken+park'>press this to see linken park musics in youtube.</a>
+      <br>
+      <hr>
+      <a href='SummerHolidays2020.html'>Summer holidays 2020</a>
+      <h2>daddy i love you</h2>
   </body>
   
 </html>
