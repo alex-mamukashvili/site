@@ -17,7 +17,7 @@
   xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
 
 <head profile="http://www.w3.org/1999/xhtml/vocab">
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRJS-1888dd77a01fc8c6df6",applicationID:"277410493"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(6),c=e(7),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(8);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(5),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,y=["click","keydown","mousedown","pointerdown","touchstart"];y.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],4:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],5:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],6:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],7:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],8:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?f(e,c,o):o()}function n(n,r,i,o){if(!p.aborted||o){e&&e(n,r,i);for(var a=t(i),c=v(n),f=c.length,u=0;u<f;u++)c[u].apply(a,r);var d=s[w[n]];return d&&d.push([b,n,r,a]),a}}function l(e,t){h[e]=v(e).concat(t)}function m(e,t){var n=h[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return h[e]||[]}function g(e){return d[e]=d[e]||i(n)}function y(e,t){u(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var h={},w={},b={on:l,addEventListener:l,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:y,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var c="nr@context",f=e("gos"),u=e(6),s={},d={},p=t.exports=i();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=b.info=NREUM.info,t=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=e(2),c=e("handle"),f=e(6),u=e("ee"),s=e(4),d=window,p=d.document,l="addEventListener",m="attachEvent",v=d.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:v,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1184.min.js"},w=v&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),b=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:w,userAgent:s};e(1),e(3),p[l]?(p[l]("DOMContentLoaded",o,!1),d[l]("load",r,!1)):(p[m]("onreadystatechange",i),d[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0},{}],"wrap-function":[function(e,t,n){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(7),a="nr@original",c=Object.prototype.hasOwnProperty,f=!1;t.exports=function(e,t){function n(e,t,n,i){function nrWrapper(){var r,a,c,f;try{a=this,r=o(arguments),c="function"==typeof n?n(r,a):n||{}}catch(u){p([u,"",[r,a,i],c])}s(t+"start",[r,a,i],c);try{return f=e.apply(a,r)}catch(d){throw s(t+"err",[r,a,d],c),d}finally{s(t+"end",[r,a,f],c)}}return r(e)?e:(t||(t=""),nrWrapper[a]=e,d(e,nrWrapper),nrWrapper)}function u(e,t,i,o){i||(i="");var a,c,f,u="-"===i.charAt(0);for(f=0;f<t.length;f++)c=t[f],a=e[c],r(a)||(e[c]=n(a,u?c+i:i,o,c))}function s(n,r,i){if(!f||t){var o=f;f=!0;try{e.emit(n,r,i,t)}catch(a){p([a,n,r,i])}f=o}}function d(e,t){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(e);return n.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(r){p([r])}for(var i in e)c.call(e,i)&&(t[i]=e[i]);return t}function p(t){try{e.emit("internal-error",t)}catch(n){}}return e||(e=i),n.inPlace=u,n.flag=a,n}},{}]},{},["loader"]);</script>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRJS-1888dd77a01fc8c6df6",applicationID:"277410493"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(6),c=e(7),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(8);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(5),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventer"in document){var g=!1,y=["click","keydown","mousedown","pointerdown","touchstart"];y.forEach(function(e){document.addEventer(e,a,!1)})}l(c)}},{}],4:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],5:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventer"in document&&o&&document.addEventer(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],6:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],7:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],8:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?f(e,c,o):o()}function n(n,r,i,o){if(!p.aborted||o){e&&e(n,r,i);for(var a=t(i),c=v(n),f=c.length,u=0;u<f;u++)c[u].apply(a,r);var d=s[w[n]];return d&&d.push([b,n,r,a]),a}}function l(e,t){h[e]=v(e).concat(t)}function m(e,t){var n=h[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return h[e]||[]}function g(e){return d[e]=d[e]||i(n)}function y(e,t){u(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var h={},w={},b={on:l,addEventer:l,removeEventer:m,emit:n,get:g,ers:v,context:t,buffer:y,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var c="nr@context",f=e("gos"),u=e(6),s={},d={},p=t.exports=i();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=b.info=NREUM.info,t=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=e(2),c=e("handle"),f=e(6),u=e("ee"),s=e(4),d=window,p=d.document,l="addEventer",m="attachEvent",v=d.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:v,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1184.min.js"},w=v&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),b=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:w,userAgent:s};e(1),e(3),p[l]?(p[l]("DOMContentLoaded",o,!1),d[l]("load",r,!1)):(p[m]("onreadystatechange",i),d[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0},{}],"wrap-function":[function(e,t,n){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(7),a="nr@original",c=Object.prototype.hasOwnProperty,f=!1;t.exports=function(e,t){function n(e,t,n,i){function nrWrapper(){var r,a,c,f;try{a=this,r=o(arguments),c="function"==typeof n?n(r,a):n||{}}catch(u){p([u,"",[r,a,i],c])}s(t+"start",[r,a,i],c);try{return f=e.apply(a,r)}catch(d){throw s(t+"err",[r,a,d],c),d}finally{s(t+"end",[r,a,f],c)}}return r(e)?e:(t||(t=""),nrWrapper[a]=e,d(e,nrWrapper),nrWrapper)}function u(e,t,i,o){i||(i="");var a,c,f,u="-"===i.charAt(0);for(f=0;f<t.length;f++)c=t[f],a=e[c],r(a)||(e[c]=n(a,u?c+i:i,o,c))}function s(n,r,i){if(!f||t){var o=f;f=!0;try{e.emit(n,r,i,t)}catch(a){p([a,n,r,i])}f=o}}function d(e,t){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(e);return n.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(r){p([r])}for(var i in e)c.call(e,i)&&(t[i]=e[i]);return t}function p(t){try{e.emit("internal-error",t)}catch(n){}}return e||(e=i),n.inPlace=u,n.flag=a,n}},{}]},{},["loader"]);</script>
 <link rel="shortcut icon" href="https://www.mikeshinoda.com/sites/g/files/g2000007296/themes/mythemes/acq_starterm_copy_2/images/favicon_6.ico" type="image/vnd.microsoft.icon" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="description" content="Music, lyrics and videos for Mike Shinoda&#039;s new album &#039;Post Traumatic&#039;" />
@@ -204,7 +204,7 @@ if (aliasArgs.length == 0) {
         };
 
         if (string == "blog" || string == "Blog") {
-            document.addEventListener("DOMContentLoaded", function(event) { 
+            document.addEventer("DOMContentLoaded", function(event) { 
                 document.querySelectorAll(".node #comment-new .form-submit")[0].setAttribute("data-track", "blog-comment");  
             });
         }
@@ -493,7 +493,7 @@ ShareThis({
 <!--//--><![CDATA[// ><!--
 
    if(navigator.userAgent.match(/Trident\/7\./)) {
-  document.body.addEventListener("mousewheel", function() {
+  document.body.addEventer("mousewheel", function() {
     event.preventDefault();
     var wd = event.wheelDelta;
     var csp = window.pageYOffset;
@@ -620,7 +620,7 @@ br.mobileBrk
       xfbml      : true                                  // Look for social plugins on the page
     });
 
-    // Additional initialization code such as adding Event Listeners goes here
+    // Additional initialization code such as adding Event ers goes here
   };
 
   // Load the SDK asynchronously
@@ -1246,7 +1246,7 @@ jQuery(document).ready(function() {
 
     jQuery('.view.view-album-package-post-tramatic.view-id-album_package_post_tramatic .views-row').each(function() {
 
-        jQuery(this).find(".albumPacakgeListen .listen .fullhead").click(function() {
+        jQuery(this).find(".albumPacakge . .fullhead").click(function() {
             jQuery(this).parent().find(".spotifyEmbed").slideToggle();
             jQuery(this).toggleClass("open");
         });
@@ -1316,9 +1316,9 @@ jQuery(document).ready(function() {
             jQuery(this).find(".video .fullhead").css("display", "none");
         }
         if (y == '') {
-            jQuery(this).find(".listen .fullhead").css("pointer-events", "none");
-            // jQuery(this).find(".listen .fullhead").css("opacity", "0.5")
-            jQuery(this).find(".listen .fullhead").css("display", "none");
+            jQuery(this).find(". .fullhead").css("pointer-events", "none");
+            // jQuery(this).find(". .fullhead").css("opacity", "0.5")
+            jQuery(this).find(". .fullhead").css("display", "none");
         }
         if (z == '') {
             jQuery(this).find(".lyrics .fullhead").css("pointer-events", "none");
@@ -1330,21 +1330,21 @@ jQuery(document).ready(function() {
     /*on click omniture*/
 
 
-    jQuery('.listen .fullhead').live('click', function(e) {
-        var arrlisten = jQuery(this).parent().parent().parent().find(".albumPackageTitle").text().split("_");
-        var tname = arrlisten[1];
-        CallOmniture("Mike Shinoda:Music:Post Traumatic:" + tname + " Listen Click");
+    jQuery('. .fullhead').live('click', function(e) {
+        var arr = jQuery(this).parent().parent().parent().find(".albumPackageTitle").text().split("_");
+        var tname = arr[1];
+        CallOmniture("Mike Shinoda:Music:Post Traumatic:" + tname + "  Click");
     });
 
     jQuery('.video .fullhead').live('click', function(e) {
-        var arrlisten = jQuery(this).parent().parent().parent().find(".albumPackageTitle").text().split("_");
-        var tname = arrlisten[1];
+        var arr = jQuery(this).parent().parent().parent().find(".albumPackageTitle").text().split("_");
+        var tname = arr[1];
         CallOmniture("Mike Shinoda:Music:Post Traumatic:" + tname + " Video Click");
     });
 
     jQuery('.lyrics .fullhead').live('click', function(e) {
-        var arrlisten = jQuery(this).parent().parent().parent().find(".albumPackageTitle").text().split("_");
-        var tname = arrlisten[1];
+        var arr = jQuery(this).parent().parent().parent().find(".albumPackageTitle").text().split("_");
+        var tname = arr[1];
         CallOmniture("Mike Shinoda:Music:Post Traumatic:" + tname + " Lyrics Click");
     });
 
@@ -1433,7 +1433,7 @@ border-color: #b64230;
     height: 120px;
 }
 
-.albumPacakgeListen,
+.albumPacakge,
 .albumPacakgeVideo,
 .albumPacakgelyrics {
     margin-left: 46px;
@@ -1442,14 +1442,14 @@ border-color: #b64230;
     margin-top: 15px;
 }
 
-.listen .heading,
+. .heading,
 .video .heading,
 .lyrics .heading {
     display: inline-block;
     width: 60px;
 }
 
-.listen span,
+. span,
 .video span,
 .lyrics span {
     display: inline-block;
@@ -1524,13 +1524,13 @@ border-color: #b64230;
     width: 100%;
 }
 
-.listen .fullhead,
+. .fullhead,
 .video .fullhead,
 .lyrics .fullhead {
     cursor: pointer
 }
 
-.listen .fullhead:after,
+. .fullhead:after,
 .video .fullhead:after,
 .lyrics .fullhead:after {
     content: '';
@@ -1543,7 +1543,7 @@ border-color: #b64230;
     margin-left: 10px;
 }
 
-.listen .fullhead.open:after,
+. .fullhead.open:after,
 .video .fullhead.open:after,
 .lyrics .fullhead.open:after {
     content: '';
@@ -1707,13 +1707,13 @@ iframe#hdr_ifr {
         margin-bottom: 0px;
         height: auto;
     }
-    .albumPacakgeListen,
+    .albumPacakge,
     .albumPacakgeVideo,
     .albumPacakgelyrics {
         margin-left: 30px;
         font-size: 11.12px;
     }
-    .listen .heading,
+    . .heading,
     .video .heading,
     .lyrics .heading {
         width: 40px;
@@ -1724,21 +1724,21 @@ iframe#hdr_ifr {
         margin-left: 48px;
         margin-right: auto;
     }
-    .listen span,
+    . span,
     .video span,
     .lyrics span {
         width: 192px;
         overflow: hidden;
         line-height: 7px;
     }
-    .listen .fullhead:after,
+    . .fullhead:after,
     .video .fullhead:after,
     .lyrics .fullhead:after {
         width: 10px;
         height: 10px;
         margin-left: 8px;
     }
-    .listen .fullhead.open:after,
+    . .fullhead.open:after,
     .video .fullhead.open:after,
     .lyrics .fullhead.open:after {
         width: 10px;
@@ -1802,9 +1802,9 @@ iframe#hdr_ifr {
         
         
 	</div>
-	<div class="albumPacakgeListen">
-        <div class="listen">
-			<div class="fullhead" data-track="spotify-emb"><div class="heading">listen</div> <span>*************************</span></div>
+	<div class="albumPacakge">
+        <div class="">
+			<div class="fullhead" data-track="spotify-emb"><div class="heading"></div> <span></span></div>
 			<div class="spotifyEmbed" style="display:none;"><iframe width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media" data-src="https://open.spotify.com/embed/track/5oyMCoYK2rRMjAvZUHbn7R" class="optanon-category-C0003" data-ot-processed="yes"></iframe></div>
 		</div> 
     </div>
@@ -1842,9 +1842,9 @@ iframe#hdr_ifr {
         
         
 	</div>
-	<div class="albumPacakgeListen">
-        <div class="listen">
-			<div class="fullhead" data-track="spotify-emb"><div class="heading">listen</div> <span>*************************</span></div>
+	<div class="albumPacakge">
+        <div class="">
+			<div class="fullhead" data-track="spotify-emb"><div class="heading"></div> <span>*************************</span></div>
 			<div class="spotifyEmbed" style="display:none;"><iframe width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media" data-src="https://open.spotify.com/embed/track/1QO9k34FcHXGqdMUWjH1Rn" class="optanon-category-C0003" data-ot-processed="yes"></iframe></div>
 		</div> 
     </div>
@@ -1929,9 +1929,9 @@ iframe#hdr_ifr {
         
         
 	</div>
-	<div class="albumPacakgeListen">
-        <div class="listen">
-			<div class="fullhead" data-track="spotify-emb"><div class="heading">listen</div> <span>*************************</span></div>
+	<div class="albumPacakge">
+        <div class="">
+			<div class="fullhead" data-track="spotify-emb"><div class="heading"></div><span></span></div>
 			<div class="spotifyEmbed" style="display:none;"><iframe width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media" data-src="https://open.spotify.com/embed/track/5uUx2PVuJrQ9eM18wQP0GO" class="optanon-category-C0003" data-ot-processed="yes"></iframe></div>
 		</div> 
     </div>
@@ -2004,9 +2004,9 @@ iframe#hdr_ifr {
         
         
 	</div>
-	<div class="albumPacakgeListen">
-        <div class="listen">
-			<div class="fullhead" data-track="spotify-emb"><div class="heading">listen</div> <span>*************************</span></div>
+	<div class="albumPacakge">
+        <div class="">
+			<div class="fullhead" data-track="spotify-emb"><div class="heading"></div> <span>*************************</span></div>
 			<div class="spotifyEmbed" style="display:none;"><iframe width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media" data-src="https://open.spotify.com/embed/track/37gsVhpHyyGyYZHGdFC2p0" class="optanon-category-C0003" data-ot-processed="yes"></iframe></div>
 		</div> 
     </div>
@@ -2075,9 +2075,9 @@ iframe#hdr_ifr {
         
         
 	</div>
-	<div class="albumPacakgeListen">
-        <div class="listen">
-			<div class="fullhead" data-track="spotify-emb"><div class="heading">listen</div> <span>*************************</span></div>
+	<div class="albumPacakge">
+        <div class="">
+			<div class="fullhead" data-track="spotify-emb"><div class="heading"></div> <span>*************************</span></div>
 			<div class="spotifyEmbed" style="display:none;"><iframe width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media" data-src="https://open.spotify.com/embed/album/0rdKJxRJdcNozg9g7ww99u" class="optanon-category-C0003" data-ot-processed="yes"></iframe></div>
 		</div> 
     </div>
@@ -2149,9 +2149,9 @@ iframe#hdr_ifr {
         
         
 	</div>
-	<div class="albumPacakgeListen">
-        <div class="listen">
-			<div class="fullhead" data-track="spotify-emb"><div class="heading">listen</div> <span>*************************</span></div>
+	<div class="albumPacakge">
+        <div class="">
+			<div class="fullhead" data-track="spotify-emb"><div class="heading"></div> <span>*************************</span></div>
 			<div class="spotifyEmbed" style="display:none;"><iframe width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media" data-src="https://open.spotify.com/embed/track/6mfRIwGwlHWRWwUfkbWTKP" class="optanon-category-C0003" data-ot-processed="yes"></iframe></div>
 		</div> 
     </div>
@@ -2188,9 +2188,9 @@ iframe#hdr_ifr {
         
         
 	</div>
-	<div class="albumPacakgeListen">
-        <div class="listen">
-			<div class="fullhead" data-track="spotify-emb"><div class="heading">listen</div> <span>*************************</span></div>
+	<div class="albumPacakge">
+        <div class="">
+			<div class="fullhead" data-track="spotify-emb"><div class="heading"></div> <span>*************************</span></div>
 			<div class="spotifyEmbed" style="display:none;"><iframe width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media" data-src="https://open.spotify.com/embed/track/3QDcsPvzTfGQxfnpHFUHRd" class="optanon-category-C0003" data-ot-processed="yes"></iframe></div>
 		</div> 
     </div>
@@ -2251,9 +2251,9 @@ iframe#hdr_ifr {
         
         
 	</div>
-	<div class="albumPacakgeListen">
-        <div class="listen">
-			<div class="fullhead" data-track="spotify-emb"><div class="heading">listen</div> <span>*************************</span></div>
+	<div class="albumPacakge">
+        <div class="">
+			<div class="fullhead" data-track="spotify-emb"><div class="heading"></div> <span>*************************</span></div>
 			<div class="spotifyEmbed" style="display:none;"><iframe width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media" data-src="https://open.spotify.com/embed/track/4ccocJuCXjkpckAL1ZzCTA" class="optanon-category-C0003" data-ot-processed="yes"></iframe></div>
 		</div> 
     </div>
@@ -2325,9 +2325,9 @@ iframe#hdr_ifr {
         <div class="livedrums">Live Drums by: Darren King</div>
         
 	</div>
-	<div class="albumPacakgeListen">
-        <div class="listen">
-			<div class="fullhead" data-track="spotify-emb"><div class="heading">listen</div> <span>*************************</span></div>
+	<div class="albumPacakge">
+        <div class="">
+			<div class="fullhead" data-track="spotify-emb"><div class="heading"></div> <span>*************************</span></div>
 			<div class="spotifyEmbed" style="display:none;"><iframe width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media" data-src="https://open.spotify.com/embed/track/2W0ExXoHGZF78RYHhcSgMZ" class="optanon-category-C0003" data-ot-processed="yes"></iframe></div>
 		</div> 
     </div>
@@ -2400,9 +2400,9 @@ iframe#hdr_ifr {
         
         
 	</div>
-	<div class="albumPacakgeListen">
-        <div class="listen">
-			<div class="fullhead" data-track="spotify-emb"><div class="heading">listen</div> <span>*************************</span></div>
+	<div class="albumPacakge">
+        <div class="">
+			<div class="fullhead" data-track="spotify-emb"><div class="heading"></div> <span>*************************</span></div>
 			<div class="spotifyEmbed" style="display:none;"><iframe width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media" data-src="https://open.spotify.com/embed/album/5a6DvFXOnKubmjMr7JkfFI" class="optanon-category-C0003" data-ot-processed="yes"></iframe></div>
 		</div> 
     </div>
@@ -2484,9 +2484,9 @@ iframe#hdr_ifr {
         
         
 	</div>
-	<div class="albumPacakgeListen">
-        <div class="listen">
-			<div class="fullhead" data-track="spotify-emb"><div class="heading">listen</div> <span>*************************</span></div>
+	<div class="albumPacakge">
+        <div class="">
+			<div class="fullhead" data-track="spotify-emb"><div class="heading"></div> <span>*************************</span></div>
 			<div class="spotifyEmbed" style="display:none;"><iframe width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media" data-src="https://open.spotify.com/embed/track/7qHPOydWy2c3iKsibA31ch" class="optanon-category-C0003" data-ot-processed="yes"></iframe></div>
 		</div> 
     </div>
@@ -2584,9 +2584,9 @@ iframe#hdr_ifr {
         
         
 	</div>
-	<div class="albumPacakgeListen">
-        <div class="listen">
-			<div class="fullhead" data-track="spotify-emb"><div class="heading">listen</div> <span>*************************</span></div>
+	<div class="albumPacakge">
+        <div class="">
+			<div class="fullhead" data-track="spotify-emb"><div class="heading"></div> <span>*************************</span></div>
 			<div class="spotifyEmbed" style="display:none;"><iframe width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media" data-src="https://open.spotify.com/embed/track/6ZsKifufUhD5q5jAtzzATH" class="optanon-category-C0003" data-ot-processed="yes"></iframe></div>
 		</div> 
     </div>
@@ -2672,9 +2672,9 @@ iframe#hdr_ifr {
         
         
 	</div>
-	<div class="albumPacakgeListen">
-        <div class="listen">
-			<div class="fullhead" data-track="spotify-emb"><div class="heading">listen</div> <span>*************************</span></div>
+	<div class="albumPacakge">
+        <div class="">
+			<div class="fullhead" data-track="spotify-emb"><div class="heading"></div> <span>*************************</span></div>
 			<div class="spotifyEmbed" style="display:none;"><iframe width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media" data-src="https://open.spotify.com/embed/track/6hChL2HaNqHrkpzbPk2xT7" class="optanon-category-C0003" data-ot-processed="yes"></iframe></div>
 		</div> 
     </div>
@@ -2763,9 +2763,9 @@ iframe#hdr_ifr {
         
         <div class="additionalGuitar">Additional Guitar by: Boonn</div>
 	</div>
-	<div class="albumPacakgeListen">
-        <div class="listen">
-			<div class="fullhead" data-track="spotify-emb"><div class="heading">listen</div> <span>*************************</span></div>
+	<div class="albumPacakge">
+        <div class="">
+			<div class="fullhead" data-track="spotify-emb"><div class="heading"></div> <span>*************************</span></div>
 			<div class="spotifyEmbed" style="display:none;"><iframe width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media" data-src="https://open.spotify.com/embed/album/15UCS2DZ8a8BPcxztvFOoX" class="optanon-category-C0003" data-ot-processed="yes"></iframe></div>
 		</div> 
     </div>
@@ -2869,9 +2869,9 @@ iframe#hdr_ifr {
         
         
 	</div>
-	<div class="albumPacakgeListen">
-        <div class="listen">
-			<div class="fullhead" data-track="spotify-emb"><div class="heading">listen</div> <span>*************************</span></div>
+	<div class="albumPacakge">
+        <div class="">
+			<div class="fullhead" data-track="spotify-emb"><div class="heading"></div> <span>*************************</span></div>
 			<div class="spotifyEmbed" style="display:none;"><iframe width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media" data-src="https://open.spotify.com/embed/track/5zphNl34cRw8UyV63IfSX5" class="optanon-category-C0003" data-ot-processed="yes"></iframe></div>
 		</div> 
     </div>
@@ -2930,9 +2930,9 @@ iframe#hdr_ifr {
         
         
 	</div>
-	<div class="albumPacakgeListen">
-        <div class="listen">
-			<div class="fullhead" data-track="spotify-emb"><div class="heading">listen</div> <span>*************************</span></div>
+	<div class="albumPacakge">
+        <div class="">
+			<div class="fullhead" data-track="spotify-emb"><div class="heading"></div> <span>*************************</span></div>
 			<div class="spotifyEmbed" style="display:none;"><iframe width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media" data-src="https://open.spotify.com/embed/track/3JdC30s70TxGqT2LXgLR2R" class="optanon-category-C0003" data-ot-processed="yes"></iframe></div>
 		</div> 
     </div>
@@ -2997,7 +2997,7 @@ iframe#hdr_ifr {
 <p>So I can’t hear you now</p>
 <p>I can’t hear you now</p>
 <p> </p>
-<p>And I waited too long / I listened too much</p>
+<p>And I waited too long / I ed too much</p>
 <p>You said what can’t be unheard</p>
 <p>I’m drawing a line / enough is enough</p>
 <p>I let you have your last word</p></div>
