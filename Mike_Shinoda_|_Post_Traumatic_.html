@@ -1,0 +1,3549 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
+  "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" version="XHTML+RDFa 1.0" dir="ltr"
+  xmlns:og="http://ogp.me/ns#"
+  xmlns:article="http://ogp.me/ns/article#"
+  xmlns:book="http://ogp.me/ns/book#"
+  xmlns:profile="http://ogp.me/ns/profile#"
+  xmlns:video="http://ogp.me/ns/video#"
+  xmlns:product="http://ogp.me/ns/product#"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/terms/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:sioc="http://rdfs.org/sioc/ns#"
+  xmlns:sioct="http://rdfs.org/sioc/types#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRJS-1888dd77a01fc8c6df6",applicationID:"277410493"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(6),c=e(7),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(8);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(5),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,y=["click","keydown","mousedown","pointerdown","touchstart"];y.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],4:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],5:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],6:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],7:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],8:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?f(e,c,o):o()}function n(n,r,i,o){if(!p.aborted||o){e&&e(n,r,i);for(var a=t(i),c=v(n),f=c.length,u=0;u<f;u++)c[u].apply(a,r);var d=s[w[n]];return d&&d.push([b,n,r,a]),a}}function l(e,t){h[e]=v(e).concat(t)}function m(e,t){var n=h[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return h[e]||[]}function g(e){return d[e]=d[e]||i(n)}function y(e,t){u(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var h={},w={},b={on:l,addEventListener:l,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:y,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var c="nr@context",f=e("gos"),u=e(6),s={},d={},p=t.exports=i();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=b.info=NREUM.info,t=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=e(2),c=e("handle"),f=e(6),u=e("ee"),s=e(4),d=window,p=d.document,l="addEventListener",m="attachEvent",v=d.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:v,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1184.min.js"},w=v&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),b=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:w,userAgent:s};e(1),e(3),p[l]?(p[l]("DOMContentLoaded",o,!1),d[l]("load",r,!1)):(p[m]("onreadystatechange",i),d[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0},{}],"wrap-function":[function(e,t,n){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(7),a="nr@original",c=Object.prototype.hasOwnProperty,f=!1;t.exports=function(e,t){function n(e,t,n,i){function nrWrapper(){var r,a,c,f;try{a=this,r=o(arguments),c="function"==typeof n?n(r,a):n||{}}catch(u){p([u,"",[r,a,i],c])}s(t+"start",[r,a,i],c);try{return f=e.apply(a,r)}catch(d){throw s(t+"err",[r,a,d],c),d}finally{s(t+"end",[r,a,f],c)}}return r(e)?e:(t||(t=""),nrWrapper[a]=e,d(e,nrWrapper),nrWrapper)}function u(e,t,i,o){i||(i="");var a,c,f,u="-"===i.charAt(0);for(f=0;f<t.length;f++)c=t[f],a=e[c],r(a)||(e[c]=n(a,u?c+i:i,o,c))}function s(n,r,i){if(!f||t){var o=f;f=!0;try{e.emit(n,r,i,t)}catch(a){p([a,n,r,i])}f=o}}function d(e,t){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(e);return n.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(r){p([r])}for(var i in e)c.call(e,i)&&(t[i]=e[i]);return t}function p(t){try{e.emit("internal-error",t)}catch(n){}}return e||(e=i),n.inPlace=u,n.flag=a,n}},{}]},{},["loader"]);</script>
+<link rel="shortcut icon" href="https://www.mikeshinoda.com/sites/g/files/g2000007296/themes/mythemes/acq_starterm_copy_2/images/favicon_6.ico" type="image/vnd.microsoft.icon" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Music, lyrics and videos for Mike Shinoda&#039;s new album &#039;Post Traumatic&#039;" />
+<meta name="robots" content="follow, index" />
+<meta name="generator" content="Drupal 7 (http://drupal.org)" />
+<link rel="canonical" href="https://www.mikeshinoda.com/posttraumatic" />
+<meta property="og:site_name" content="Mike Shinoda Official Website" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.mikeshinoda.com/posttraumatic" />
+<meta property="og:title" content="Mike Shinoda | Post Traumatic" />
+<meta property="og:description" content="Music, lyrics and videos for Mike Shinoda&#039;s new album &#039;Post Traumatic&#039;" />
+<meta property="og:image" content="https://www.mikeshinoda.com//sites/g/files/g2000007296/f/201806/MS-FBOG.jpg" />
+<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8" data-document-language="true" data-domain-script="51bad973-eb61-4d8f-bcea-ee6dac40a3b7"></script>
+<script type="text/javascript">function OptanonWrapper() {
+    var cookiePolicyLink = 'https://www.wminewmedia.com/cookies-policy/';
+    var allLinks = document.querySelectorAll('a');
+    for(i = 0; i < allLinks.length; i++) {
+      let href = allLinks[i].href;
+      if (href.indexOf(cookiePolicyLink) > -1 && href.indexOf('?ot=') < 0) {
+        href = href + '?ot=51bad973-eb61-4d8f-bcea-ee6dac40a3b7&url=' + window.location.hostname;
+        allLinks[i].setAttribute("href", href);
+        allLinks[i].setAttribute("target", "_blank");
+      }
+    }             
+    var eOT = new Event("OneTrustGroupsUpdated");
+    document.dispatchEvent(eOT);
+    var regCheckPerformance = /,C0002,/;
+    var regCheckFunctional = /,C0003,/;
+    var regCheckTargeting = /,C0004,/;
+    var regCheckSocial = /,C0008,/;
+}</script>
+<link rel="stylesheet" type="text/css" href="https://www.wminewmedia.com/cookies-policy/onetrust/ot.css">
+<script>  digitalData = {"settings":{"reportSuites":"wmg,wmgmikeshinoda.com"},"content":{"artist":"Mike Shinoda","label":"Warner Records","sublabel":""},"page":{"pageInfo":{"pageName":"Mike Shinoda | Post Traumatic","platform":"Drupal 7","devTeam":"WMAS"},"category":{"primaryCategory":"Mike Shinoda","pageType":""}}}</script><script>var aliasArgs = "";
+var siteName = "Mike Shinoda";
+digitalData = {
+    settings: {
+        reportSuites: "wmg,wmgmikeshinoda.com" // replace with the suite id provided for the sites
+    },
+    content: {
+        artist: "Mike Shinoda",
+        label: "Warner Records",
+        sublabel: "",
+        customVideo: "true"
+    },
+    page: {
+        pageInfo: {
+            pageName: "",
+            server: "",
+            platform: "Drupal 7",
+"devTeam":"WMAS"
+        },
+        category: {
+            primaryCategory: "",
+            pageType: ""
+        }
+    },
+    user: {
+        profile: {
+            profileID: ""
+        }
+    }
+};
+
+digitalData.page.pageInfo.server = digitalData.content.artist + ":Site";
+
+if (aliasArgs.length == 0) {
+    var string = "posttraumatic";
+    var pageMapping = {
+        "blog": "News",
+        "news": "News",
+        "photo": "Photos",
+        "video": "Videos",
+        "music": "Music",
+        "tour": "Tour",
+        "forum": "Community",
+        "community": "Community",
+        "mailing-list": "Mailing List Sign-up",
+        "home-onepage-b": "HomePage",
+        "not-authorized": "403 Error",
+        "page-not-found": "404 Error",
+        "user": "Login",
+        "connect": "Mailing List Sign-up",
+        "unsubscribe": "Unsubscribe",
+        "contact-us": "Contact Us",
+		"about": "About",
+		"search": "Search:Results",
+		"chat": "Chat",
+		"music-videos":"Music & Videos",
+		"shazam":"NYC Concert Shazam Contest:Landing",
+               "posttraumatic": "Music:Post Traumatic"
+    };
+    var pageNameMapping = {
+        "blog": "News:Landing",
+        "news": "News:Landing",
+        "photo": "Photos:Landing",
+        "video": "Videos:Landing",
+        "music": "Music:Landing",
+        "tour": "Tour:Upcoming",
+        "forum": "Community:Landing",
+        "community": "Community:Landing",
+        "mailing-list": "Mailing List Sign-up",
+        "home-onepage-b": "HomePage",
+        "not-authorized": "Error",
+        "page-not-found": "Error",
+        "user": "Login" ,
+        "connect": "Mailing List Sign-up",
+        "unsubscribe": "unsubscribe",
+        "contact-us": "Contact Us",
+		"about":"About",
+		"search": "Search:Results",
+		"chat": "Chat",
+		"music-videos":"music & videos:landing",
+		"shazam":"Landing Page:Contest",
+                 "posttraumatic": "Music:Album Details"
+		
+    };
+
+    digitalData.page.pageInfo.pageName = digitalData.content.artist + ":" + pageMapping[string];
+    digitalData.page.category.pageType = pageNameMapping[string];
+
+    switch (string) {
+        case "page-not-found": digitalData.page.category.primaryCategory = siteName + ":Error";
+            break;
+        case "not-authorized": digitalData.page.category.primaryCategory = siteName + ":Error";
+            break;
+        case "home-onepage-b": digitalData.page.category.primaryCategory = digitalData.content.artist + ":Home";
+            break;
+        case "connect": digitalData.page.category.primaryCategory = siteName + ":Mailing List Sign-up";
+           break;
+        case "unsubscribe": digitalData.page.category.primaryCategory = siteName + ":Unsubscribe";
+           break;
+        case "posttraumatic": digitalData.page.category.primaryCategory = siteName + ":Music";
+           break;
+		case "search": digitalData.page.category.primaryCategory = siteName + ":Search";
+			break;
+        case "user": digitalData.page.category.pageType = "authentication:login";
+            digitalData.page.category.primaryCategory = siteName + ":" + pageMapping[string];
+            break;
+        default: digitalData.page.category.primaryCategory = siteName + ":" + pageMapping[string];
+            break;
+    }
+} else {
+    if (aliasArgs == "category") {
+        var categoryMapping = {
+            "news-v1": "News",
+            "photo-v1": "Photos",
+            "video-v1": "Videos",
+            "forum": "Discussions"
+        };
+        var categoryNameMapping = {
+            "news-v1": "News:Category",
+            "photo-v1": "Photos:Category",
+            "video-v1": "Videos:Category",
+            "forum": "Community:Discussions"
+        };
+        var string = "album-package-post-tramatic";
+
+        digitalData.page.pageInfo.pageName = digitalData.content.artist + ":" + categoryMapping[string] +":";
+        digitalData.page.category.primaryCategory = siteName + ":" + categoryMapping[string];
+        digitalData.page.category.pageType = categoryNameMapping[string];
+
+    } else {
+        var string = "";
+        var currentPageArgs = "posttraumatic";
+        var detailPageMapping = {
+            "Photo": "Photos",
+            "Video": "Videos",
+            "Forum topic": "Discussions",
+            "Album": "Music",
+            "forum": "Community",
+            "blog": "News",
+            "Blog": "News",
+            "Splash Page/Lightbox":"Splash"
+        };
+        var detailPageNameMapping = {
+            "Photo": "Photos:Details",
+            "Video": "Videos:Details",
+            "Forum topic": "Community:Thread",
+            "Album": "Music:Album Details",
+            "forum": "Community:Landing",
+            "blog": "News:Article",
+            "Blog": "News:Article",
+           "Splash Page/Lightbox":"Splash"
+        };
+
+        if (string == "blog" || string == "Blog") {
+            document.addEventListener("DOMContentLoaded", function(event) { 
+                document.querySelectorAll(".node #comment-new .form-submit")[0].setAttribute("data-track", "blog-comment");  
+            });
+        }
+
+        digitalData.page.pageInfo.pageName = siteName + ":" + detailPageMapping[string] + ':';
+        digitalData.page.category.primaryCategory = siteName + ":" + detailPageMapping[string];
+        digitalData.page.category.pageType = detailPageNameMapping[string];
+        if (aliasArgs == "register") {
+            digitalData.page.pageInfo.pageName = siteName + ":registration";
+            digitalData.page.category.primaryCategory = siteName + ":registration";
+            digitalData.page.category.pageType = "authentication:registration";
+        }
+        if (aliasArgs == "login") {
+            digitalData.page.pageInfo.pageName = siteName + ":Login";
+            digitalData.page.category.primaryCategory = siteName + ":Login";
+            digitalData.page.category.pageType = "authentication:login";
+        }
+        if (aliasArgs == "lyrics") {
+            digitalData.page.pageInfo.pageName = siteName + ":Music:Lyrics";
+            digitalData.page.category.primaryCategory = siteName + ":Music";
+            digitalData.page.category.pageType = "music:lyrics";
+        }
+        if (currentPageArgs.length !== 0 && currentPageArgs.indexOf("member") !== -1) {
+            digitalData.page.pageInfo.pageName = siteName + ":Members:" + aliasArgs;
+            digitalData.page.category.primaryCategory = siteName + ":Members";
+            digitalData.page.category.pageType = "community:member details";
+        }
+        if (currentPageArgs.length !== 0 && currentPageArgs.indexOf("edit-profile") !== -1) {
+            digitalData.page.pageInfo.pageName = siteName + ":Edit Profile";
+            digitalData.page.category.primaryCategory = siteName + ":Edit Profile";
+            digitalData.page.category.pageType = "community:edit profile";
+        }
+        if (currentPageArgs.length !== 0 && currentPageArgs.indexOf("comments") !== -1) {
+            digitalData.page.pageInfo.pageName = siteName + ":Blog comments:" + "";
+            digitalData.page.category.primaryCategory = siteName +":Blog";
+            digitalData.page.category.pageType = "blog:comments";
+        }
+    }
+}</script><script src='https://assets.adobedtm.com/31543e7db99435a92d6f4a2cf97c808672ed7dd0/satelliteLib-b6e3529c31d92a9252c30c1714b6b9342304145b.js'></script>  <title>Mike Shinoda | Post Traumatic</title>
+  <link type="text/css" rel="stylesheet" href="https://www.mikeshinoda.com/sites/g/files/g2000007296/f/css/css_xE-rWrJf-fncB6ztZfd2huxqgxu4WO-qwma6Xer30m4.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.mikeshinoda.com/sites/g/files/g2000007296/f/css/css_A7L9lzYfi0Rrggkhtup9J-NajVb47KzW_dN58Wk1YRE.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.mikeshinoda.com/sites/g/files/g2000007296/f/css/css_9-HV6mQBvWyX1aHfayEd_LDezfkxs9ayM9R3L-XROag.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="https://www.mikeshinoda.com/sites/g/files/g2000007296/f/css/css_bfgPoR1w1BhLJgeLt2tAgWWMMDWMzPYWysvMF8Gsmvo.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.mikeshinoda.com/sites/g/files/g2000007296/f/css/css_P--uK_u2cWk7Ux9rtPoaQn5tpHG8G7uVzfcocLAKXes.css" media="only screen and (max-device-width: 480px)" />
+<link type="text/css" rel="stylesheet" href="https://www.mikeshinoda.com/sites/g/files/g2000007296/f/css/css_A4veNBo1iC9I7Wp74eTzemy-XwvDkqFp-JguZWKtiEY.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.mikeshinoda.com/sites/g/files/g2000007296/f/css/css_dt0oJJ94i_Cf5_Ogj9b9_QwH3n-AKfUoA1OyPfIGSJI.css" media="all" />
+
+<!--[if lte IE 8]>
+<link type="text/css" rel="stylesheet" href="https://www.mikeshinoda.com/sites/g/files/g2000007296/f/css/css_ItF2QWE5ZCu1nXCtb8bMRu749o4ShVLOd0z5ETDKdSE.css" media="all" />
+<![endif]-->
+  <script type="text/javascript" src="https://www.mikeshinoda.com/sites/g/files/g2000007296/f/js/js_Zjy-0nf6F3LqnbeqtqgfxYPs-f1yUSmCcdAWMHea3lc.js"></script>
+<script type="text/javascript" src="https://www.mikeshinoda.com/sites/g/files/g2000007296/f/js/js_uf70xlUxhvInSLPpsDRV1njqa6bUCvpxD0Sm5TqM1pc.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+document.createElement( "picture" );
+//--><!]]>
+</script>
+<script type="text/javascript" src="https://www.mikeshinoda.com/sites/g/files/g2000007296/f/js/js_wqbkEdTADCQvU009W2K2R-vvLiKLz2dYgrXTmd-HfQQ.js"></script>
+<script type="text/javascript" src="https://www.mikeshinoda.com/sites/g/files/g2000007296/f/js/js_SVSEULPpa1zAvduAMyldDemu4qWJNGVNt7J8-Chf9lw.js"></script>
+<script type="text/javascript" src="https://use.typekit.com/wqf4fjd.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+try{Typekit.load();}catch(e){};
+//--><!]]>
+</script>
+<script type="text/javascript" src="https://www.mikeshinoda.com/sites/g/files/g2000007296/f/js/js_Wkqtiue4cg-LsVI7YbwbgZbmUZ-DvgT_gtJKbMQOTNQ.js"></script>
+<script type="text/javascript" src="https://www.mikeshinoda.com/sites/g/files/g2000007296/f/js/js_UOfho9R5EzCW4uBEqRS5DMB2AxaLSFo-WY42GixtwLk.js"></script>
+<script type="text/javascript" src="https://cdn.livefyre.com/Livefyre.js?sdsd"></script>
+<script type="text/javascript" src="https://www.mikeshinoda.com/sites/g/files/g2000007296/f/js/js_Go8d-u5meHk52gcICRnsJlfsA35m2aNwObwBd_Ft05Q.js"></script>
+<script type="text/javascript" src="https://libraries.wmgartistservices.com/custom-js/Songkick-Middletier.js"></script>
+<script type="text/javascript" src="https://www.mikeshinoda.com/sites/g/files/g2000007296/f/js/js_7Qz5Ll3FESmBYipY2xc773w4goLqpOrKx-BB7HjXDvU.js"></script>
+<script type="text/javascript" src="https://www.klaviyo.com/media/js/public/klaviyo_subscribe.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"acq_starterm_copy_2","theme_token":"V4mJDShbzln4NQhd-YVTp1MaFphTHUmOb_jj1L-V1kg","js":{"sites\/all\/modules\/contrib\/picture\/picturefill2\/picturefill.min.js":1,"sites\/all\/modules\/contrib\/picture\/picture.min.js":1,"public:\/\/javascript_libraries\/js_9vjzE2QrwPVuDl3iTW4j7HV8jWDgpMUagNDgN6A-BHI.js":1,"public:\/\/javascript_libraries\/js_GsMeKWiIs92-pW-8nvdwENjjgp4-MccJpl0h3WcpnZo.js":1,"public:\/\/javascript_libraries\/js_GvEQmrS_258XV4Fcin5YAPCbcw0m5bK9npTH_RAMdcw.js":1,"public:\/\/javascript_libraries\/sc-player-new.txt":1,"public:\/\/javascript_libraries\/highlight password fields on Edit Account page_0.txt":1,"public:\/\/javascript_libraries\/js_Mx5dHrV7hniYXjyrpcbWxxhFZ3iLxNPuAfxo3M-G94U.js":1,"public:\/\/javascript_libraries\/js_Df5D_RV2cj5A5EfYCNrB97IVh9iPaD2bYFuiVEmmsYc.js":1,"https:\/\/libraries.wmgartistservices.com\/custom-js\/Twitter-Button-Script.js":1,"public:\/\/javascript_libraries\/js_jjHde5ecxrJRHhv0ARBy9c_FpGd09i9L8hIJFS2ocDo.js":1,"public:\/\/javascript_libraries\/js__CBRdbp0uvl6xMBgZn0lttLRAYb2juAxMtVeVu9Ua0M.js":1,"public:\/\/javascript_libraries\/js_cfR6jWbucImFInJRntGiOZlU4wSJp2rWc3oz8mXzzOQ.js":1,"https:\/\/apis.google.com\/js\/platform.js":1,"public:\/\/javascript_libraries\/js_Rx0AqHkQSoX2BgaWzRba63z45W0MOo7BHMiXQrN4mU8.js":1,"public:\/\/javascript_libraries\/ig-videos.js_0.txt":1,"public:\/\/javascript_libraries\/jquery.linky_.js_0.txt":1,"public:\/\/javascript_libraries\/infinite-Scroll.js_0.txt":1,"public:\/\/javascript_libraries\/customScroll.js.txt":1,"public:\/\/javascript_libraries\/Splash_Light_Box_JS_with_DTM_update_12_12_19.js_0.txt":1,"public:\/\/javascript_libraries\/turnkey-2019-09-27-6.js.txt":1,"profiles\/warner\/modules\/acquia\/gardens_misc\/js\/gardens_misc.iframe-undo.js":1,"misc\/jquery.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"profiles\/warner\/modules\/contrib\/dialog\/jquery.xLazyLoader.js":1,"misc\/ui\/jquery.ui.core.min.js":1,"misc\/ui\/jquery.ui.widget.min.js":1,"misc\/ajax.js":1,"misc\/jquery.ba-bbq.js":1,"modules\/overlay\/overlay-parent.js":1,"misc\/jquery.cookie.js":1,"profiles\/warner\/modules\/gardens\/gardens_features\/plugins\/jquery.form.js":1,"misc\/ui\/jquery.ui.mouse.min.js":1,"misc\/ui\/jquery.ui.resizable.min.js":1,"misc\/ui\/jquery.ui.draggable.min.js":1,"misc\/ui\/jquery.ui.button.min.js":1,"misc\/ui\/jquery.ui.position.min.js":1,"misc\/ui\/jquery.ui.dialog.min.js":1,"profiles\/warner\/modules\/contrib\/views\/js\/jquery.ui.dialog.patch.js":1,"profiles\/warner\/modules\/gardens\/gardens_features\/plugins\/Modernizr\/modernizr.js":1,"profiles\/warner\/libraries\/breakup\/jquery.breakup.min.js":1,"profiles\/warner\/modules\/contrib\/dialog\/dialog.js":1,"0":1,"profiles\/warner\/modules\/contrib\/comment_notify\/comment_notify.js":1,"profiles\/warner\/modules\/gardens\/gardens_features\/js\/gardens_features.ui-dialog.js":1,"profiles\/warner\/libraries\/colorbox\/jquery.colorbox-min.js":1,"profiles\/warner\/modules\/contrib\/colorbox\/js\/colorbox.js":1,"profiles\/warner\/modules\/contrib\/colorbox\/styles\/default\/colorbox_style.js":1,"profiles\/warner\/modules\/contrib\/colorbox\/js\/colorbox_inline.js":1,"https:\/\/use.typekit.com\/wqf4fjd.js":1,"1":1,"profiles\/warner\/libraries\/timeago\/jquery.timeago.js":1,"profiles\/warner\/modules\/contrib\/timeago\/timeago.js":1,"profiles\/warner\/modules\/contrib\/extlink\/extlink.js":1,"profiles\/warner\/modules\/acquia\/gardens_misc\/js\/gardens_misc.colorbox.js":1,"profiles\/warner\/modules\/contrib\/acsf\/acsf_openid\/acsf_openid.overlay.js":1,"profiles\/warner\/modules\/acquia\/gardens_help\/gardens_help.js":1,"profiles\/warner\/modules\/gardens\/gardens_features\/js\/gardens_features.js":1,"profiles\/warner\/modules\/acquia\/gardens_media\/gardens_media_links.js":1,"sites\/g\/files\/g2000007296\/themes\/mythemes\/acq_starterm_copy_2\/local.js":1,"sites\/all\/modules\/custom\/warner_misc\/plugins\/prevent-multiple-clicks\/prevent-multiple-clicks.js":1,"public:\/\/javascript_libraries\/js_kCZqvUCfvPjrogV3-oOBgaQd15qfSs3asTB91H9QeTM.js":1,"public:\/\/javascript_libraries\/js_tWssgbB6RD-K4eT5VYSk7bvAnOmqM8gx40IiaXJ6cxQ.js":1,"public:\/\/javascript_libraries\/js_esLq-yzyrm5wNkQZa7F4XwncvFq9qRfhVTgOX6rWZQI.js":1,"public:\/\/javascript_libraries\/js_DnOMO-FtEJyikTQtbqKB61uKetSKYFyELuqVjXcFv4A.js":1,"public:\/\/javascript_libraries\/js_Vq3vhExnniV-MsZd8SZX_O9gk3inRbbH5y4wPps_o9w.js":1,"public:\/\/javascript_libraries\/js_I_kCiPqzkTj9XhcJZKWTVe6UHbYfbA9DjV_4SRu8Io4.js":1,"public:\/\/javascript_libraries\/js_UYmJCsFjV0E5eMI64C4l_2v_0pH7Juwc3SuoRU7rTBY.js":1,"public:\/\/javascript_libraries\/js_xE-6xG8tavkHMDA_ANUslt4Btgp7tQmFHyG4NgTszBY.js":1,"public:\/\/javascript_libraries\/js_6mnZvl5hESpUKfizP56m427QRUrdiwSftUZ8Y2MM8Bw.js":1,"public:\/\/javascript_libraries\/js_79gT8ocG-gX1mio5ox4ANdkanF5sFzD7Vf8isS3Ejbs.js":1,"public:\/\/javascript_libraries\/js_Fj9cCAv1wJ-BlPu-rwgD81Tw4IQ5lgdid7AqjV50ZGc.js":1,"public:\/\/javascript_libraries\/js_wK_QYcoCbm238b6-Raeaf9j6IalcikdpqgMTgX1iQUo.js":1,"public:\/\/javascript_libraries\/pkgd.imageload.min_.js.txt":1,"public:\/\/javascript_libraries\/utils.js_1.txt":1,"public:\/\/javascript_libraries\/js_d-ptTH5LsKTtO82jTsd9q4OpvzuvovPuMNbSwLa_gcY.js":1,"public:\/\/javascript_libraries\/onepage-config.js_0.txt":1,"public:\/\/javascript_libraries\/layout.js_0.txt":1,"public:\/\/javascript_libraries\/onepage-blocks.js.txt":1,"public:\/\/javascript_libraries\/music.js_0.txt":1,"public:\/\/javascript_libraries\/pages.js.txt":1,"public:\/\/javascript_libraries\/onepage-misc.js.txt":1,"public:\/\/javascript_libraries\/init_3_v1.js.txt":1,"public:\/\/javascript_libraries\/js_EgwXkTRNClSj0kBmhtnibADXt57_U2M4h0l76OTYnoQ.js":1,"public:\/\/javascript_libraries\/js_lAD9C2v7q3DLjjQOW_NQvdQotOrpJY5Z8MTqSr-3d38.js":1,"public:\/\/javascript_libraries\/js_9twpOWMQTZbXJwezhqQb7Z0WI-vH2E9dfm1SwleSGR4.js":1,"https:\/\/cdn.livefyre.com\/Livefyre.js?sdsd":1,"public:\/\/javascript_libraries\/js_oYC6au5mcDI2kImccJV_5EF95upLMb1J0XYvdEun-j8.js":1,"public:\/\/javascript_libraries\/supplant.js.txt":1,"https:\/\/libraries.wmgartistservices.com\/custom-js\/Songkick-Middletier.js":1,"public:\/\/javascript_libraries\/spotify_web_API.js.txt":1,"https:\/\/www.klaviyo.com\/media\/js\/public\/klaviyo_subscribe.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"misc\/ui\/jquery.ui.core.css":1,"misc\/ui\/jquery.ui.theme.css":1,"modules\/overlay\/overlay-parent.css":1,"misc\/ui\/jquery.ui.resizable.css":1,"misc\/ui\/jquery.ui.button.css":1,"misc\/ui\/jquery.ui.dialog.css":1,"profiles\/warner\/modules\/gardens\/gardens_features\/css\/gardens_features.jquery.ui.dialog.css":1,"profiles\/warner\/libraries\/colorbox\/example1\/colorbox.css":1,"profiles\/warner\/modules\/contrib\/comment_notify\/comment_notify.css":1,"modules\/aggregator\/aggregator.css":1,"modules\/comment\/comment.css":1,"profiles\/warner\/modules\/contrib\/date\/date_api\/date.css":1,"profiles\/warner\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"profiles\/warner\/modules\/contrib\/date\/date_repeat_field\/date_repeat_field.css":1,"modules\/field\/theme\/field.css":1,"profiles\/warner\/modules\/contrib\/mollom\/mollom.css":1,"modules\/node\/node.css":1,"sites\/all\/modules\/contrib\/picture\/picture_wysiwyg.css":1,"profiles\/warner\/modules\/contrib\/role_indicators\/role_indicators.css":1,"modules\/user\/user.css":1,"modules\/forum\/forum.css":1,"profiles\/warner\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/custom\/warner_misc\/css\/wmg.ui.dialog.css":1,"profiles\/warner\/modules\/acquia\/gardens_misc\/css\/gardens_misc.mast.css":1,"profiles\/warner\/modules\/contrib\/ctools\/css\/ctools.css":1,"profiles\/warner\/modules\/contrib\/follow\/follow.css":1,"profiles\/warner\/modules\/acquia\/gardens_help\/gardens_help.css":1,"sites\/all\/modules\/custom\/warner_honeypot\/warner_honeypot.css":1,"profiles\/warner\/modules\/contrib\/extlink\/extlink.css":1,"profiles\/warner\/modules\/contrib\/taxonomy_access\/taxonomy_access.css":1,"profiles\/warner\/modules\/gardens\/gardens_features\/gardens_features.css":1,"profiles\/warner\/modules\/gardens\/gardens_features\/gardens_features.jquery.ui.theme.css":1,"sites\/g\/files\/g2000007296\/themes\/mythemes\/acq_starterm_copy_2\/defaults.css":1,"sites\/g\/files\/g2000007296\/themes\/mythemes\/acq_starterm_copy_2\/style.css":1,"sites\/g\/files\/g2000007296\/themes\/mythemes\/acq_starterm_copy_2\/palette.css":1,"sites\/g\/files\/g2000007296\/themes\/mythemes\/acq_starterm_copy_2\/custom.css":1,"sites\/g\/files\/g2000007296\/themes\/mythemes\/acq_starterm_copy_2\/advanced.css":1,"sites\/g\/files\/g2000007296\/themes\/mythemes\/acq_starterm_copy_2\/font-families.css":1,"profiles\/warner\/modules\/gardens\/gardens_features\/css\/ie\/gardens_features.lte-ie-8.css":1}},"overlay":{"paths":{"admin":"user\/*\/edit-profile\nimport\nimport\/*\nnode\/*\/import\nnode\/*\/delete-items\nnode\/*\/log\nfield-collection\/*\/*\/edit\nfield-collection\/*\/*\/delete\nfield-collection\/*\/add\/*\/*\nfocal_point\/test-drive\nfocal_point\/preview\/*\/*\ngardener\/*\ngardens-login\nmedia\/*\/edit\nmedia\/*\/multiedit\nmedia\/*\/delete\nmedia-gallery\/detail\/*\/*\/edit\nmedia-gallery\/detail\/*\/*\/remove\nnode\/*\/multiedit\nnode\/*\/edit\nnode\/*\/delete\nnode\/*\/revisions\nnode\/*\/revisions\/*\/revert\nnode\/*\/revisions\/*\/delete\nnode\/add\nnode\/add\/*\nnode\/*\/sort\nnode\/*\/upload\nnode\/*\/items\nnode\/*\/manage\nuser\/*\/openid\nuser\/*\/openid\/delete\noverlay\/dismiss-message\nuser\/*\/shortcuts\nuser\/*\/spambot\nadmin\nadmin\/*\nbatch\ntaxonomy\/term\/*\/edit\nuser\/*\/cancel\nuser\/*\/edit\nuser\/*\/edit\/*","non_admin":"admin\/structure\/block\/demo\/*\nadmin\/structure\/mailing-list\/*\/export\nadmin\/reports\/status\/php"},"pathPrefixes":[],"ajaxCallback":"overlay-ajax"},"colorbox":{"opacity":"0.85","current":"{current} of {total}","previous":"\u00ab Prev","next":"Next \u00bb","close":"Close","maxWidth":"98%","maxHeight":"98%","fixed":true,"mobiledetect":true,"mobiledevicewidth":"480px"},"gardenerHelpSearchURL":"http:\/\/www.drupalgardens.com","gardensMisc":{"isSMB":false},"themebuilderLogPath":"themebuilder-log-message","timeago":{"refreshMillis":60000,"allowFuture":true,"localeTitle":false,"cutoff":0,"strings":{"prefixAgo":null,"prefixFromNow":null,"suffixAgo":"ago","suffixFromNow":"from now","seconds":"less than a minute","minute":"about a minute","minutes":"%d minutes","hour":"about an hour","hours":"about %d hours","day":"a day","days":"%d days","month":"about a month","months":"%d months","year":"about a year","years":"%d years","wordSeparator":" "}},"extlink":{"extTarget":0,"extClass":0,"extSubdomains":0,"extExclude":"(acquia-sites.com|drupalgardens.com|rpxnow.com)","extInclude":"","extAlert":0,"extAlertText":"This link will take you to an external web site.","mailtoClass":0},"server_variables":{"site_name":"Mike Shinoda","page_title":"Mike Shinoda | Post Traumatic"},"gardensFeatures":{"userIsAnonymous":true,"dialogUserEnabled":true,"isSMB":false,"siteFactoryProductPage":"https:\/\/www.acquia.com\/products-services\/acquia-cloud-site-factory"}});
+//--><!]]>
+</script>
+</head>
+<body class="html not-front not-logged-in no-sidebars page-album-package-post-tramatic theme-markup-2 body-layout-fixed-c" >
+  <div id="skip-to-content">
+    <a href="#skip-to-content-target">Skip directly to content</a>
+  </div>
+
+  <!--[if IE ]>
+  <div id="gardens_ie">
+  <![endif]-->
+  
+  <!--[if IE 8]>
+  <div id="gardens_ie8">
+  <![endif]-->
+  
+  <!--[if IE 7]>
+  <div id="gardens_ie7">
+  <![endif]-->
+  
+  <!--[if lt IE 7]>
+  <div id="gardens_ie-deprecated">
+  <![endif]-->
+
+    
+<div id="page" class="page clearfix tb-terminal">
+
+  <div id="page-deco-top" class="deco-page-top deco-page deco-top deco tb-scope tb-scope-prefer">
+    <div class="width deco-width inner tb-terminal">
+      <div class="layer-a layer"></div>
+      <div class="layer-b layer"></div>
+      <div class="layer-c layer"></div>
+      <div class="layer-d layer"></div>
+    </div>
+  </div>
+  
+  <div id="page-deco-bottom" class="deco-page-bottom deco-page deco-bottom deco tb-scope tb-scope-prefer">
+    <div class="width deco-width inner tb-terminal">
+      <div class="layer-a layer"></div>
+      <div class="layer-b layer"></div>
+      <div class="layer-c layer"></div>
+      <div class="layer-d layer"></div>
+    </div>
+  </div>
+    
+  <div class="page-width tb-scope">
+    <div class="lining tb-terminal"> <!-- Broken out of .page-width to avoid update issues with margin: 0 auto being undone -->
+    
+      <div id="header" class="wrapper-header wrapper clearfix tb-scope">
+      
+        <div id="header-deco-top" class="deco-header-top deco-header deco-top deco tb-scope tb-scope-prefer">
+          <div class="width deco-width inner tb-terminal">
+            <div class="layer-a layer"></div>
+            <div class="layer-b layer"></div>
+            <div class="layer-c layer"></div>
+            <div class="layer-d layer"></div>
+          </div>
+        </div>
+        
+        <div id="header-deco-bottom" class="deco-header-bottom deco-header deco-bottom deco tb-scope tb-scope-prefer">
+          <div class="width deco-width inner tb-terminal">
+            <div class="layer-a layer"></div>
+            <div class="layer-b layer"></div>
+            <div class="layer-c layer"></div>
+            <div class="layer-d layer"></div>
+          </div>
+        </div>
+      
+                  <div id="preheader" class="stack-preheader stack-pre stack col-align-last-right horizontal clearfix tb-scope">
+            <div class="stack-width inset-1 inset tb-terminal">
+              <div class="inset-2 inset tb-terminal">
+                <div class="inset-3 inset tb-terminal">
+                  <div class="inset-4 inset tb-terminal">
+    
+                                              
+                      <div class="box col-2 clearfix tb-terminal">
+                    
+                                                  <div class="col-first col left tb-height-balance tb-terminal">
+                            <div id="preheader-first-region" class="tb-region tb-scope">
+                                <div class="region region-preheader-first">
+    
+<div id="block-block-821" class="block block-block clearfix">
+  <div class="inner tb-terminal">
+    <div class="top"><div class="top-inset-1 tb-terminal"><div class="top-inset-2 tb-terminal"></div></div></div>
+  
+    <div class="middle tb-terminal">
+        
+            
+            
+              
+      <div class="content">
+        <script>
+<!--//--><![CDATA[// ><!--
+
+
+    jQuery(window).load(function () {
+        jQuery(".se-pre-con").addClass('hideMe');
+    });
+
+
+//--><!]]>
+</script><style>
+<!--/*--><![CDATA[/* ><!--*/
+
+    .no-js #loader {
+        display: none;
+    }
+
+    .js #loader {
+        display: block;
+        position: absolute;
+        left: 100px;
+        top: 0;
+    }
+
+    .se-pre-con {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%)translateY(-50%);
+        -webkit-transform: translateX(-50%)translateY(-50%);
+        -moz-transform: translateX(-50%)translateY(-50%);
+        -ms-transform: translateX(-50%)translateY(-50%);
+        -o-transform: translateX(-50%)translateY(-50%);
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+        background: url("/sites/g/files/g2000007296/f/201803/89.gif") center no-repeat #fff;
+    }
+
+    .se-pre-con.hideMe {
+        display: none;
+    }
+
+    #lightBoxContent.lightBoxContent.tkt {
+        bottom: 0 !important;
+    }
+
+    @media only screen and (min-width: 1024px) {
+        html.touch {
+            overflow: hidden;
+        }
+    }
+
+    @media only screen and (min-width:1024px) and (max-width:1403px) {
+
+        #block-views-home-one-page-carousel-block-1 .view-content .item-list ul picture,
+        #block-views-home-one-page-carousel-block-2 .view-content .item-list ul picture {
+            width: 100vw;
+            display: block;
+            overflow: hidden;
+            text-align: center;
+            position: relative;
+            min-height: calc(100vh - 30.5vh);
+        }
+
+        #block-views-home-one-page-carousel-block-1 .view-content .item-list ul img,
+        #block-views-home-one-page-carousel-block-2 .view-content .item-list ul img {
+            display: block;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            height: auto;
+        }
+    }
+
+    .gecko1.gecko #block-views-home-one-page-carousel-block-1 .view-content .item-list ul img,
+    .gecko1.gecko #block-views-home-one-page-carousel-block-2 .view-content .item-list ul img {
+        height: auto;
+    }
+
+    @media only screen and (max-width: 480px) and (min-width: 320px) {
+
+        #block-views-home-one-page-carousel-block-1 .view-content .item-list ul picture,
+        #block-views-home-one-page-carousel-block-2 .view-content .item-list ul picture {
+            min-height: calc(100vh - 33vh);
+        }
+    }
+#block-views-home-one-page-carousel-block-1 .view-content .item-list ul picture, #block-views-home-one-page-carousel-block-2 .view-content .item-list ul picture{
+/*min-height: unset;*/
+}
+
+/*--><!]]>*/
+</style><div class="se-pre-con"></div>      </div>
+      
+    </div>
+    
+    <div class="bottom"><div class="bottom-inset-1 tb-terminal"><div class="bottom-inset-2 tb-terminal"></div></div></div>
+  </div>
+</div>
+
+<div id="block-block-841" class="block block-block clearfix">
+  <div class="inner tb-terminal">
+    <div class="top"><div class="top-inset-1 tb-terminal"><div class="top-inset-2 tb-terminal"></div></div></div>
+  
+    <div class="middle tb-terminal">
+        
+            
+            
+              
+      <div class="content">
+        <link href="https://feature.atlrec.com/mikeshinoda/styles/sticky.css" rel="stylesheet" type="text/css" /><link href="https://feature.atlrec.com/mikeshinoda/styles/share-this.css" rel="stylesheet" type="text/css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" /><script src="https://feature.atlrec.com/mikeshinoda/scripts/share-this.js"></script><script src="https://feature.atlrec.com/mikeshinoda/scripts/email.js"></script><script src="https://feature.atlrec.com/mikeshinoda/scripts/facebook.js?1"></script><script src="https://feature.atlrec.com/mikeshinoda/scripts/linked-in.js"></script><script src="https://feature.atlrec.com/mikeshinoda/scripts/reddit.js"></script><script src="https://feature.atlrec.com/mikeshinoda/scripts/twitter.js?3"></script><script src="https://feature.atlrec.com/mikeshinoda/scripts/googleplus.js?1?dual"></script><script src="https://feature.atlrec.com/mikeshinoda/scripts/pinterest.js?sds"></script><script>
+<!--//--><![CDATA[// ><!--
+
+ShareThis({
+  sharers: [ ShareThisViaFacebook, ShareThisViaTwitter, ShareThisViaGoogleplus],
+  selector: ".lyricsEmbed"
+}).init();
+
+//--><!]]>
+</script><script>
+<!--//--><![CDATA[// ><!--
+
+   if(navigator.userAgent.match(/Trident\/7\./)) {
+  document.body.addEventListener("mousewheel", function() {
+    event.preventDefault();
+    var wd = event.wheelDelta;
+    var csp = window.pageYOffset;
+    window.scrollTo(0, csp - wd);
+  });
+}
+    
+//--><!]]>
+</script><style>
+<!--/*--><![CDATA[/* ><!--*/
+
+.share-this-popover>ul>li {
+    position: relative;
+}
+.fa {
+    position: absolute;
+    top: 13px;
+    left: 5px;
+}
+i.fa.fa-pinterest {
+    left: 10px;
+}
+.share-this-popover {
+    max-width: none;
+}
+
+@media only screen and (max-width: 1023px) {
+.page-album-package-post-tramatic .fa {
+    top: 2px;
+    font-size: 16px !important;
+}
+.page-album-package-post-tramatic .share-this-popover>ul {
+    left: 50%;
+    width: 50%;
+    border-radius: 5px;
+    transform: translateX(-50%);
+}
+.page-album-package-post-tramatic .share-this-popover>ul>li {
+    width: 1.3em;
+    height: 0.8em;
+    line-height: 0.8em;
+}
+.page-album-package-post-tramatic .share-this-popover>ul>li>a {
+    padding: .25em;
+}
+}
+
+/*--><!]]>*/
+</style>      </div>
+      
+    </div>
+    
+    <div class="bottom"><div class="bottom-inset-1 tb-terminal"><div class="bottom-inset-2 tb-terminal"></div></div></div>
+  </div>
+</div>
+
+<div id="block-block-871" class="block block-block clearfix">
+  <div class="inner tb-terminal">
+    <div class="top"><div class="top-inset-1 tb-terminal"><div class="top-inset-2 tb-terminal"></div></div></div>
+  
+    <div class="middle tb-terminal">
+        
+            
+            
+              
+      <div class="content">
+        <style>
+<!--/*--><![CDATA[/* ><!--*/
+
+body div#onetrust-consent-sdk {
+display: block;
+}
+ a.optanon-show-settings, .copyright a.ot-sdk-show-settings {
+display: inline-block;
+}
+div#pp-footer {
+display: none !important;
+
+}
+div#footer-inner , br.mobileBrk{
+display: none;
+}
+#block-block-461 a{
+    text-transform: capitalize;
+}
+@media only screen and (max-width: 767px){
+ br.mobileBrk{
+  display: block;
+}
+#block-block-461 a.choices::after{
+    content:none;
+}
+}
+br.mobileBrk
+
+/*--><!]]>*/
+</style>      </div>
+      
+    </div>
+    
+    <div class="bottom"><div class="bottom-inset-1 tb-terminal"><div class="bottom-inset-2 tb-terminal"></div></div></div>
+  </div>
+</div>
+
+<div id="block-block-551" class="block block-block clearfix">
+  <div class="inner tb-terminal">
+    <div class="top"><div class="top-inset-1 tb-terminal"><div class="top-inset-2 tb-terminal"></div></div></div>
+  
+    <div class="middle tb-terminal">
+        
+            
+            
+              
+      <div class="content">
+        <div id="fb-root"></div>
+<script class="optanon-category-C0004" type="text/plain">
+<!--//--><![CDATA[// ><!--
+
+  window.fbAsyncInit = function() {
+    // init the FB JS SDK
+    FB.init({
+      appId      : '936782073168285',                        // App ID from the app dashboard
+      status     : true,                                 // Check Facebook Login status
+      xfbml      : true                                  // Look for social plugins on the page
+    });
+
+    // Additional initialization code such as adding Event Listeners goes here
+  };
+
+  // Load the SDK asynchronously
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/all.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+
+//--><!]]>
+</script><script>
+<!--//--><![CDATA[// ><!--
+
+jQuery(window).load(function() {
+/*adding a disabled class to the bit widget sold out link*/
+jQuery("#bit-events tr td.bit-tickets a.bit-buy-tix:contains('Sold Out')").parent().addClass('disabled');
+/*adding disable class for empty soundcolud player */
+jQuery( ".view-music li.views-row" ).each(function( index ) {
+if(jQuery(this).find(".views-field-field-soundcloud-url .field-content").is(':empty')){
+jQuery(this).length;
+jQuery(this).find(".views-field-title").addClass("disable");
+}
+});
+
+
+});
+
+
+
+
+//--><!]]>
+</script>      </div>
+      
+    </div>
+    
+    <div class="bottom"><div class="bottom-inset-1 tb-terminal"><div class="bottom-inset-2 tb-terminal"></div></div></div>
+  </div>
+</div>
+
+<div id="block-block-831" class="block block-block clearfix">
+  <div class="inner tb-terminal">
+    <div class="top"><div class="top-inset-1 tb-terminal"><div class="top-inset-2 tb-terminal"></div></div></div>
+  
+    <div class="middle tb-terminal">
+        
+            
+            
+              
+      <div class="content">
+        <script type="text/javascript">
+<!--//--><![CDATA[// ><!--
+
+	var WMG = WMG || {};
+	WMGConfig = {
+		artistname : "Mike Shinoda",
+		basePath : document.domain,
+		siteID : 8950, /*legacy eos id*/
+		feedbackLink : 'forum/category/topic-feedback-and-suggestions',
+		/*CellStream Block Configuration*/
+		CellStream : {
+			states : {
+				init : {
+					width : '111px',
+					height : '180px',
+					left : ['0px', '134px', '268px'],
+					top : '0px'
+				},
+				hover : {
+					width : '203px',
+					height : '252px',
+					left : ['0px', '76px', '166px'],
+					top : '-35px'
+				}
+			}
+		},
+		/*Ads Blocks Configuration*/
+		Ads : {
+			csid : '[site_variables:freewheel_csid]',
+			/*TBD*/
+			urlsMap : {
+				'home' : 'homepage',
+				'homepage' : 'homepage',
+				'blog(/.*)?' : 'blog',
+				'news(/.*)?' : 'blog',
+				'photo(/.*)?' : 'photos',
+				'video(/.*)?' : 'videos',
+				'album(/.*)?' : 'music',
+				'music(/.*)?' : 'music',
+				'tour' : 'tourdates',
+				'about' : 'bio',
+				'community' : 'community',
+				'forum(/.*)?' : 'forum',
+				'node/add/forum' : 'forum',
+				'contact\-us' : 'contact',
+				'member(/.*)?' : 'members',
+				'user(/([0-9]+)/.*)?' : 'members'
+			}
+		},
+		/*MailingList Block Configuration*/
+		MailingList : {
+			EmailListIds : {
+				'United States' : '14073863',
+				'United Kingdom' : '14073863',
+				'France' : '14073863',
+				'Australia' : '14073863',
+				'Germany' : '14073863',
+				'Mexico' : '14073863'
+			},
+                        labelListId : '14076565',
+                        Datasource : '[Artist Name]_website_registration',
+			MobileKeywordIds : {
+				'United States' : ''
+			},
+                        autoreply : 'yes',
+                        geoip : 'true',                        
+		},
+		BITHandle : "[site_variables:bit_handle]", /*Bans in Town handle*/
+		YoutubeChannel : "[site_variables:youtube_channel]", /* Youtube Channel*/
+                fixedNavigation : false,
+		Twitter : {
+			handle : "[site_variables:official_twitter_account]", /*Twitter account name*/
+			via : 'wmgd2c_ss1',
+			operation : 'search',
+			noOfTweets : 5,
+			tagLabel : '',
+			twitterCriteria : '',
+			/*Mapping Twitter Accounts to Site Profiles for Pro Users*/
+			TwitterMap : {}
+		},
+	};
+	WMG = jQuery.extend(true, WMG, WMGConfig);
+
+//--><!]]>
+</script>      </div>
+      
+    </div>
+    
+    <div class="bottom"><div class="bottom-inset-1 tb-terminal"><div class="bottom-inset-2 tb-terminal"></div></div></div>
+  </div>
+</div>
+  </div>
+                            </div>
+                          </div> <!-- /#preheader-first-region -->
+                                                  
+                                                  <div class="col-second col left last tb-height-balance tb-terminal">
+                            <div id="preheader-second-region" class="tb-region tb-scope">
+                                <div class="region region-preheader-second">
+    
+<div id="block-block-731" class="block block-block clearfix">
+  <div class="inner tb-terminal">
+    <div class="top"><div class="top-inset-1 tb-terminal"><div class="top-inset-2 tb-terminal"></div></div></div>
+  
+    <div class="middle tb-terminal">
+        
+            
+            
+              
+      <div class="content">
+        <div class="nav-toggle"><span></span><span></span><span></span><span></span></div>
+<style>
+<!--/*--><![CDATA[/* ><!--*/
+
+
+#block-block-731{
+  clear: none;
+  float: right;
+  margin-right: 0.8em;
+  width: auto;
+}
+#preheader-second-region .nav-toggle {
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+  width: 50px;
+  height: 45px;
+  z-index: 30;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#preheader-second-region .nav-toggle span {
+  width: 50px;
+  display: block;
+  height: 2px;
+  position: absolute;
+  left: 5px;
+  background-color: #000;
+  opacity: 1;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+#preheader-second-region .nav-toggle span:nth-child(1) {
+  top: 0px;
+}
+
+#preheader-second-region .nav-toggle span:nth-child(2) {
+  top: 14px;
+}
+
+#preheader-second-region .nav-toggle span:nth-child(3) {
+  top: 28px;
+}
+#preheader-second-region .nav-toggle span:nth-child(4) {
+  top: 42px;
+}
+#preheader-second-region .nav-toggle.close span:nth-child(1) {
+  top: 18px;
+  -webkit-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+#preheader-second-region .nav-toggle.close span:nth-child(2),
+#preheader-second-region .nav-toggle.close span:nth-child(4) {
+  opacity: 0;
+  left: -30px;
+}
+
+#preheader-second-region .nav-toggle.close span:nth-child(3) {
+  top: 18px;
+  -webkit-transform: rotate(-135deg);
+  -ms-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+.screenW { 
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 900;
+  transition: all 500ms linear;
+}
+.screenW.active {
+  background: #eaeae2;
+}
+.screen{
+  position: fixed;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 82px);
+  z-index: 10001;
+  -webkit-perspective: 2000;
+  perspective: 2000;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.screen .inner.active {
+ // -webkit-transform: rotateX(0) rotateY(0deg) translateZ(0);
+ // transform: rotateX(0) rotateY(0deg) translateZ(0);
+  left: 0;
+z-index: 999;
+}
+.screen .inner {
+  position: absolute;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  overflow:scroll;
+  //-webkit-transform: rotateX(0) rotateY(90deg) translateZ(0);
+ // transform: rotateX(0) rotateY(90deg) translateZ(0);
+//  -webkit-backface-visibility: hidden;
+//  -moz-backface-visibility: hidden;
+ // -o-backface-visibility: hidden;
+//  backface-visibility: hidden;
+//  -webkit-transform-style: preserve-3d;
+ // transform-style: preserve-3d;
+ // transition: all 600ms cubic-bezier(0.175,0.885,0.32,1.275);
+}
+.screen ul.menu {
+  padding: 0 40px;
+  max-width: 350px;
+  text-align: center;
+  display: block;
+  position: relative;
+ // margin: 130px auto 30px auto;
+   margin: 50px auto 30px auto;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.screen .content ul.menu li {
+  background: transparent;
+  text-align: left;
+  width: 100%;
+  margin: 0;
+  padding: 17px 0;
+}
+.screen .content ul.menu li a {
+    font-size: 25px;
+    text-transform: lowercase;
+    letter-spacing: 1.5px;
+    color: #000;
+	
+}
+.screen .content ul.menu li a.active {
+  color: #b64230;
+}
+.screen .content ul.menu li.leaf.level-1.menu-link-31331{
+     display:none;
+}
+.screen .mobile_close {
+	font-size: 32px;
+    display: block;
+    width: 21px;
+    height: 37px;
+    margin-top: 12px;
+    margin-right: 25px;
+    position: relative;
+    z-index: 9999;
+    color: #000;
+    float: right;
+}
+.screen .content ul.menu li a::after{
+      content: "///";
+      margin: 0px 20px; 
+}
+.screen .inner.active.out {
+   // -webkit-transform: rotateX(0) rotateY(-90deg) translateZ(0);
+ //  transform: rotateX(0) rotateY(-90deg) translateZ(0);
+    left: -100%;
+   // transition: all 800ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  }
+  .hideLogo a{
+	display:none; 
+  }
+  .hideLogo{
+      height: 82px;	  
+  }
+@media only screen and (min-width:768px) and (max-width:1023px){
+    #preheader-second-region .nav-toggle {
+          top:5vw; 
+    } 
+}
+@media only screen and (min-width:320px) and (max-width:480px){
+    #preheader-second-region .nav-toggle {
+          top:6.2vw; 
+    } 
+}
+@media only screen and (min-width: 1024px){
+#block-block-731, .screen{
+ display: none !important;
+}
+#block-menu-menu-home-one-page-linked{
+ display: block !important;
+}
+}
+
+@media only screen and (max-width: 1023px){
+#block-block-731, .screen{
+ display: block !important;
+   position: absolute;
+    top: 17px;
+    right: 0;
+}
+div#block-block-731.hideMenu {
+    display: none !important;
+}
+#block-menu-menu-home-one-page-linked{
+ display: none !important;
+}
+.screen .content ul.menu li a {
+    font-size: 20px;
+}
+}
+.tabs {
+    margin: 0;
+}
+.firefox .page-tour div#tourWrapper .seated-event-row .seated-event-link-cells a {
+    line-height: 15.5px;
+}
+/* added from onsite */
+
+
+@media only screen and (max-width: 480px) and (min-width: 320px){
+#preheader-second-region .nav-toggle {
+    top: 6.2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 7.75vh;
+    max-height: 45px;
+}
+
+}
+
+#tklbContainer #lightBoxContent.lightBoxContent .turnKeyTextWrapper{
+  z-index: 10;
+}
+
+#tklbContainer #lightBoxContent.lightBoxContent .lightBoxClose.turnKeyClose{
+  z-index: 1;
+}
+#block-block-461 {
+    color: #aeaea6;
+}
+
+/*--><!]]>*/
+</style><script>
+<!--//--><![CDATA[// ><!--
+
+jQuery(document).ready(function(){
+	jQuery(".nav-toggle").live('click', function() {
+        jQuery('body').toggleClass('navopen');
+        if (!jQuery(this).hasClass("close")) {
+		jQuery('#site-name').addClass("hideLogo");
+	    jQuery("body").append('<div class="screen"><div class="inner" /><div class="screenW" />');
+        jQuery("#block-menu-menu-home-one-page-linked  .content").clone().appendTo(".screen .inner");
+		//jQuery(".screen").append('<a href="javascript:void(0);" class="mobile_close">X');
+        jQuery('.screen').css('top', '82px' );      
+       // jQuery('.screen .inner').css('height', jQuery(window).height() -  jQuery('#block-block-731').outerHeight() - 1 );
+		jQuery(".screen").slideDown('slow', function() {
+			 jQuery(".screenW").addClass("active");
+			 setTimeout(function() {
+				jQuery(".screen .inner").addClass("active");
+			}, 300);			
+		});		
+	} else {
+		jQuery(".screen").slideUp('slow', function() {
+			jQuery(".screen .inner").addClass("out");
+			jQuery('#mob-nav').removeClass('close');
+			jQuery('#site-name').removeClass("hideLogo");
+			jQuery(".screenW").removeClass("active");
+			jQuery(".screen,.screenW").remove();
+		});
+	}
+	jQuery(this).toggleClass("close");
+	}); 
+ 
+});
+
+/*jQuery(window).bind('load', function(){
+   setTimeout(function(){ initiateHomeCarousel(); }, 3000);
+});*/
+
+jQuery(window).bind('load', function(){
+	
+jQuery("#tklbContainer #lightBoxContent.lightBoxContent .lightBoxClose.turnKeyClose").click(function(){
+	setTimeout(function(){ initiateHomeCarousel(); }, 500);
+});
+
+jQuery("#lightBoxContent.lightBoxContent.tklb .lightBoxClose.turnKeyClose a").click(function(){
+	setTimeout(function(){ initiateHomeCarousel(); }, 500);
+});
+
+if (jQuery(window).width() > 767) {
+if(jQuery("div#block-block-771 div#tklbContainer div#lightBoxContent").css("display") == "none"){
+		setTimeout(function(){ initiateHomeCarousel(); }, 3000);
+}
+}
+if (jQuery(window).width() < 768) {
+if(jQuery("#lightBoxContent.lightBoxContent.tklb").css("display") == "none"){
+		setTimeout(function(){ initiateHomeCarousel(); }, 3000);
+}
+}
+
+});
+
+jQuery(document).ready(function(){
+if(jQuery("body").hasClass("page-node-23171")){
+               }
+else{
+            jQuery('.termsWrapper a.terms').live('click', function(e) {
+                jQuery(this).toggleClass('showing');
+                
+                jQuery(this).parents('.termsWrapper').find('.termsContent').slideToggle();
+                
+                //$thisOuterWrapper.find("#terms").slideToggle();
+            });    
+ }
+});
+
+
+
+           
+
+
+//--><!]]>
+</script>      </div>
+      
+    </div>
+    
+    <div class="bottom"><div class="bottom-inset-1 tb-terminal"><div class="bottom-inset-2 tb-terminal"></div></div></div>
+  </div>
+</div>
+
+<div id="block-block-761" class="block block-block clearfix">
+  <div class="inner tb-terminal">
+    <div class="top"><div class="top-inset-1 tb-terminal"><div class="top-inset-2 tb-terminal"></div></div></div>
+  
+    <div class="middle tb-terminal">
+        
+            
+            
+              
+      <div class="content">
+        <h1 id="site-name" class="site-name site-name-front"><a href="/?frontpage=true" title="Home" rel="home" class="active"><span>Mike Shinoda</span></a></h1>
+      </div>
+      
+    </div>
+    
+    <div class="bottom"><div class="bottom-inset-1 tb-terminal"><div class="bottom-inset-2 tb-terminal"></div></div></div>
+  </div>
+</div>
+  </div>
+                            </div>
+                          </div> <!-- /#preheader-second-region -->
+                                              
+                                            
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+                
+                
+        <!-- Navigation --> 
+                
+      </div> <!-- /#header -->
+      
+      <div id="content" class="wrapper-content wrapper clearfix tb-scope">
+        <div class="wrapper-1 tb-terminal tb-content-wrapper-1">
+      
+          <div id="content-deco-top" class="deco-content-top deco-content deco-top deco tb-scope tb-scope-prefer">
+            <div class="width deco-width inner tb-terminal">
+              <div class="layer-a layer"></div>
+              <div class="layer-b layer"></div>
+              <div class="layer-c layer"></div>
+              <div class="layer-d layer"></div>
+            </div>
+          </div>
+          
+          <div id="content-deco-bottom" class="deco-content-bottom deco-content deco-bottom deco tb-scope tb-scope-prefer">
+            <div class="width deco-width inner tb-terminal">
+              <div class="layer-a layer"></div>
+              <div class="layer-b layer"></div>
+              <div class="layer-c layer"></div>
+              <div class="layer-d layer"></div>
+            </div>
+          </div>
+        
+                    
+                      <div id="breadcrumb" class="stack-breadcrumb stack clearfix tb-scope">
+              <div class="stack-width inset-1 inset tb-terminal">
+                <div class="inset-2 inset tb-terminal">
+                  <div class="inset-3 inset tb-terminal">
+                    <div class="inset-4 inset tb-terminal">
+                      <div class="box col-1 clearfix tb-terminal">
+                        <div id="breadcrumb-region" class="col tb-region tb-scope tb-height-balance">
+                          <h2 class="element-invisible">You are here</h2><div class="breadcrumb"><a href="/">Home</a></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+                        
+                  
+          
+             
+          <div id="content-inner" class="stack-content-inner stack clearfix tb-scope">
+            <div class="stack-width inset-1 inset tb-terminal">
+              <div class="inset-2 inset tb-terminal">
+                <div class="inset-3 inset tb-terminal">
+                  <div class="inset-4 inset tb-terminal">
+                    <div class="box clearfix tb-terminal tb-preview-shuffle-regions">
+                      
+                                            
+                                              
+                       <!-- end sidebars -->
+                      
+                      <div id="main" class="col-c tb-height-balance tb-region tb-scope tb-primary">
+                                                <div class="pane">
+                          <a id="skip-to-content-target" class="skip-to-link" title="Target of skip-to-content link"></a>
+                                                                                <h1 class="title" id="page-title">Mike Shinoda | Post Traumatic</h1>
+                                                                                                          <div class="tabs"></div>
+                                                                                                                                    <div id="content-area" class="content-area">  <div class="region region-content">
+    
+<div id="block-system-main" class="block block-system clearfix">
+  <div class="inner tb-terminal">
+    <div class="top"><div class="top-inset-1 tb-terminal"><div class="top-inset-2 tb-terminal"></div></div></div>
+  
+    <div class="middle tb-terminal">
+        
+            
+            
+              
+      <div class="content">
+        <div class="view view-album-package-post-tramatic view-id-album_package_post_tramatic view-display-id-page view-dom-id-7621ef994fa2bebc1955c9c8e03f5538">
+            <div class="view-header">
+      <div class="headerImg">
+    <!--img src="/sites/g/files/g2000007296/f/201806/headerimage-min_new.jpg"-->
+    <!--<img src="/sites/g/files/g2000007296/f/201806/headerimage-min.jpg">-->
+    <h4>// post traumatic \\</h4>
+</div>
+<script>
+<!--//--><![CDATA[// ><!--
+
+function CallOmniture(text) {
+    var s = s_gi(digitalData.settings.reportSuites);
+    s.linkTrackVars = 'prop1,eVar4';
+    s.prop1 = digitalData.content.artist;
+    s.eVar4 = digitalData.content.artist;
+    s.tl(this, 'o', text);
+}
+
+jQuery(document).ready(function() {
+
+    jQuery('.view.view-album-package-post-tramatic.view-id-album_package_post_tramatic .views-row').each(function() {
+
+        jQuery(this).find(".albumPacakgeListen .listen .fullhead").click(function() {
+            jQuery(this).parent().find(".spotifyEmbed").slideToggle();
+            jQuery(this).toggleClass("open");
+        });
+
+        jQuery(this).find(".albumPacakgeVideo .video .fullhead").click(function() {
+            jQuery(this).parent().find(".videoEmbed").slideToggle();
+            jQuery(this).toggleClass("open");
+        });
+
+        jQuery(this).find(".albumPacakgelyrics .lyrics .fullhead").click(function() {
+            jQuery(this).parent().find(".lyricsEmbed").slideToggle();
+            jQuery(this).toggleClass("open");
+        });
+
+    });
+
+
+    jQuery("<div class='form-block-one'>").insertBefore(".view.view-album-package-post-tramatic.view-id-album_package_post_tramatic .views-row-1");
+    jQuery(".view.view-album-package-post-tramatic.view-id-album_package_post_tramatic .views-row-1").appendTo(".form-block-one");
+    jQuery(".view.view-album-package-post-tramatic.view-id-album_package_post_tramatic .views-row-2").appendTo(".form-block-one");
+    jQuery(".view.view-album-package-post-tramatic.view-id-album_package_post_tramatic .views-row-3").appendTo(".form-block-one");
+    jQuery(".view.view-album-package-post-tramatic.view-id-album_package_post_tramatic .views-row-4").appendTo(".form-block-one");
+    jQuery("<div class='bgimage one'>").insertAfter(".form-block-one");
+
+    jQuery("<div class='form-block-two'>").insertBefore(".view.view-album-package-post-tramatic.view-id-album_package_post_tramatic .views-row-5");
+    jQuery(".view.view-album-package-post-tramatic.view-id-album_package_post_tramatic .views-row-5").appendTo(".form-block-two");
+    jQuery(".view.view-album-package-post-tramatic.view-id-album_package_post_tramatic .views-row-6").appendTo(".form-block-two");
+    jQuery(".view.view-album-package-post-tramatic.view-id-album_package_post_tramatic .views-row-7").appendTo(".form-block-two");
+    jQuery(".view.view-album-package-post-tramatic.view-id-album_package_post_tramatic .views-row-8").appendTo(".form-block-two");
+    jQuery("<div class='bgimage two'>").insertAfter(".form-block-two");
+
+    jQuery("<div class='form-block-three'>").insertBefore(".view.view-album-package-post-tramatic.view-id-album_package_post_tramatic .views-row-9");
+    jQuery(".view.view-album-package-post-tramatic.view-id-album_package_post_tramatic .views-row-9").appendTo(".form-block-three");
+    jQuery(".view.view-album-package-post-tramatic.view-id-album_package_post_tramatic .views-row-10").appendTo(".form-block-three");
+    jQuery(".view.view-album-package-post-tramatic.view-id-album_package_post_tramatic .views-row-11").appendTo(".form-block-three");
+    jQuery(".view.view-album-package-post-tramatic.view-id-album_package_post_tramatic .views-row-12").appendTo(".form-block-three");
+    jQuery("<div class='bgimage three'>").insertAfter(".form-block-three");
+
+    jQuery("<div class='form-block-four'>").insertBefore(".view.view-album-package-post-tramatic.view-id-album_package_post_tramatic .views-row-13");
+    jQuery(".view.view-album-package-post-tramatic.view-id-album_package_post_tramatic .views-row-13").appendTo(".form-block-four");
+    jQuery(".view.view-album-package-post-tramatic.view-id-album_package_post_tramatic .views-row-14").appendTo(".form-block-four");
+    jQuery(".view.view-album-package-post-tramatic.view-id-album_package_post_tramatic .views-row-15").appendTo(".form-block-four");
+    jQuery(".view.view-album-package-post-tramatic.view-id-album_package_post_tramatic .views-row-16").appendTo(".form-block-four");
+    jQuery("<div class='bgimage four'>").insertAfter(".form-block-four");
+
+
+
+
+
+    /*jQuery( "<img src='/sites/g/files/g2000007296/f/201806/image1btw-new.jpeg'>" ).insertAfter( ".view.view-album-package-post-tramatic.view-id-album_package_post_tramatic .views-row-4");
+	
+    jQuery( "<img src='/sites/g/files/g2000007296/f/201806/image2btw.jpg'>" ).insertAfter( ".view.view-album-package-post-tramatic.view-id-album_package_post_tramatic .views-row-8");
+	
+    jQuery( "<img src='/sites/g/files/g2000007296/f/201806/image3btw.jpg'>" ).insertAfter( ".view.view-album-package-post-tramatic.view-id-album_package_post_tramatic .views-row-12");
+	
+    jQuery( "<img src='/sites/g/files/g2000007296/f/201806/imagefinal.jpg'>" ).insertAfter( ".view.view-album-package-post-tramatic.view-id-album_package_post_tramatic .views-row-16");*/
+
+    jQuery('link[rel="shortcut icon"]').attr('href', '/sites/g/files/g2000007296/f/201806/MS-Favicon.ico');
+
+    jQuery(".view.view-album-package-post-tramatic.view-id-album_package_post_tramatic .views-row").each(function() {
+        var x = jQuery(this).find(".videoEmbed").html();
+        var y = jQuery(this).find(".spotifyEmbed").html();
+        var z = jQuery(this).find(".lyricsEmbed").html();
+        if (x == '') {
+            jQuery(this).find(".video .fullhead").css("pointer-events", "none");
+            // jQuery(this).find(".video .fullhead").css("opacity", "0.5");
+            jQuery(this).find(".video .fullhead").css("display", "none");
+        }
+        if (y == '') {
+            jQuery(this).find(".listen .fullhead").css("pointer-events", "none");
+            // jQuery(this).find(".listen .fullhead").css("opacity", "0.5")
+            jQuery(this).find(".listen .fullhead").css("display", "none");
+        }
+        if (z == '') {
+            jQuery(this).find(".lyrics .fullhead").css("pointer-events", "none");
+            // jQuery(this).find(".lyrics .fullhead").css("opacity", "0.5")
+            jQuery(this).find(".lyrics .fullhead").css("display", "none");
+        }
+    })
+
+    /*on click omniture*/
+
+
+    jQuery('.listen .fullhead').live('click', function(e) {
+        var arrlisten = jQuery(this).parent().parent().parent().find(".albumPackageTitle").text().split("_");
+        var tname = arrlisten[1];
+        CallOmniture("Mike Shinoda:Music:Post Traumatic:" + tname + " Listen Click");
+    });
+
+    jQuery('.video .fullhead').live('click', function(e) {
+        var arrlisten = jQuery(this).parent().parent().parent().find(".albumPackageTitle").text().split("_");
+        var tname = arrlisten[1];
+        CallOmniture("Mike Shinoda:Music:Post Traumatic:" + tname + " Video Click");
+    });
+
+    jQuery('.lyrics .fullhead').live('click', function(e) {
+        var arrlisten = jQuery(this).parent().parent().parent().find(".albumPackageTitle").text().split("_");
+        var tname = arrlisten[1];
+        CallOmniture("Mike Shinoda:Music:Post Traumatic:" + tname + " Lyrics Click");
+    });
+
+});
+
+//--><!]]>
+</script><style>
+<!--/*--><![CDATA[/* ><!--*/
+
+.buttonBlock {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    max-width: 80vw;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    padding-bottom: 50px;
+}
+.buttonBlock a:hover
+{
+    color: #b64230;
+border-color: #b64230;
+}
+.buttonBlock a {
+    font-size: 14.67px;
+    color: #000;
+    width: 210px;
+    max-width: 80vw;
+    display: block;
+    border: solid 2px #000;
+    box-sizing: border-box;
+    height: 28px;
+    line-height: 24px;
+    margin-top: 5px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    margin-left: 20px;
+    text-align: center;
+
+}
+
+.page-album-package-post-tramatic #content .stack .stack-width {
+    max-width: 100%;
+}
+
+.page-album-package-post-tramatic #page #content #main h1.title#page-title {
+    display: none;
+}
+
+.view.view-album-package-post-tramatic.view-id-album_package_post_tramatic .view-content {
+    text-align: center;
+    font-size: 0;
+}
+
+.view.view-album-package-post-tramatic.view-id-album_package_post_tramatic .views-row {
+    display: inline-table;
+    width: 42%;
+    margin-bottom: 160px;
+    text-align: left;
+    padding: 0 2%;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+.view.view-album-package-post-tramatic.view-id-album_package_post_tramatic .views-row .albumPackageWrapper {
+    width: 525px;
+    margin: 0 auto;
+}
+
+.albumPackageWrapper .albumPackageTitle {
+    text-transform: lowercase;
+    font-size: 24px;
+    letter-spacing: 2px;
+    padding-bottom: 10px;
+}
+
+.albumPackageCredits {
+    font-size: 17.58px;
+    font-weight: 500;
+    text-transform: lowercase;
+    letter-spacing: 2px;
+    padding-left: 46px;
+    margin-bottom: 28px;
+    height: 120px;
+}
+
+.albumPacakgeListen,
+.albumPacakgeVideo,
+.albumPacakgelyrics {
+    margin-left: 46px;
+    font-size: 20.57px;
+    letter-spacing: 2px;
+    margin-top: 15px;
+}
+
+.listen .heading,
+.video .heading,
+.lyrics .heading {
+    display: inline-block;
+    width: 60px;
+}
+
+.listen span,
+.video span,
+.lyrics span {
+    display: inline-block;
+    vertical-align: bottom;
+    line-height: 14px;
+}
+
+.spotifyEmbed,
+.videoEmbed,
+.lyricsEmbed {
+    margin-top: 30px;
+}
+
+.spotifyEmbed:empty,
+.videoEmbed:empty,
+.lyricsEmbed:empty {
+    display: none !important;
+}
+
+
+.albumPacakgeVideo iframe.media-youtube-player {
+    max-width: 100%;
+    height: 240px;
+}
+
+.spotifyEmbed,
+.videoEmbed,
+.lyricsEmbed {
+    display: none;
+    margin-right: auto;
+    margin-left: auto;
+    width: 90%;
+}
+
+.lyricsEmbed {
+    font-size: 17.58px;
+    text-align: center;
+    font-weight: 500;
+    width: 365px;
+    margin-left: 70px;
+    margin-right: auto;
+}
+
+.lyricsEmbed p {
+    margin: 0;
+}
+
+.view.view-album-package-post-tramatic.view-id-album_package_post_tramatic .headerImg {
+    position: relative;
+    max-height: 632px;
+    overflow: hidden;
+    background-image: url(/sites/g/files/g2000007296/f/201806/headerimage-min.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    padding-top: 632px;
+}
+
+.view.view-album-package-post-tramatic.view-id-album_package_post_tramatic .headerImg h4 {
+    font-size: 31.7px;
+    color: #fff;
+    font-weight: 400;
+    letter-spacing: 15px;
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translateX(-50%)translateY(-50%);
+}
+
+.view.view-album-package-post-tramatic.view-id-album_package_post_tramatic img {
+    margin-bottom: 72px;
+    font-size: 0;
+    width: 100%;
+}
+
+.listen .fullhead,
+.video .fullhead,
+.lyrics .fullhead {
+    cursor: pointer
+}
+
+.listen .fullhead:after,
+.video .fullhead:after,
+.lyrics .fullhead:after {
+    content: '';
+    background: url(/sites/g/files/g2000007296/f/201806/drop-down-arrow.png);
+    width: 18px;
+    height: 18px;
+    background-size: cover;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+.listen .fullhead.open:after,
+.video .fullhead.open:after,
+.lyrics .fullhead.open:after {
+    content: '';
+    background: url(/sites/g/files/g2000007296/f/201806/drop-up-arrow.png);
+    width: 18px;
+    height: 18px;
+    background-size: cover;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+.page-album-package-post-tramatic div#block-menu-menu-home-one-page-linked {
+    display: none !important;
+}
+
+.page-album-package-post-tramatic .wrapper-content {
+    padding: 0;
+    margin: 0;
+}
+
+.view.view-album-package-post-tramatic.view-id-album_package_post_tramatic img:last-child {
+    margin-bottom: 0;
+}
+
+iframe#chk_frame,
+iframe#hdr_ifr {
+    display: none;
+}
+
+.page-album-package-post-tramatic div#footer {
+    position: static;
+    width: 100%;
+    bottom: 0;
+    height: auto;
+    box-sizing: border-box;
+    color: #fff;
+    padding-top:0;
+}
+
+.page-album-package-post-tramatic #block-block-461 a {
+    color: black !important;
+}
+
+.videoEmbed {
+    margin-left: 0;
+    width: 95%;
+}
+
+@media only screen and (min-width: 1024px) {
+
+    .bgimage {
+        max-height: 625px;
+        background-attachment: fixed;
+        padding-top: 625px;
+    }
+
+    .bgimage.one {
+        background-image: url(/sites/g/files/g2000007296/f/201806/MS-Image1.jpg?itok=0HBfEu36);
+        background-size: cover;
+    }
+
+    .bgimage.two {
+        background-image: url(/sites/g/files/g2000007296/f/201806/image2btw.jpg);
+        background-size: cover;
+    }
+
+    .bgimage.three {
+        background-image: url(/sites/g/files/g2000007296/f/201806/image3btw.jpg);
+        background-size: cover;
+    }
+
+    .bgimage.four {
+        background-image: url(/sites/g/files/g2000007296/f/201806/imagefinal.jpg);
+        background-size: cover;
+        /*background-position-y: 15vw;*/
+        background-position-y: 4vw;
+        background-repeat: no-repeat;
+    }
+
+    .form-block-one,
+    .form-block-two,
+    .form-block-three,
+    .form-block-four {
+        padding-top: 105px;
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+
+    .bgimage {
+        padding-top: 47vw;
+    }
+
+    .bgimage.one {
+        background-image: url(/sites/g/files/g2000007296/f/201806/image1btw-new.jpeg);
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+    }
+
+    .bgimage.two {
+        background-image: url(/sites/g/files/g2000007296/f/201806/image2btw.jpg);
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+    }
+
+    .bgimage.three {
+        background-image: url(/sites/g/files/g2000007296/f/201806/image3btw.jpg);
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+    }
+
+    .bgimage.four {
+        background-image: url(/sites/g/files/g2000007296/f/201806/imagefinal.jpg);
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+    }
+
+    .form-block-one,
+    .form-block-two,
+    .form-block-three,
+    .form-block-four {
+        padding-top: 50px;
+    }
+
+    .view.view-album-package-post-tramatic.view-id-album_package_post_tramatic .headerImg {
+        max-height: 150px;
+        overflow: hidden;
+        background-image: url(/sites/g/files/g2000007296/f/201806/headerimage-min.jpg);
+        background-size: 100% auto;
+        padding-top: 150px;
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+    .view.view-album-package-post-tramatic.view-id-album_package_post_tramatic .headerImg h4 {
+        font-size: 13px;
+        letter-spacing: 5px;
+        width: 250px;
+        text-align: center;
+    }
+    .view.view-album-package-post-tramatic.view-id-album_package_post_tramatic .views-row .albumPackageWrapper {
+        width: auto;
+        margin: 0 auto;
+    }
+    .albumPackageWrapper .albumPackageTitle {
+        font-size: 13px;
+        letter-spacing: 2px;
+        padding-bottom: 7px;
+    }
+    .view.view-album-package-post-tramatic.view-id-album_package_post_tramatic .views-row {
+        display: block;
+        width: 100%;
+        margin-bottom: 50px;
+        padding: 0 5%;
+    }
+    .albumPackageCredits {
+        font-size: 10px;
+        padding-left: 30px;
+        line-height: 15px;
+        margin-bottom: 0px;
+        height: auto;
+    }
+    .albumPacakgeListen,
+    .albumPacakgeVideo,
+    .albumPacakgelyrics {
+        margin-left: 30px;
+        font-size: 11.12px;
+    }
+    .listen .heading,
+    .video .heading,
+    .lyrics .heading {
+        width: 40px;
+    }
+    .lyricsEmbed {
+        font-size: 9.55px;
+        width: 192px;
+        margin-left: 48px;
+        margin-right: auto;
+    }
+    .listen span,
+    .video span,
+    .lyrics span {
+        width: 192px;
+        overflow: hidden;
+        line-height: 7px;
+    }
+    .listen .fullhead:after,
+    .video .fullhead:after,
+    .lyrics .fullhead:after {
+        width: 10px;
+        height: 10px;
+        margin-left: 8px;
+    }
+    .listen .fullhead.open:after,
+    .video .fullhead.open:after,
+    .lyrics .fullhead.open:after {
+        width: 10px;
+        height: 10px;
+        margin-left: 8px;
+    }
+    .spotifyEmbed iframe {
+        max-width: 100%;
+    }
+    .view.view-album-package-post-tramatic.view-id-album_package_post_tramatic img {
+        margin-bottom: 45px;
+    }
+    .page-album-package-post-tramatic #content .stack .stack-width {
+        max-width: 100%;
+        margin: 0;
+    }
+    .albumPacakgeVideo iframe.media-youtube-player {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+    .view.view-album-package-post-tramatic.view-id-album_package_post_tramatic .views-row .albumPackageWrapper {
+        width: 300px;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+
+    .buttonBlock {
+        width: 80vw;
+    }
+
+    .buttonBlock a {
+        width: 80vw;
+        margin-left: 0;
+    }
+}
+
+/*--><!]]>*/
+</style>    </div>
+  
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+      
+  <div class="views-field views-field-nothing">        <span class="field-content"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><head><meta http-equiv="Content-Type" content="charset=utf-8"></head><body><div class="albumPackageWrapper">
+	<div class="albumPackageTitle">001._Place To Start</div>
+	<div class="albumPackageCredits">
+		<div class="producerName">produced by: Mike Shinoda</div>
+
+		
+		
+		<div class="mixerName">mixed by: Mike Shinoda </div>
+		<div class="masterName">mastered by: Michelle Mancini</div>
+		<div class="percussion">percussion by: Rob Bourdon</div>
+        
+        
+	</div>
+	<div class="albumPacakgeListen">
+        <div class="listen">
+			<div class="fullhead" data-track="spotify-emb"><div class="heading">listen</div> <span>*************************</span></div>
+			<div class="spotifyEmbed" style="display:none;"><iframe width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media" data-src="https://open.spotify.com/embed/track/5oyMCoYK2rRMjAvZUHbn7R" class="optanon-category-C0003" data-ot-processed="yes"></iframe></div>
+		</div> 
+    </div>
+	<div class="albumPacakgeVideo">
+		<div class="video">
+			<div class="fullhead" data-track="youtube-emb"><div class="heading">video</div> <span>*************************</span></div>
+			<div class="videoEmbed" style="display:none;"><div class="field field-name-file field-type-file field-label-hidden"><div class="field-items"><div class="field-item even"><div class="styles file-styles  styles-field-file styles-style- styles-container-media_youtube"><div class="media-thumbnail-frame"><div class="media-youtube-video media-youtube-1">
+  <iframe class="media-youtube-player" width="560" height="340" title="6tEQoF_8Z7s" src="https://www.youtube-nocookie.com/embed/6tEQoF_8Z7s?wmode=opaque" frameborder="0" allowfullscreen data-ot-processed="yes">Video of 6tEQoF_8Z7s</iframe>
+</div>
+</div></div></div></div></div></div>
+		</div>
+	</div>
+	<div class="albumPacakgelyrics">
+		<div class="lyrics">
+			<div class="fullhead"><div class="heading">lyrics</div> <span>*************************</span></div>
+			<div class="lyricsEmbed" style="display:none;"><p>I don't have a leg to stand on<br>Spinning like a whirlwind nothing to land on<br>Came so far never thought it'd be done now<br>Stuck in a holding pattern waiting to come down<br>Did somebody else define me<br>Can I put the past behind me<br>Do I even have a decision<br>Feeling like I'm living in a story already written<br>Am I part of a vision / made by somebody else<br>Pointing fingers at villains but I’m the villain myself<br>Or am I out of conviction with no wind in the sail<br>Too focused on the end and simply ready to fail<br>Cause I’m tired of the fear that I can’t control this<br>I’m tired of feeling like every next step’s hopeless<br>I’m tired of being scared what I build might break apart<br>I don’t want to know the end, all I want is a place to start</p>
+<p> </p></div>
+		</div>
+	</div>
+</div></body></html>
+</span>  </div>  </div>
+  <div class="views-row views-row-2 views-row-even">
+      
+  <div class="views-field views-field-nothing">        <span class="field-content"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><head><meta http-equiv="Content-Type" content="charset=utf-8"></head><body><div class="albumPackageWrapper">
+	<div class="albumPackageTitle">002._Over Again</div>
+	<div class="albumPackageCredits">
+		<div class="producerName">produced by: Mike Shinoda</div>
+
+		
+		
+		<div class="mixerName">mixed by: Manny Marroquin </div>
+		<div class="masterName">mastered by: Michelle Mancini</div>
+		
+        
+        
+	</div>
+	<div class="albumPacakgeListen">
+        <div class="listen">
+			<div class="fullhead" data-track="spotify-emb"><div class="heading">listen</div> <span>*************************</span></div>
+			<div class="spotifyEmbed" style="display:none;"><iframe width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media" data-src="https://open.spotify.com/embed/track/1QO9k34FcHXGqdMUWjH1Rn" class="optanon-category-C0003" data-ot-processed="yes"></iframe></div>
+		</div> 
+    </div>
+	<div class="albumPacakgeVideo">
+		<div class="video">
+			<div class="fullhead" data-track="youtube-emb"><div class="heading">video</div> <span>*************************</span></div>
+			<div class="videoEmbed" style="display:none;"><div class="field field-name-file field-type-file field-label-hidden"><div class="field-items"><div class="field-item even"><div class="styles file-styles  styles-field-file styles-style- styles-container-media_youtube"><div class="media-thumbnail-frame"><div class="media-youtube-video media-youtube-2">
+  <iframe class="media-youtube-player" width="560" height="340" title="Xk_2NB0RIaA" src="https://www.youtube-nocookie.com/embed/Xk_2NB0RIaA?wmode=opaque" frameborder="0" allowfullscreen data-ot-processed="yes">Video of Xk_2NB0RIaA</iframe>
+</div>
+</div></div></div></div></div></div>
+		</div>
+	</div>
+	<div class="albumPacakgelyrics">
+		<div class="lyrics">
+			<div class="fullhead"><div class="heading">lyrics</div> <span>*************************</span></div>
+			<div class="lyricsEmbed" style="display:none;"><p>Sometimes / sometimes you don’t say goodbye once</p>
+<p>You say goodbye over and over and over again</p>
+<p>Over and over and over again</p>
+<p>Sometimes / sometimes you don’t say goodbye once</p>
+<p>You say goodbye over and over and over again</p>
+<p>Over and over and over again</p>
+<p> </p>
+<p>It was a month since he passed / maybe less</p>
+<p>And no one knew what to do / we were such a mess</p>
+<p>We were texting / we were calling / we were checking in</p>
+<p>We said we ought to play a show in honor of our friend</p>
+<p>Well now that show’s finally here / it’s tonight</p>
+<p>Supposed to go / to the bowl / get on stage / dim the lights</p>
+<p>With our friends / and our family / in his name / celebrate</p>
+<p>There’s no way that I’ll be ready to get back up on that stage</p>
+<p>Can't remember if I’ve cancelled any show</p>
+<p>But I think about what I’m supposed to do and I don’t know</p>
+<p>Cause I think about not doing it the same way as before</p>
+<p>And it makes me wanna puke my fucking guts out on the floor</p>
+<p>We rehearsed it for a month / I’m not worried about the set</p>
+<p>I get tackled by the grief at times that I would least expect</p>
+<p>I know what I should be doing when I’m singing but instead</p>
+<p>We’ll be playing through a song and I’d remember in my head</p>
+<p> </p>
+<p>Sometimes / sometimes you don’t say goodbye once</p>
+<p>You say goodbye over and over and over again</p>
+<p>Over and over and over again</p>
+<p>Sometimes / sometimes you don’t say goodbye once</p>
+<p>You say goodbye over and over and over again</p>
+<p>Over and over and over again</p>
+<p> </p>
+<p>What (are) they saying, I’m not raw?</p>
+<p>What the fuck you take me for?</p>
+<p>All the sudden you hear what I’ve said a hundred ways before?</p>
+<p>I been pushed, I been trapped</p>
+<p>Drug myself through hell and back and</p>
+<p>Fallen flat and had the balls to start it all again from scratch</p>
+<p>How do you feel / how you doing / how’d the show go?</p>
+<p>Am I insane to say the truth is that I don’t know</p>
+<p>My body aches / head’s spinning this is all wrong</p>
+<p>I almost lost it in middle of a couple songs</p>
+<p>And everybody that I talk to is like, “wow</p>
+<p>Must be really hard to figure what to do now”</p>
+<p>Well thank you genius / you think it’ll be a challenge</p>
+<p>Only my life’s work hanging in the fucking balance</p>
+<p>And all I wanted was to get a little bit of closure</p>
+<p>And every step I took I looked and wasn’t any closer</p>
+<p>Cause sometimes when you say goodbye yeah you say it</p>
+<p>Over and over and over and over</p></div>
+		</div>
+	</div>
+</div></body></html>
+</span>  </div>  </div>
+  <div class="views-row views-row-3 views-row-odd">
+      
+  <div class="views-field views-field-nothing">        <span class="field-content"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><head><meta http-equiv="Content-Type" content="charset=utf-8"></head><body><div class="albumPackageWrapper">
+	<div class="albumPackageTitle">003._Watching As I Fall</div>
+	<div class="albumPackageCredits">
+		<div class="producerName">produced by: Mike Shinoda</div>
+
+		
+		
+		<div class="mixerName">mixed by: Manny Marroquin </div>
+		<div class="masterName">mastered by: Michelle Mancini</div>
+		
+        
+        
+	</div>
+	<div class="albumPacakgeListen">
+        <div class="listen">
+			<div class="fullhead" data-track="spotify-emb"><div class="heading">listen</div> <span>*************************</span></div>
+			<div class="spotifyEmbed" style="display:none;"><iframe width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media" data-src="https://open.spotify.com/embed/track/5uUx2PVuJrQ9eM18wQP0GO" class="optanon-category-C0003" data-ot-processed="yes"></iframe></div>
+		</div> 
+    </div>
+	<div class="albumPacakgeVideo">
+		<div class="video">
+			<div class="fullhead" data-track="youtube-emb"><div class="heading">video</div> <span>*************************</span></div>
+			<div class="videoEmbed" style="display:none;"><div class="field field-name-file field-type-file field-label-hidden"><div class="field-items"><div class="field-item even"><div class="styles file-styles  styles-field-file styles-style- styles-container-media_youtube"><div class="media-thumbnail-frame"><div class="media-youtube-video media-youtube-3">
+  <iframe class="media-youtube-player" width="560" height="340" title="zW52pp_qKeM" src="https://www.youtube-nocookie.com/embed/zW52pp_qKeM?wmode=opaque" frameborder="0" allowfullscreen data-ot-processed="yes">Video of zW52pp_qKeM</iframe>
+</div>
+</div></div></div></div></div></div>
+		</div>
+	</div>
+	<div class="albumPacakgelyrics">
+		<div class="lyrics">
+			<div class="fullhead"><div class="heading">lyrics</div> <span>*************************</span></div>
+			<div class="lyricsEmbed" style="display:none;"><p>Excuse me while I kiss the sky</p>
+<p>Sing a song of sixpence / pocket full of lies</p>
+<p>Thinking I’m OK but they’re saying otherwise</p>
+<p>Tell me how I look but can’t look me in the eyes</p>
+<p>Watching as I say this and then I do that</p>
+<p>Telling them the old words but in a new rap</p>
+<p>Then I change my mind up and make them lose track</p>
+<p>Shit I’m inconsistent I thought you knew that</p>
+<p> </p>
+<p>Maybe I should be more grateful</p>
+<p>That I had to watch it all come undone</p>
+<p>Holding so tight to the edge is painful</p>
+<p>But I can’t ignore it I know</p>
+<p> </p>
+<p>They’re watching as I fall / they’re staring as I go</p>
+<p>I gave until my soul hurt / and never told them so</p>
+<p>They’re watching as I fall / to somewhere down below</p>
+<p>But maybe I’m just falling / to get somewhere they won’t</p>
+<p> </p>
+<p>Excuse me while I sympathize</p>
+<p>Singing with the fat lady tell me what’s the time</p>
+<p>You know what it is not afraid to cross the line</p>
+<p>Nothing is forever don’t be mad at the design</p>
+<p>Ask me if I can / I say I don’t know</p>
+<p>And honestly I buy that I can sound cold</p>
+<p>Still upset from stuff that’s 15 years old</p>
+<p>I don’t know what it takes to make me let go</p>
+<p> </p>
+<p>Maybe I should be more grateful</p>
+<p>That I had to watch it all come undone</p>
+<p>Holding so tight to the edge is painful</p>
+<p>But I can’t ignore it I know</p>
+<p> </p>
+<p>They’re watching as I fall / they’re staring as I go</p>
+<p>I gave until my soul hurt / and never told them so</p>
+<p>They’re watching as I fall / to somewhere down below</p>
+<p>But maybe I’m just falling / to get somewhere they won’t</p></div>
+		</div>
+	</div>
+</div></body></html>
+</span>  </div>  </div>
+  <div class="views-row views-row-4 views-row-even">
+      
+  <div class="views-field views-field-nothing">        <span class="field-content"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><head><meta http-equiv="Content-Type" content="charset=utf-8"></head><body><div class="albumPackageWrapper">
+	<div class="albumPackageTitle">004._Nothing Makes Sense Anymore</div>
+	<div class="albumPackageCredits">
+		<div class="producerName">produced by: Mike Shinoda</div>
+
+		
+		
+		<div class="mixerName">mixed by: Manny Marroquin </div>
+		<div class="masterName">mastered by: Michelle Mancini</div>
+		
+        
+        
+	</div>
+	<div class="albumPacakgeListen">
+        <div class="listen">
+			<div class="fullhead" data-track="spotify-emb"><div class="heading">listen</div> <span>*************************</span></div>
+			<div class="spotifyEmbed" style="display:none;"><iframe width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media" data-src="https://open.spotify.com/embed/track/37gsVhpHyyGyYZHGdFC2p0" class="optanon-category-C0003" data-ot-processed="yes"></iframe></div>
+		</div> 
+    </div>
+	<div class="albumPacakgeVideo">
+		<div class="video">
+			<div class="fullhead" data-track="youtube-emb"><div class="heading">video</div> <span>*************************</span></div>
+			<div class="videoEmbed" style="display:none;"><div class="field field-name-file field-type-file field-label-hidden"><div class="field-items"><div class="field-item even"><div class="styles file-styles  styles-field-file styles-style- styles-container-media_youtube"><div class="media-thumbnail-frame"><div class="media-youtube-video media-youtube-4">
+  <iframe class="media-youtube-player" width="560" height="340" title="xMTsul4UFl8" src="https://www.youtube-nocookie.com/embed/xMTsul4UFl8?wmode=opaque" frameborder="0" allowfullscreen data-ot-processed="yes">Video of xMTsul4UFl8</iframe>
+</div>
+</div></div></div></div></div></div>
+		</div>
+	</div>
+	<div class="albumPacakgelyrics">
+		<div class="lyrics">
+			<div class="fullhead"><div class="heading">lyrics</div> <span>*************************</span></div>
+			<div class="lyricsEmbed" style="display:none;"><p>I used to know where the bottom was</p>
+<p>Somewhere far under the ocean waves</p>
+<p>Up on a ledge I was looking down</p>
+<p>It was far enough to keep me safe</p>
+<p>But the ground was cracked open</p>
+<p>Threw me in the ocean</p>
+<p>Cast me out away at sea</p>
+<p>And the waves are still breaking</p>
+<p>Now that I awaken</p>
+<p>No one’s left to answer me</p>
+<p> </p>
+<p>My inside’s out / my left is right</p>
+<p>My upside’s down / my black is white</p>
+<p>I hold my breath / and close my eyes</p>
+<p>And wait for dawn but there’s no light</p>
+<p>Nothing makes sense anymore anymore</p>
+<p>Nothing makes sense anymore anymore</p>
+<p> </p>
+<p>I used to sleep without waking up</p>
+<p>In a dream I made from painted walls</p>
+<p>I was a moment away from done</p>
+<p>When the black spilled out across it all</p>
+<p>And my eyes were made sober</p>
+<p>World was turned over</p>
+<p>Washing out the lines I’d seen</p>
+<p>And my heart is still breaking</p>
+<p>Now that I awaken</p>
+<p>No one’s left to answer me</p>
+<p> </p>
+<p>I’m a call without an answer</p>
+<p>I’m a shadow in the dark</p>
+<p>Trying to put it back together</p>
+<p>As I watch it fall apart</p></div>
+		</div>
+	</div>
+</div></body></html>
+</span>  </div>  </div>
+  <div class="views-row views-row-5 views-row-odd">
+      
+  <div class="views-field views-field-nothing">        <span class="field-content"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><head><meta http-equiv="Content-Type" content="charset=utf-8"></head><body><div class="albumPackageWrapper">
+	<div class="albumPackageTitle">005._About You (feat. blackbear)</div>
+	<div class="albumPackageCredits">
+		<div class="producerName">produced by: Mike Shinoda</div>
+
+		
+		<div class="addtionalProducerName">Additional production by: Aaron C. Harmon &amp; Jordan Reyes </div>
+		<div class="mixerName">mixed by: Manny Marroquin </div>
+		<div class="masterName">mastered by: Michelle Mancini</div>
+		
+        
+        
+	</div>
+	<div class="albumPacakgeListen">
+        <div class="listen">
+			<div class="fullhead" data-track="spotify-emb"><div class="heading">listen</div> <span>*************************</span></div>
+			<div class="spotifyEmbed" style="display:none;"><iframe width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media" data-src="https://open.spotify.com/embed/album/0rdKJxRJdcNozg9g7ww99u" class="optanon-category-C0003" data-ot-processed="yes"></iframe></div>
+		</div> 
+    </div>
+	<div class="albumPacakgeVideo">
+		<div class="video">
+			<div class="fullhead" data-track="youtube-emb"><div class="heading">video</div> <span>*************************</span></div>
+			<div class="videoEmbed" style="display:none;"><div class="field field-name-file field-type-file field-label-hidden"><div class="field-items"><div class="field-item even"><div class="styles file-styles  styles-field-file styles-style- styles-container-media_youtube"><div class="media-thumbnail-frame"><div class="media-youtube-video media-youtube-5">
+  <iframe class="media-youtube-player" width="560" height="340" title="DFIg6mi49Ig" src="https://www.youtube-nocookie.com/embed/DFIg6mi49Ig?wmode=opaque" frameborder="0" allowfullscreen data-ot-processed="yes">Video of DFIg6mi49Ig</iframe>
+</div>
+</div></div></div></div></div></div>
+		</div>
+	</div>
+	<div class="albumPacakgelyrics">
+		<div class="lyrics">
+			<div class="fullhead"><div class="heading">lyrics</div> <span>*************************</span></div>
+			<div class="lyricsEmbed" style="display:none;"><p>This is that gather round it / and wonder where I found it</p>
+<p>This is that wake up make your agent have your tour re-routed</p>
+<p>This is that drama comma pain and ain’t no way around it</p>
+<p>Cause somehow still it's hard to know what I can say about it</p>
+<p>I buckled up told myself to suck it up </p>
+<p>I was scared to death to get up there and spill my fucking guts</p>
+<p>I was saying pull your stupid self together buttercup</p>
+<p>get it cracking Back in Black until you have em Thunderstruck </p>
+<p>But</p>
+<p> </p>
+<p>Even when it's not about you, about you</p>
+<p>All the sudden it's about you now, oh</p>
+<p>Even when it's not about you, about you</p>
+<p>All the sudden it's about you</p>
+<p> </p>
+<p>No, there's not a single thing that I can say</p>
+<p>Not a single solitary / every meaning changes shape</p>
+<p>Even when there's no connection back to you in any line</p>
+<p>All the sudden it's about you and it gets me every time but</p>
+<p>What the fuck is left to author anyway</p>
+<p>When I basically been writing since the Raiders ran LA</p>
+<p>I’m afraid that maybe I've said everything there is to say</p>
+<p>Maybe I should make an exit while there’re ways to get away, cause</p>
+<p> </p>
+<p>(blackbear)</p>
+<p>can’t find the words to a memory</p>
+<p>but these are just words to a melody</p>
+<p>find something that works fits the symmetry</p>
+<p>for only a quick broken remedy</p>
+<p>and i’d give anything to choose</p>
+<p>pick out the words i bring home to u</p>
+<p>how can i make due</p>
+<p>put a smile on change my attitude</p>
+<p>and even though it’s not about u</p>
+<p>everything is all about u </p>
+<p>all about u</p></div>
+		</div>
+	</div>
+</div></body></html>
+</span>  </div>  </div>
+  <div class="views-row views-row-6 views-row-even">
+      
+  <div class="views-field views-field-nothing">        <span class="field-content"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><head><meta http-equiv="Content-Type" content="charset=utf-8"></head><body><div class="albumPackageWrapper">
+	<div class="albumPackageTitle">006._Brooding (Instrumental)</div>
+	<div class="albumPackageCredits">
+		<div class="producerName">produced by: Mike Shinoda</div>
+
+		
+		
+		<div class="mixerName">mixed by: Mike Shinoda </div>
+		<div class="masterName">mastered by: Michelle Mancini</div>
+		
+        
+        
+	</div>
+	<div class="albumPacakgeListen">
+        <div class="listen">
+			<div class="fullhead" data-track="spotify-emb"><div class="heading">listen</div> <span>*************************</span></div>
+			<div class="spotifyEmbed" style="display:none;"><iframe width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media" data-src="https://open.spotify.com/embed/track/6mfRIwGwlHWRWwUfkbWTKP" class="optanon-category-C0003" data-ot-processed="yes"></iframe></div>
+		</div> 
+    </div>
+	<div class="albumPacakgeVideo">
+		<div class="video">
+			<div class="fullhead" data-track="youtube-emb"><div class="heading">video</div> <span>*************************</span></div>
+			<div class="videoEmbed" style="display:none;"><div class="field field-name-file field-type-file field-label-hidden"><div class="field-items"><div class="field-item even"><div class="styles file-styles  styles-field-file styles-style- styles-container-media_youtube"><div class="media-thumbnail-frame"><div class="media-youtube-video media-youtube-6">
+  <iframe class="media-youtube-player" width="560" height="340" title="oky8duSez1k" src="https://www.youtube-nocookie.com/embed/oky8duSez1k?wmode=opaque" frameborder="0" allowfullscreen data-ot-processed="yes">Video of oky8duSez1k</iframe>
+</div>
+</div></div></div></div></div></div>
+		</div>
+	</div>
+	<div class="albumPacakgelyrics">
+		<div class="lyrics">
+			<div class="fullhead"><div class="heading">lyrics</div> <span>*************************</span></div>
+			<div class="lyricsEmbed" style="display:none;"></div>
+		</div>
+	</div>
+</div></body></html>
+</span>  </div>  </div>
+  <div class="views-row views-row-7 views-row-odd">
+      
+  <div class="views-field views-field-nothing">        <span class="field-content"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><head><meta http-equiv="Content-Type" content="charset=utf-8"></head><body><div class="albumPackageWrapper">
+	<div class="albumPackageTitle">007._Promises I Can’t Keep</div>
+	<div class="albumPackageCredits">
+		<div class="producerName">produced by: Mike Shinoda</div>
+
+		
+		
+		<div class="mixerName">mixed by: Manny Marroquin </div>
+		<div class="masterName">mastered by: Michelle Mancini</div>
+		
+        
+        
+	</div>
+	<div class="albumPacakgeListen">
+        <div class="listen">
+			<div class="fullhead" data-track="spotify-emb"><div class="heading">listen</div> <span>*************************</span></div>
+			<div class="spotifyEmbed" style="display:none;"><iframe width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media" data-src="https://open.spotify.com/embed/track/3QDcsPvzTfGQxfnpHFUHRd" class="optanon-category-C0003" data-ot-processed="yes"></iframe></div>
+		</div> 
+    </div>
+	<div class="albumPacakgeVideo">
+		<div class="video">
+			<div class="fullhead" data-track="youtube-emb"><div class="heading">video</div> <span>*************************</span></div>
+			<div class="videoEmbed" style="display:none;"><div class="field field-name-file field-type-file field-label-hidden"><div class="field-items"><div class="field-item even"><div class="styles file-styles  styles-field-file styles-style- styles-container-media_youtube"><div class="media-thumbnail-frame"><div class="media-youtube-video media-youtube-7">
+  <iframe class="media-youtube-player" width="560" height="340" title="itcevYy_cXc" src="https://www.youtube-nocookie.com/embed/itcevYy_cXc?wmode=opaque" frameborder="0" allowfullscreen data-ot-processed="yes">Video of itcevYy_cXc</iframe>
+</div>
+</div></div></div></div></div></div>
+		</div>
+	</div>
+	<div class="albumPacakgelyrics">
+		<div class="lyrics">
+			<div class="fullhead"><div class="heading">lyrics</div> <span>*************************</span></div>
+			<div class="lyricsEmbed" style="display:none;"><p>What's the difference between a man and a monster</p>
+<p>Is it somewhere between “I can" and “I want to"</p>
+<p>Is it somewhere between the promises I made</p>
+<p>And the fact I couldn’t see something getting in the way</p>
+<p>I used to think that I know what I want</p>
+<p>Never saw it coming unglued</p>
+<p>I used to think that I know what I want</p>
+<p>Now it’s time to see if it’s true</p>
+<p> </p>
+<p>I had so much certainty</p>
+<p>Till that moment I lost control</p>
+<p>And I’ve tried but it never was up to me</p>
+<p>I’ve got no worse enemy</p>
+<p>Than the fear of what’s still unknown</p>
+<p>And the time’s come to realize there will be</p>
+<p>Promises I can’t keep</p>
+<p> </p>
+<p>What's the difference between a loss and a forfeit</p>
+<p>I tried to make it better but I made it more sick</p>
+<p>I tried to make it right / but now awake at night</p>
+<p>I know reality was getting in the way</p>
+<p>I used to think that I knew who I was</p>
+<p>Never saw it coming unglued</p>
+<p>I used to think that I knew who I was</p>
+<p>Now it’s time to see if it’s true</p></div>
+		</div>
+	</div>
+</div></body></html>
+</span>  </div>  </div>
+  <div class="views-row views-row-8 views-row-even">
+      
+  <div class="views-field views-field-nothing">        <span class="field-content"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><head><meta http-equiv="Content-Type" content="charset=utf-8"></head><body><div class="albumPackageWrapper">
+	<div class="albumPackageTitle">008._Crossing A Line</div>
+	<div class="albumPackageCredits">
+		<div class="producerName">produced by: Mike Shinoda</div>
+
+		
+		
+		<div class="mixerName">mixed by: Manny Marroquin </div>
+		<div class="masterName">mastered by: Michelle Mancini</div>
+		
+        
+        
+	</div>
+	<div class="albumPacakgeListen">
+        <div class="listen">
+			<div class="fullhead" data-track="spotify-emb"><div class="heading">listen</div> <span>*************************</span></div>
+			<div class="spotifyEmbed" style="display:none;"><iframe width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media" data-src="https://open.spotify.com/embed/track/4ccocJuCXjkpckAL1ZzCTA" class="optanon-category-C0003" data-ot-processed="yes"></iframe></div>
+		</div> 
+    </div>
+	<div class="albumPacakgeVideo">
+		<div class="video">
+			<div class="fullhead" data-track="youtube-emb"><div class="heading">video</div> <span>*************************</span></div>
+			<div class="videoEmbed" style="display:none;"><div class="field field-name-file field-type-file field-label-hidden"><div class="field-items"><div class="field-item even"><div class="styles file-styles  styles-field-file styles-style- styles-container-media_youtube"><div class="media-thumbnail-frame"><div class="media-youtube-video media-youtube-8">
+  <iframe class="media-youtube-player" width="560" height="340" title="I2sRc3j7IU0" src="https://www.youtube-nocookie.com/embed/I2sRc3j7IU0?wmode=opaque" frameborder="0" allowfullscreen data-ot-processed="yes">Video of I2sRc3j7IU0</iframe>
+</div>
+</div></div></div></div></div></div>
+		</div>
+	</div>
+	<div class="albumPacakgelyrics">
+		<div class="lyrics">
+			<div class="fullhead"><div class="heading">lyrics</div> <span>*************************</span></div>
+			<div class="lyricsEmbed" style="display:none;"><p>They’ll tell you I don’t care anymore</p>
+<p>And I hope you’ll know that’s a lie</p>
+<p>Cause I’ve found what I have been waiting for</p>
+<p>But to get there means crossing a line</p>
+<p> </p>
+<p>I don’t know how to warn you / for what I’m gonna say</p>
+<p>Cause you’re holding so tight to / what I’m taking away</p>
+<p>I got demons inside me / so I’m faced with a choice</p>
+<p>Either try to ignore them / or I give them a voice</p>
+<p> </p>
+<p>And it’s keeping me up at night</p>
+<p>Worried it’s not alright</p>
+<p>Holding back things you don’t know</p>
+<p>And it’s keeping me up at night</p>
+<p>Worried it’s not alright</p>
+<p>You’re not gonna like where this goes</p>
+<p> </p>
+<p>And they’ll</p>
+<p>Tell you I don’t care anymore</p>
+<p>And I hope you’ll know that’s a lie</p>
+<p>Cause I’ve found what I have been waiting for</p>
+<p>But to get there means crossing a line</p>
+<p>So I’m crossing a line</p>
+<p> </p>
+<p>It’s not about status / we know it never was</p>
+<p>Cause what good is the kingdom / when you’re missing the love</p>
+<p>This is not a goodbye now / I’m not going away</p>
+<p>No I don’t have the answers / but I do have the faith</p>
+<p> </p>
+<p>And it’s keeping me up at night</p>
+<p>Worried it’s not alright</p>
+<p>Holding back things you don’t know</p>
+<p>And it’s keeping me up at night</p>
+<p>Worried it’s not alright</p>
+<p>You’re not gonna like where this goes</p>
+<p>NO</p></div>
+		</div>
+	</div>
+</div></body></html>
+</span>  </div>  </div>
+  <div class="views-row views-row-9 views-row-odd">
+      
+  <div class="views-field views-field-nothing">        <span class="field-content"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><head><meta http-equiv="Content-Type" content="charset=utf-8"></head><body><div class="albumPackageWrapper">
+	<div class="albumPackageTitle">009._Hold It Together</div>
+	<div class="albumPackageCredits">
+		<div class="producerName">produced by: Mike Shinoda</div>
+
+		
+		
+		<div class="mixerName">mixed by: Mike Shinoda </div>
+		<div class="masterName">mastered by: Michelle Mancini</div>
+		
+        <div class="livedrums">Live Drums by: Darren King</div>
+        
+	</div>
+	<div class="albumPacakgeListen">
+        <div class="listen">
+			<div class="fullhead" data-track="spotify-emb"><div class="heading">listen</div> <span>*************************</span></div>
+			<div class="spotifyEmbed" style="display:none;"><iframe width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media" data-src="https://open.spotify.com/embed/track/2W0ExXoHGZF78RYHhcSgMZ" class="optanon-category-C0003" data-ot-processed="yes"></iframe></div>
+		</div> 
+    </div>
+	<div class="albumPacakgeVideo">
+		<div class="video">
+			<div class="fullhead" data-track="youtube-emb"><div class="heading">video</div> <span>*************************</span></div>
+			<div class="videoEmbed" style="display:none;"><div class="field field-name-file field-type-file field-label-hidden"><div class="field-items"><div class="field-item even"><div class="styles file-styles  styles-field-file styles-style- styles-container-media_youtube"><div class="media-thumbnail-frame"><div class="media-youtube-video media-youtube-9">
+  <iframe class="media-youtube-player" width="560" height="340" title="Zr58BveEVSk" src="https://www.youtube-nocookie.com/embed/Zr58BveEVSk?wmode=opaque" frameborder="0" allowfullscreen data-ot-processed="yes">Video of Zr58BveEVSk</iframe>
+</div>
+</div></div></div></div></div></div>
+		</div>
+	</div>
+	<div class="albumPacakgelyrics">
+		<div class="lyrics">
+			<div class="fullhead"><div class="heading">lyrics</div> <span>*************************</span></div>
+			<div class="lyricsEmbed" style="display:none;"><p>She said are you OK</p>
+<p>And I'm staring into space</p>
+<p>It's making her nervous / ‘cause one thing is certain</p>
+<p>I don’t have my head on straight</p>
+<p>We're trying to get through each week</p>
+<p>On two or three hours of sleep</p>
+<p>I say to be patient / that we’re gonna make it</p>
+<p>I have to admit that I’m struggling</p>
+<p> </p>
+<p>They say take it slow but the</p>
+<p>World keeps spinning / and that I don't control</p>
+<p>And so there I go</p>
+<p>Trying to act normal / so they won't know that</p>
+<p> </p>
+<p>I’m just trying to hold my shit together / together darling</p>
+<p>I’m just trying to hold my shit together / together darling</p>
+<p> </p>
+<p>They say that they sympathize</p>
+<p>I'm grateful they take the time</p>
+<p>But bringing it up at this 6 year old’s birthday</p>
+<p>It kinda fucks up my vibe</p>
+<p>We end on an awkward note</p>
+<p>I make the most awkward joke</p>
+<p>Too dark to be funny / I shouldn't have come it’d be</p>
+<p>Weird go to home and I'm struggling</p>
+<p> </p>
+<p>They say take it slow but the</p>
+<p>World keeps spinning / and that I don't control</p>
+<p>And so there I go</p>
+<p>Trying to act normal / so they won't know that</p>
+<p> </p>
+<p>I’m just trying to hold my shit together / together darling</p>
+<p>I’m just trying to hold my shit together / together darling</p>
+<p> </p>
+<p>Oh I don’t know what else to try</p>
+<p>Pretend I'm in control but I’m</p>
+<p>Just trying to hold my shit together / together darling</p></div>
+		</div>
+	</div>
+</div></body></html>
+</span>  </div>  </div>
+  <div class="views-row views-row-10 views-row-even">
+      
+  <div class="views-field views-field-nothing">        <span class="field-content"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><head><meta http-equiv="Content-Type" content="charset=utf-8"></head><body><div class="albumPackageWrapper">
+	<div class="albumPackageTitle">010._Ghosts</div>
+	<div class="albumPackageCredits">
+		<div class="producerName">produced by: Mike Shinoda</div>
+
+		
+		
+		<div class="mixerName">mixed by: Serban Ghenea </div>
+		<div class="masterName">mastered by: Michelle Mancini</div>
+		
+        
+        
+	</div>
+	<div class="albumPacakgeListen">
+        <div class="listen">
+			<div class="fullhead" data-track="spotify-emb"><div class="heading">listen</div> <span>*************************</span></div>
+			<div class="spotifyEmbed" style="display:none;"><iframe width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media" data-src="https://open.spotify.com/embed/album/5a6DvFXOnKubmjMr7JkfFI" class="optanon-category-C0003" data-ot-processed="yes"></iframe></div>
+		</div> 
+    </div>
+	<div class="albumPacakgeVideo">
+		<div class="video">
+			<div class="fullhead" data-track="youtube-emb"><div class="heading">video</div> <span>*************************</span></div>
+			<div class="videoEmbed" style="display:none;"><div class="field field-name-file field-type-file field-label-hidden"><div class="field-items"><div class="field-item even"><div class="styles file-styles  styles-field-file styles-style- styles-container-media_youtube"><div class="media-thumbnail-frame"><div class="media-youtube-video media-youtube-10">
+  <iframe class="media-youtube-player" width="560" height="340" title="ObDgFUTP0PA" src="https://www.youtube-nocookie.com/embed/ObDgFUTP0PA?wmode=opaque" frameborder="0" allowfullscreen data-ot-processed="yes">Video of ObDgFUTP0PA</iframe>
+</div>
+</div></div></div></div></div></div>
+		</div>
+	</div>
+	<div class="albumPacakgelyrics">
+		<div class="lyrics">
+			<div class="fullhead"><div class="heading">lyrics</div> <span>*************************</span></div>
+			<div class="lyricsEmbed" style="display:none;"><p>She said</p>
+<p>This is not about a poltergeist</p>
+<p>Not about a phantom that glows at night</p>
+<p>But there are things we don’t know and I</p>
+<p>Don’t have another choice but an open mind / oh</p>
+<p>And I know what they’ll say</p>
+<p>I’m trying to make sense of what no one can explain</p>
+<p>But I’ve been having dreams that after I’m awake</p>
+<p>Play out in reality the very next day</p>
+<p>So I play along</p>
+<p>I nod my head when they say I’m wrong</p>
+<p>But each night falls and away I run</p>
+<p>On the other side till the daylight comes</p>
+<p> </p>
+<p>And when the lights go down</p>
+<p>I see things I can’t explain</p>
+<p>Calling out my name</p>
+<p>The lights go down</p>
+<p>Holding every memory close</p>
+<p>Tonight is for our ghosts</p>
+<p>Ghosts</p>
+<p> </p>
+<p>This is not about you and me</p>
+<p>I can’t bring back how it used to be</p>
+<p>And I know what I do believe but</p>
+<p>I’ve already seen what I couldn’t see / oh</p>
+<p>So I play along</p>
+<p>I nod my head when they say I’m wrong</p>
+<p>But each night falls and away I run</p>
+<p>On the other side till the daylight comes</p>
+<p> </p>
+<p>And when the lights go down</p>
+<p>I see things I can’t explain</p>
+<p>Calling out my name</p>
+<p>The lights go down</p>
+<p>Holding every memory close</p>
+<p>Tonight is for our ghosts</p>
+<p>Ghosts</p>
+<p> </p>
+<p>And when the lights go down</p>
+<p>Is there something in the air</p>
+<p>There but never there</p>
+<p>The lights go down</p>
+<p>Holding every memory close</p>
+<p>Tonight is for our ghosts</p>
+<p>Ghosts</p></div>
+		</div>
+	</div>
+</div></body></html>
+</span>  </div>  </div>
+  <div class="views-row views-row-11 views-row-odd">
+      
+  <div class="views-field views-field-nothing">        <span class="field-content"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><head><meta http-equiv="Content-Type" content="charset=utf-8"></head><body><div class="albumPackageWrapper">
+	<div class="albumPackageTitle">011._Make It Up As I Go (feat. K.Flay)</div>
+	<div class="albumPackageCredits">
+		<div class="producerName">produced by: Mike Shinoda</div>
+
+		
+		
+		<div class="mixerName">mixed by: Manny Marroquin </div>
+		<div class="masterName">mastered by: Michelle Mancini</div>
+		
+        
+        
+	</div>
+	<div class="albumPacakgeListen">
+        <div class="listen">
+			<div class="fullhead" data-track="spotify-emb"><div class="heading">listen</div> <span>*************************</span></div>
+			<div class="spotifyEmbed" style="display:none;"><iframe width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media" data-src="https://open.spotify.com/embed/track/7qHPOydWy2c3iKsibA31ch" class="optanon-category-C0003" data-ot-processed="yes"></iframe></div>
+		</div> 
+    </div>
+	<div class="albumPacakgeVideo">
+		<div class="video">
+			<div class="fullhead" data-track="youtube-emb"><div class="heading">video</div> <span>*************************</span></div>
+			<div class="videoEmbed" style="display:none;"><div class="field field-name-file field-type-file field-label-hidden"><div class="field-items"><div class="field-item even"><div class="styles file-styles  styles-field-file styles-style- styles-container-media_youtube"><div class="media-thumbnail-frame"><div class="media-youtube-video media-youtube-11">
+  <iframe class="media-youtube-player" width="560" height="340" title="MAHif75XlPU" src="https://www.youtube-nocookie.com/embed/MAHif75XlPU?wmode=opaque" frameborder="0" allowfullscreen data-ot-processed="yes">Video of MAHif75XlPU</iframe>
+</div>
+</div></div></div></div></div></div>
+		</div>
+	</div>
+	<div class="albumPacakgelyrics">
+		<div class="lyrics">
+			<div class="fullhead"><div class="heading">lyrics</div> <span>*************************</span></div>
+			<div class="lyricsEmbed" style="display:none;"><p>I keep on running backwards</p>
+<p>I keep on losing faith</p>
+<p>I thought I had the answers</p>
+<p>I thought I knew the way</p>
+<p>My brother said be patient</p>
+<p>My mother held my hand</p>
+<p>I don’t know what I’m chasing</p>
+<p>I don’t know who I am</p>
+<p> </p>
+<p>Woke up this morning holding my head</p>
+<p>Thinking last night is one I’ll regret</p>
+<p>Washing off the bad decisions / the blurry vision</p>
+<p>The clues that I’m still a mess</p>
+<p>Spitting out the taste I have in my mouth</p>
+<p>Knowing what this all is really about</p>
+<p>Knowing there’s an explanation / an expiration</p>
+<p>I gotta figure shit out</p>
+<p> </p>
+<p>And they’re asking me / if I can see / the darkness down below</p>
+<p>And I know it’s true / I say I do / when half the time I don’t</p>
+<p>Maybe I can’t make / what it may take / to leave this thing behind</p>
+<p>But I shut my eyes / and cross each line / and every time</p>
+<p> </p>
+<p>I keep on running backwards</p>
+<p>I keep on losing faith</p>
+<p>I thought I had the answers</p>
+<p>I thought I knew the way</p>
+<p>My brother said be patient</p>
+<p>My mother held my hand</p>
+<p>I don’t know what I’m chasing</p>
+<p>I don’t know who I am</p>
+<p> </p>
+<p>Waking in the dead of night I can’t sleep</p>
+<p>Sleeping in the light of day for like weeks</p>
+<p>Reality was out of focus</p>
+<p>I could be hopeless</p>
+<p>Instead I gritted my teeth</p>
+<p>I didn’t have the patience left to explain</p>
+<p>Didn’t wanna wait while nobody came</p>
+<p>I know the path ahead’s uneven</p>
+<p>But while I’m breathing</p>
+<p>I have to make my own lane</p>
+<p> </p>
+<p>And they’re asking me / if I can see / the darkness down below</p>
+<p>And I know it’s true / I say I do / when half the time I don’t</p>
+<p>Maybe I can’t make / what it may take / to leave this thing behind</p>
+<p>But I shut my eyes / and cross each line / and every time</p>
+<p> </p>
+<p>I keep on running backwards</p>
+<p>I keep on losing faith</p>
+<p>I thought I had the answers</p>
+<p>I thought I knew the way</p>
+<p>My brother said be patient</p>
+<p>My mother held my hand</p>
+<p>I don’t know what I’m chasing</p>
+<p>I don’t know who I am</p>
+<p> </p>
+<p>So I make it up as I go (o-oh, o-oh)</p>
+<p>I make it up as I go (o-oh, o-oh)</p>
+<p>So I make it up as I go (o-oh, o-oh)</p>
+<p>I make it up as I go</p>
+<p>As I go</p></div>
+		</div>
+	</div>
+</div></body></html>
+</span>  </div>  </div>
+  <div class="views-row views-row-12 views-row-even">
+      
+  <div class="views-field views-field-nothing">        <span class="field-content"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><head><meta http-equiv="Content-Type" content="charset=utf-8"></head><body><div class="albumPackageWrapper">
+	<div class="albumPackageTitle">012._Lift Off (feat. Chino Moreno and Machine Gun Kelly)</div>
+	<div class="albumPackageCredits">
+		<div class="producerName">produced by: Mike Shinoda</div>
+
+		<div class="coProducerName">co-produced by: Andrew Dawson</div>
+		
+		<div class="mixerName">mixed by: Manny Marroquin </div>
+		<div class="masterName">mastered by: Michelle Mancini</div>
+		
+        
+        
+	</div>
+	<div class="albumPacakgeListen">
+        <div class="listen">
+			<div class="fullhead" data-track="spotify-emb"><div class="heading">listen</div> <span>*************************</span></div>
+			<div class="spotifyEmbed" style="display:none;"><iframe width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media" data-src="https://open.spotify.com/embed/track/6ZsKifufUhD5q5jAtzzATH" class="optanon-category-C0003" data-ot-processed="yes"></iframe></div>
+		</div> 
+    </div>
+	<div class="albumPacakgeVideo">
+		<div class="video">
+			<div class="fullhead" data-track="youtube-emb"><div class="heading">video</div> <span>*************************</span></div>
+			<div class="videoEmbed" style="display:none;"><div class="field field-name-file field-type-file field-label-hidden"><div class="field-items"><div class="field-item even"><div class="styles file-styles  styles-field-file styles-style- styles-container-media_youtube"><div class="media-thumbnail-frame"><div class="media-youtube-video media-youtube-12">
+  <iframe class="media-youtube-player" width="560" height="340" title="ceUDRy9DFyo" src="https://www.youtube-nocookie.com/embed/ceUDRy9DFyo?wmode=opaque" frameborder="0" allowfullscreen data-ot-processed="yes">Video of ceUDRy9DFyo</iframe>
+</div>
+</div></div></div></div></div></div>
+		</div>
+	</div>
+	<div class="albumPacakgelyrics">
+		<div class="lyrics">
+			<div class="fullhead"><div class="heading">lyrics</div> <span>*************************</span></div>
+			<div class="lyricsEmbed" style="display:none;"><p>I’m off of the Earth / on a ride / alone</p>
+<p> </p>
+<p>Lift off like Virgin Galactic</p>
+<p>My Richard’s too Branson to fuck with you bastards</p>
+<p>Very legendary that’s some matter-of-fact shit</p>
+<p>You’re the opposite of stars, like rats spelled backwards</p>
+<p>I flow poems out to Saturn and passed it</p>
+<p>Easy as a standard anti-gravity backflip</p>
+<p>Satellite tracking can’t map up my tactics</p>
+<p>I spit the same shit they split an atom in half with</p>
+<p>No, it’s not what I want but it had to be</p>
+<p>I spent 6 months just recharging my battery</p>
+<p>Imagine me quitting, what a travesty that would be</p>
+<p>You space shuttle Challengers are nothing but tragedies</p>
+<p>So take care on the path that you’re headed</p>
+<p>I’m the father to your style, don’t’ you ever forget it</p>
+<p>I don’t drop mics / only let it smoke where I set it</p>
+<p>And I don’t play / even when they press it / get it</p>
+<p> </p>
+<p>I’m off of the Earth / on a ride / alone</p>
+<p>I’m drifting away / out of time / afloat</p>
+<p>Away from the truth / away from the night / away from the day</p>
+<p>I’m off of the Earth / on a ride / alone</p>
+<p> </p>
+<p>Please brace for impact</p>
+<p>Must’ve went to space and got sent back</p>
+<p>But I’m still intact</p>
+<p>In fact, take a picture of me</p>
+<p>You can see that I’m a star with your lens cracked</p>
+<p>Supernova / In Caesars Palace stuntin' on my opponents</p>
+<p>Cause history’ll show / We done been to war like Romans</p>
+<p>Did that dance with the devil / Hell hot as a kettle</p>
+<p>So it’s no wonder why I put this ice on all of my metal</p>
+<p>And wear that shit like a medal </p>
+<p>Use to think I was a joker / no Jared Leto</p>
+<p>When I said I’d get us out the ghetto</p>
+<p>Slam my foot on the pedal </p>
+<p>Book the studio when I couldn’t afford instrumentals</p>
+<p>Fuck it, record acapella </p>
+<p>Flyin’ coach dreaming Coachella / until they banned me</p>
+<p>Now they like Bambi’s mother, dead</p>
+<p>I’m on to these Grammys</p>
+<p>I’m rollin’ these grams gladly / purple and green like Daphne</p>
+<p>Shades on like Velma / hair long like Shaggy</p>
+<p>Crushin’ addys in my water / got my voice raspy</p>
+<p>Haven’t slept since California and that shit was last week</p>
+<p>Paranoid when I sleep</p>
+<p>But when I’m high, I’m happy</p>
+<p>That’s why I need to kiss the sky when I get stuck in the valley</p>
+<p>Lift Off</p></div>
+		</div>
+	</div>
+</div></body></html>
+</span>  </div>  </div>
+  <div class="views-row views-row-13 views-row-odd">
+      
+  <div class="views-field views-field-nothing">        <span class="field-content"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><head><meta http-equiv="Content-Type" content="charset=utf-8"></head><body><div class="albumPackageWrapper">
+	<div class="albumPackageTitle">013._I.O.U.</div>
+	<div class="albumPackageCredits">
+		<div class="producerName">produced by: Mike Shinoda</div>
+
+		
+		
+		<div class="mixerName">mixed by: Jaycen Joshua </div>
+		<div class="masterName">mastered by: Michelle Mancini</div>
+		
+        
+        
+	</div>
+	<div class="albumPacakgeListen">
+        <div class="listen">
+			<div class="fullhead" data-track="spotify-emb"><div class="heading">listen</div> <span>*************************</span></div>
+			<div class="spotifyEmbed" style="display:none;"><iframe width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media" data-src="https://open.spotify.com/embed/track/6hChL2HaNqHrkpzbPk2xT7" class="optanon-category-C0003" data-ot-processed="yes"></iframe></div>
+		</div> 
+    </div>
+	<div class="albumPacakgeVideo">
+		<div class="video">
+			<div class="fullhead" data-track="youtube-emb"><div class="heading">video</div> <span>*************************</span></div>
+			<div class="videoEmbed" style="display:none;"><div class="field field-name-file field-type-file field-label-hidden"><div class="field-items"><div class="field-item even"><div class="styles file-styles  styles-field-file styles-style- styles-container-media_youtube"><div class="media-thumbnail-frame"><div class="media-youtube-video media-youtube-13">
+  <iframe class="media-youtube-player" width="560" height="340" title="JbMFSn34WN4" src="https://www.youtube-nocookie.com/embed/JbMFSn34WN4?wmode=opaque" frameborder="0" allowfullscreen data-ot-processed="yes">Video of JbMFSn34WN4</iframe>
+</div>
+</div></div></div></div></div></div>
+		</div>
+	</div>
+	<div class="albumPacakgelyrics">
+		<div class="lyrics">
+			<div class="fullhead"><div class="heading">lyrics</div> <span>*************************</span></div>
+			<div class="lyricsEmbed" style="display:none;"><p>Levitating off the blacktop</p>
+<p>Used to struggle getting started now I can't stop</p>
+<p>Used to be the quiet kid in the sandbox</p>
+<p>Now it's hands up every time that your man rocks</p>
+<p>They ought to stop me coming in again</p>
+<p>You mad / you thought we were synonyms</p>
+<p>Too bad that's the water you're getting in</p>
+<p>You’re too fat for the sharks that you're swimming in</p>
+<p>From where I'm sitting contenders are</p>
+<p>Looking like fruit spinning around in a blender</p>
+<p>Hardly a snack when I'm here looking for dinner</p>
+<p>I eat ‘em delete ‘em they're barely beginners</p>
+<p>Main course is my main sport</p>
+<p>Play major but Minor's my main Fort</p>
+<p>Put a chain around everything I came for</p>
+<p>Look but don't touch sucker</p>
+<p> </p>
+<p>Tell ‘em take an I.O.U.</p>
+<p>Say they want respect now / thinking they deserve to have it next now</p>
+<p>Tell ‘em take an I.O.U.</p>
+<p>Believing what they’re making up / talking loud but never really saying much</p>
+<p>Tell ‘em take an I.O.U.</p>
+<p>I been drawing plans out / and they think I’m giving them a handout</p>
+<p>Tell ‘em take an I.O.U.</p>
+<p>Thinking they’re entitled to a piece no / I don’t think so</p>
+<p>Tell ‘em take an I.O.U.</p>
+<p> </p>
+<p>Levitating in a blackout</p>
+<p>Used to drink at least a 40 ‘fore we mashed out</p>
+<p>Used to think that working 40 was a max out</p>
+<p>Now I’m working even when I’m sleeping do the math now</p>
+<p>‘Cause even when I’m sleeping, eyes keep ‘em open</p>
+<p>Stripe across ‘em both the color of your hemoglobin</p>
+<p>A huge act man like I’m known for being Logan</p>
+<p>X-23 I’m keen to leave ‘em with a femur broken</p>
+<p>Taking it too far maybe / Friends like</p>
+<p>Mike I don’t know who you are lately</p>
+<p>But pride and hate has made naysayers mistake me</p>
+<p>For wasting brain space on ratings they gave me?</p>
+<p>I don’t need your respect I got history / I’m</p>
+<p>‘81 Reagan with that nonsense: miss me</p>
+<p>Father like Francis, Anakin or John Misty</p>
+<p>Not to be touched sucker</p>
+<p> </p>
+<p>Tell ‘em take an I.O.U.</p>
+<p>Say they want respect now / thinking they deserve to have it next now</p>
+<p>Tell ‘em take an I.O.U.</p>
+<p>Believing what they’re making up / talking loud but never really saying much</p>
+<p>Tell ‘em take an I.O.U.</p>
+<p>I been drawing plans out / and they think I’m giving them a handout</p>
+<p>Tell ‘em take an I.O.U.</p>
+<p>Thinking they’re entitled to a piece no // I don’t think so</p>
+<p>Tell ‘em take an I.O.U.</p></div>
+		</div>
+	</div>
+</div></body></html>
+</span>  </div>  </div>
+  <div class="views-row views-row-14 views-row-even">
+      
+  <div class="views-field views-field-nothing">        <span class="field-content"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><head><meta http-equiv="Content-Type" content="charset=utf-8"></head><body><div class="albumPackageWrapper">
+	<div class="albumPackageTitle">014._Running From My Shadow (feat. grandson) </div>
+	<div class="albumPackageCredits">
+		<div class="producerName">produced by: Mike Shinoda</div>
+
+		<div class="coProducerName">co-produced by: Boonn</div>
+		
+		<div class="mixerName">mixed by: Manny Marroquin </div>
+		<div class="masterName">mastered by: Michelle Mancini</div>
+		
+        
+        <div class="additionalGuitar">Additional Guitar by: Boonn</div>
+	</div>
+	<div class="albumPacakgeListen">
+        <div class="listen">
+			<div class="fullhead" data-track="spotify-emb"><div class="heading">listen</div> <span>*************************</span></div>
+			<div class="spotifyEmbed" style="display:none;"><iframe width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media" data-src="https://open.spotify.com/embed/album/15UCS2DZ8a8BPcxztvFOoX" class="optanon-category-C0003" data-ot-processed="yes"></iframe></div>
+		</div> 
+    </div>
+	<div class="albumPacakgeVideo">
+		<div class="video">
+			<div class="fullhead" data-track="youtube-emb"><div class="heading">video</div> <span>*************************</span></div>
+			<div class="videoEmbed" style="display:none;"><div class="field field-name-file field-type-file field-label-hidden"><div class="field-items"><div class="field-item even"><div class="styles file-styles  styles-field-file styles-style- styles-container-media_youtube"><div class="media-thumbnail-frame"><div class="media-youtube-video media-youtube-14">
+  <iframe class="media-youtube-player" width="560" height="340" title="4KtBBzHWmTI" src="https://www.youtube-nocookie.com/embed/4KtBBzHWmTI?wmode=opaque" frameborder="0" allowfullscreen data-ot-processed="yes">Video of 4KtBBzHWmTI</iframe>
+</div>
+</div></div></div></div></div></div>
+		</div>
+	</div>
+	<div class="albumPacakgelyrics">
+		<div class="lyrics">
+			<div class="fullhead"><div class="heading">lyrics</div> <span>*************************</span></div>
+			<div class="lyricsEmbed" style="display:none;"><p>Wanna know where I don’t go</p>
+<p>When it goes from OK to a oh no</p>
+<p>When it goes from hi five to a low blow</p>
+<p>When it goes from all five to a solo</p>
+<p>Lemme tell you what you don’t know</p>
+<p>I been down / so low / I was</p>
+<p>Looking for something but denying that I found it</p>
+<p>There’s an elephant sitting in the room</p>
+<p>And I can’t find another way to tiptoe around it</p>
+<p>I been doing greater good for a long time</p>
+<p>But I can’t find any other way to give now</p>
+<p>I been putting myself on the sideline</p>
+<p>And it’s been time so I’m saying can I live now</p>
+<p> </p>
+<p>There are times when I kick myself</p>
+<p>Say I’m not sick but I can’t get well</p>
+<p>Say I got this while I chase my tail</p>
+<p>As if they can’t tell</p>
+<p> </p>
+<p>I'm running from my shadow</p>
+<p>Running from my shadow but it’s still there chasing me down</p>
+<p>I’ll never win the battle</p>
+<p>Never win the battle and I should have known it by now</p>
+<p>Just when I think I’ve found the end / ohhh</p>
+<p>I’m going back around again / ohhh</p>
+<p>Running from my shadow</p>
+<p>Running from my shadow but it’s still there chasing me down</p>
+<p> </p>
+<p>Light side’s got a dark side to it</p>
+<p>Daytime flows into night like fluid</p>
+<p>The yin and the yang with a curved line through it</p>
+<p>And none of it’s illuminating why I do it</p>
+<p>Maybe I didn’t want to chase what was not right</p>
+<p>Maybe I didn’t want to face you were offsides</p>
+<p>Thinking I was far away from a crossed line</p>
+<p>But I was giving soft praise to a hard lie</p>
+<p>There are things that you say and you don’t say</p>
+<p>My tongue’s gotten real tired of me biting it</p>
+<p>‘Cause I keep on following the wrong way</p>
+<p>Time’s come and I can’t keep denying it</p>
+<p>There are times when I kick myself</p>
+<p>Say I’m not sick but I can’t get well</p>
+<p>Say I got this while I chase my tail</p>
+<p>As if they can’t tell</p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p>I'm running from my shadow</p>
+<p>Running from my shadow but it’s still there chasing me down</p>
+<p>I’ll never win the battle</p>
+<p>Never win the battle and I should have known it by now</p>
+<p>Just when I think I’ve found the end / ohhh</p>
+<p>I’m going back around again / ohhh</p>
+<p>Running from my shadow</p>
+<p>Running from my shadow but it’s still there chasing me down</p>
+<p> </p>
+<p>I love you but I know / I gotta let you go</p>
+<p>Dancing with the devil cause she’s all I’ve ever known</p>
+<p>Wanted to pretend / That this time was the end</p>
+<p>Sorry but I guess I gotta let you down again</p>
+<p>Again</p>
+<p>Again</p>
+<p>Running from my shadow now my shadow is my only friend</p>
+<p> </p>
+<p>Running from my shadow</p>
+<p>But it’s still there chasing me down</p>
+<p>Running from my shadow</p>
+<p>Running from my shadow but it’s still there chasing me down</p></div>
+		</div>
+	</div>
+</div></body></html>
+</span>  </div>  </div>
+  <div class="views-row views-row-15 views-row-odd">
+      
+  <div class="views-field views-field-nothing">        <span class="field-content"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><head><meta http-equiv="Content-Type" content="charset=utf-8"></head><body><div class="albumPackageWrapper">
+	<div class="albumPackageTitle">015._World’s On Fire</div>
+	<div class="albumPackageCredits">
+		<div class="producerName">produced by: Mike Shinoda</div>
+
+		
+		
+		<div class="mixerName">mixed by: Mike Shinoda </div>
+		<div class="masterName">mastered by: Michelle Mancini</div>
+		
+        
+        
+	</div>
+	<div class="albumPacakgeListen">
+        <div class="listen">
+			<div class="fullhead" data-track="spotify-emb"><div class="heading">listen</div> <span>*************************</span></div>
+			<div class="spotifyEmbed" style="display:none;"><iframe width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media" data-src="https://open.spotify.com/embed/track/5zphNl34cRw8UyV63IfSX5" class="optanon-category-C0003" data-ot-processed="yes"></iframe></div>
+		</div> 
+    </div>
+	<div class="albumPacakgeVideo">
+		<div class="video">
+			<div class="fullhead" data-track="youtube-emb"><div class="heading">video</div> <span>*************************</span></div>
+			<div class="videoEmbed" style="display:none;"><div class="field field-name-file field-type-file field-label-hidden"><div class="field-items"><div class="field-item even"><div class="styles file-styles  styles-field-file styles-style- styles-container-media_youtube"><div class="media-thumbnail-frame"><div class="media-youtube-video media-youtube-15">
+  <iframe class="media-youtube-player" width="560" height="340" title="9VnyhYJui7g" src="https://www.youtube-nocookie.com/embed/9VnyhYJui7g?wmode=opaque" frameborder="0" allowfullscreen data-ot-processed="yes">Video of 9VnyhYJui7g</iframe>
+</div>
+</div></div></div></div></div></div>
+		</div>
+	</div>
+	<div class="albumPacakgelyrics">
+		<div class="lyrics">
+			<div class="fullhead"><div class="heading">lyrics</div> <span>*************************</span></div>
+			<div class="lyricsEmbed" style="display:none;"><p>Don’t think I need to say this</p>
+<p>‘Cause you know what’s in my head</p>
+<p>Fucked up is an understatement</p>
+<p>Can’t wait for this year to end</p>
+<p>It all fell apart / don’t know where to start</p>
+<p>And everything moves so slow</p>
+<p>I can’t get a break / it’s too much to take</p>
+<p>But closing my eyes I know</p>
+<p> </p>
+<p>When the world’s on fire / all I need is you</p>
+<p>I don’t always think to say it but it's true</p>
+<p>When I just want to disappear</p>
+<p>You’re the one that keeps me here</p>
+<p>The world’s on fire / all I need is you</p>
+<p> </p>
+<p>The riot’s on the horizon</p>
+<p>We’re calling each other's bluff</p>
+<p>The smoke’s filling up the skies and</p>
+<p>I say we should pack it up</p>
+<p>Maybe the blaze / will take this away</p>
+<p>To ash and to earth below</p>
+<p>You tell me to breathe / that you still believe</p>
+<p>And closing my eyes I know</p></div>
+		</div>
+	</div>
+</div></body></html>
+</span>  </div>  </div>
+  <div class="views-row views-row-16 views-row-even views-row-last">
+      
+  <div class="views-field views-field-nothing">        <span class="field-content"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><head><meta http-equiv="Content-Type" content="charset=utf-8"></head><body><div class="albumPackageWrapper">
+	<div class="albumPackageTitle">016._Can’t Hear You Now</div>
+	<div class="albumPackageCredits">
+		<div class="producerName">produced by: Mike Shinoda</div>
+
+		
+		
+		<div class="mixerName">mixed by: Serban Ghenea </div>
+		<div class="masterName">mastered by: Michelle Mancini</div>
+		
+        
+        
+	</div>
+	<div class="albumPacakgeListen">
+        <div class="listen">
+			<div class="fullhead" data-track="spotify-emb"><div class="heading">listen</div> <span>*************************</span></div>
+			<div class="spotifyEmbed" style="display:none;"><iframe width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media" data-src="https://open.spotify.com/embed/track/3JdC30s70TxGqT2LXgLR2R" class="optanon-category-C0003" data-ot-processed="yes"></iframe></div>
+		</div> 
+    </div>
+	<div class="albumPacakgeVideo">
+		<div class="video">
+			<div class="fullhead" data-track="youtube-emb"><div class="heading">video</div> <span>*************************</span></div>
+			<div class="videoEmbed" style="display:none;"><div class="field field-name-file field-type-file field-label-hidden"><div class="field-items"><div class="field-item even"><div class="styles file-styles  styles-field-file styles-style- styles-container-media_youtube"><div class="media-thumbnail-frame"><div class="media-youtube-video media-youtube-16">
+  <iframe class="media-youtube-player" width="560" height="340" title="cf3lgs_fFnM" src="https://www.youtube-nocookie.com/embed/cf3lgs_fFnM?wmode=opaque" frameborder="0" allowfullscreen data-ot-processed="yes">Video of cf3lgs_fFnM</iframe>
+</div>
+</div></div></div></div></div></div>
+		</div>
+	</div>
+	<div class="albumPacakgelyrics">
+		<div class="lyrics">
+			<div class="fullhead"><div class="heading">lyrics</div> <span>*************************</span></div>
+			<div class="lyricsEmbed" style="display:none;"><p>You can call till your voice is running out</p>
+<p>But I can’t hear you now</p>
+<p>I can’t hear you now</p>
+<p>I’m somewhere far away where you can’t bring me down</p>
+<p>So I can’t hear you now</p>
+<p>I can’t hear you now</p>
+<p> </p>
+<p>Run run it back / tell ‘em what I’m coming at</p>
+<p>I was on that bullshit then / now I’m done with that</p>
+<p>Scared of what I didn’t want / scared of what I wanted and</p>
+<p>Thought that I was finished but I hardly had begun in fact</p>
+<p>I’m a beast I’m a monster a savage</p>
+<p>And any other metaphor the culture can imagine</p>
+<p>And I got a caption for anybody asking</p>
+<p>That is / I am feeling fucking fantastic</p>
+<p> </p>
+<p>Some days it doesn’t take much to bring me down</p>
+<p>Some days I’m struggling for control</p>
+<p>Some days it doesn’t take much to bring me down</p>
+<p>Right now I’m floating above it all</p>
+<p> </p>
+<p>So you can call till your voice is running out</p>
+<p>But I can’t hear you now</p>
+<p>I can’t hear you now</p>
+<p>I’m somewhere far away where you can’t bring me down</p>
+<p>So I can’t hear you now</p>
+<p>I can’t hear you now</p>
+<p> </p>
+<p>Come come again / feel it when it’s flooding in</p>
+<p>Woke up knowing I don’t have to be numb again</p>
+<p>Starting line scratched out, I don’t have to run again</p>
+<p>Give a fucks maxxed out / tell ‘em I’m not coming in</p>
+<p>I’m not present on the payroll</p>
+<p>And you can tell me I should do it cause you say so</p>
+<p>But I’m not dancing to the rhythm you replay no</p>
+<p>Cause I’m already half a million miles away though / they know</p>
+<p> </p>
+<p>Some days it doesn’t take much to bring me down</p>
+<p>Some days I’m struggling for control</p>
+<p>Some days it doesn’t take much to bring me down</p>
+<p>Right now I’m floating above it all</p>
+<p> </p>
+<p>So you can call till your voice is running out</p>
+<p>But I can’t hear you now</p>
+<p>I can’t hear you now</p>
+<p>I’m somewhere far away where you can’t bring me down</p>
+<p>So I can’t hear you now</p>
+<p>I can’t hear you now</p>
+<p> </p>
+<p>And I waited too long / I listened too much</p>
+<p>You said what can’t be unheard</p>
+<p>I’m drawing a line / enough is enough</p>
+<p>I let you have your last word</p></div>
+		</div>
+	</div>
+</div></body></html>
+</span>  </div>  </div>
+    </div>
+  
+  
+  
+  
+      <div class="view-footer">
+      <div class="buttonBlock"><a class="buttonOne" href="https://mikeshinoda.warnerrecords.com/" target="_blank">Music Store</a><a class="buttonTwo" href="https://mshnd.co/StoreWE" target="_blank">Official Merch</a></div>    </div>
+  
+  
+</div>      </div>
+      
+    </div>
+    
+    <div class="bottom"><div class="bottom-inset-1 tb-terminal"><div class="bottom-inset-2 tb-terminal"></div></div></div>
+  </div>
+</div>
+
+<div id="block-views-57a54a4f01e82ad28e86af6f97f136f0" class="block block-views clearfix">
+  <div class="inner tb-terminal">
+    <div class="top"><div class="top-inset-1 tb-terminal"><div class="top-inset-2 tb-terminal"></div></div></div>
+  
+    <div class="middle tb-terminal">
+        
+            
+            
+              
+      <div class="content">
+        <div class="view view-turnkey-lightbox-toaster view-id-turnkey_lightbox_toaster view-display-id-block_2 view-dom-id-0b638e71f9a089e4b24d32d8f05ea769">
+        
+  
+  
+      <div class="view-content">
+      [{"parent":{"title":"Get on the list!","body":" Get exclusive information about Mike Shinoda tour dates, video premieres and special announcements ","field_newsletter_id":"14077170","field_datasource":"MikeShinoda_newsletteroptin_turnkeytoaster_website","field_label_list_id":"14076565","field_display_rates":"0","field_preview_mode":"true","field_lbox_height":"","field_lbox_width":"","field_toaster_timeout":"60000","field_toaster_position":"From Top","field_turnkey_height":"360","field_mailing_list_params_toast":"&amp;autoreply=no","field_mailing_list_params_se":"&amp;autoreply=no"}}]    </div>
+  
+  
+  
+  
+  
+  
+</div>      </div>
+      
+    </div>
+    
+    <div class="bottom"><div class="bottom-inset-1 tb-terminal"><div class="bottom-inset-2 tb-terminal"></div></div></div>
+  </div>
+</div>
+
+<div id="block-block-746" class="block block-block clearfix">
+  <div class="inner tb-terminal">
+    <div class="top"><div class="top-inset-1 tb-terminal"><div class="top-inset-2 tb-terminal"></div></div></div>
+  
+    <div class="middle tb-terminal">
+        
+            
+            
+              
+      <div class="content">
+        <div class="turnKeyToaster" style="display: none">
+    <div class="lightBox turnKey">
+        <div class="lightBoxWrapper">
+            <div class="lightBoxContent tkt" id="lightBoxContent">
+                <div class="lightBoxClose turnKeyClose close">
+                    <a>X</a>
+                </div>
+                <div class="turnKeyTextWrapper">
+                    
+
+                    <!-- klaviyo form html starts -->
+                    <div class="klavyio-form">
+                        <form id="email_signup" class="klaviyo_styling klaviyo_gdpr_embed_PRtwuZ" action="//manage.kmail-lists.com/subscriptions/subscribe" data-ajax-submit="//manage.kmail-lists.com/ajax/subscriptions/subscribe" method="POST" target="_blank" novalidate="novalidate">
+                            <div class="emailTitle">
+                                GET ON THE LIST!
+                            </div>
+                            <div class="mlist-header">
+                                Get exclusive information about Mike Shinoda tour dates, video premieres and special announcements
+                            </div>
+                            <input type="hidden" name="g" value="PRtwuZ" /><input type="hidden" name="$fields" value="$consent" /><input type="hidden" name="$list_fields" value="$consent" /><div class="klaviyo_messages">
+                                <div class="success_message" style="display:none;"></div>
+                                <div class="error_message" style="display:none;"></div>
+                            </div>
+                            <div class="klaviyo_field_group">
+                                <!-- <label for="k_id_email">Newsletter Sign Up</label> -->
+                                <input class="" type="email" value="" name="email" id="k_id_email" placeholder="//  email address  //" /><div class="klaviyo_field_group klaviyo_form_actions">
+                                    <!-- <div class="klaviyo_helptext"> How would you like to hear from us?
+                                        <br>(please select at least one option)
+                                    </div>
+                                    <input type="checkbox" name="$consent" id="consent-email" value="email">
+                                    <label for="consent-email">Email</label>
+                                    <br>
+                                    <input type="checkbox" name="$consent" id="consent-web" value="web">
+                                    <label for="consent-web">Online advertisements</label> -->
+                                    <div class="klaviyo_helptext klaviyo_gdpr_text">
+                                        <!-- We use email and targeted online advertising to send you product and services updates,
+                                        promotional offers and other marketing communications based on the information we
+                                        collect about you, such as your email address, general location, and purchase and
+                                        website browsing history.
+                                        <br> -->
+                                        <br /> We process your personal data as stated in our
+                                        <a href="https://www.mikeshinoda.com/privacy-policy" target="_blank" class="external-link" rel="nofollow" title="Follow link">Privacy Policy</a>. You may withdraw your consent or manage your preferences
+                                        at any time by clicking the unsubscribe link at the bottom of any of our marketing
+                                        emails, or by emailing us at
+                                        <a href="mailto:support@MikeShinoda.com">support@MikeShinoda.com</a>.</div>
+                                </div>
+                            </div>
+
+                            <div class="klaviyo_form_actions">
+                                <button type="submit" class="klaviyo_submit_button">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- klaviyo form html ends -->
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="tktContainer"></div>
+<style>
+<!--/*--><![CDATA[/* ><!--*/
+
+    .turnKeyTextWrapper {
+        background-color: #fff;
+    }
+
+    #block-views-turnkey-lightbox-block-1 {
+        display: none;
+    }
+
+    .turnKeyToaster div#lightBoxContent {
+        display: none !important;
+    }
+
+    #block-block-746 .mlist-outer-wrapper.embedded-inline-list.country-detect #thankyouBlock .thankyou-message {
+        display: block;
+    }
+
+/*--><!]]>*/
+</style><!-- klaviyo form css starts --><style type="text/css">
+<!--/*--><![CDATA[/* ><!--*/
+
+    .klaviyo_messages {
+        /* position: absolute; */
+        width: 100%;
+        top: 0px;
+        letter-spacing: 1px;
+    }
+
+    form#email_signup {
+        position: relative;
+        padding-top: 10px;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+
+    form#email_signup .emailTitle {
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+    }
+
+
+
+    form#email_signup div.mlist-header {
+        color: #000;
+        font-size: 15px;
+        font-weight: 500;
+        margin-bottom: 10px;
+    }
+
+    form#email_signup.submit-sucess .emailTitle,
+    form#email_signup.submit-sucess div.mlist-header {
+        display: none;
+    }
+
+    body.klaviyo-submit-sucess form#email_signup:not(.submit-sucess) {
+        display: none;
+    }
+
+
+
+    .klaviyo_styling.klaviyo_gdpr_embed_LIST_ID,
+    .klaviyo_condensed_styling.klaviyo_gdpr_embed_LIST_ID {
+        font-family: "Helvetica Neue", Arial;
+    }
+
+    .klaviyo_styling.klaviyo_gdpr_embed_LIST_ID .klaviyo_helptext,
+    .klaviyo_condensed_styling.klaviyo_gdpr_embed_LIST_ID .klaviyo_helptext {
+        font-family: "Helvetica Neue", Arial;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .klaviyo_styling.klaviyo_gdpr_embed_LIST_ID .klaviyo_gdpr_text,
+    .klaviyo_condensed_styling.klaviyo_gdpr_embed_LIST_ID .klaviyo_gdpr_text {
+        font-size: 14px;
+        line-height: 1.3;
+    }
+
+    .klaviyo_styling.klaviyo_gdpr_embed_LIST_ID label,
+    .klaviyo_condensed_styling.klaviyo_gdpr_embed_LIST_ID label {
+        color: #222;
+    }
+
+    .klaviyo_styling .klaviyo_field_group .klaviyo_form_actions {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .klaviyo_styling.klaviyo_gdpr_embed_LIST_ID input[type=checkbox]+label,
+    .klaviyo_condensed_styling.klaviyo_gdpr_embed_LIST_ID input[type=checkbox]+label {
+        display: inline;
+        font-weight: normal;
+        padding-left: 5px;
+    }
+
+    .klaviyo_helptext {
+        margin-bottom: 10px;
+        font-size: 11px;
+        font-weight: 400;
+        letter-spacing: 1px;
+    }
+
+    .klaviyo_helptext.klaviyo_gdpr_text a {
+        font-weight: 700;
+        color: #000;
+    }
+
+    .klaviyo_styling.klaviyo_gdpr_embed_LIST_ID input[type=text],
+    .klaviyo_styling.klaviyo_gdpr_embed_LIST_ID input[type=email],
+    .klaviyo_condensed_styling.klaviyo_gdpr_embed_LIST_ID input[type=text],
+    .klaviyo_condensed_styling.klaviyo_gdpr_embed_LIST_ID input[type=email] {
+        border-radius: 2px;
+    }
+
+    .klaviyo_condensed_styling label,
+    .klaviyo_styling label {
+        font-size: 19.03px;
+        line-height: 1.2;
+        text-align: left;
+        margin-bottom: 6px;
+        display: inline-block;
+        font-weight: 500;
+        -webkit-font-smoothing: antialiased;
+        letter-spacing: 2px;
+        margin-left: 10px;
+        text-transform: lowercase;
+    }
+
+    .klaviyo_styling.klaviyo_gdpr_embed_LIST_ID .klaviyo_submit_button,
+    .klaviyo_condensed_styling.klaviyo_gdpr_embed_LIST_ID .klaviyo_submit_button {
+        letter-spacing: 2px;
+        font-size: 19.03px;
+        margin: 30px 0 5px;
+        text-align: center;
+        padding: 0px;
+        color: #000;
+        opacity: 1;
+    }
+
+    .klaviyo_condensed_styling,
+    .klaviyo_styling {
+        font-family: "eurostile", sans-serif;
+        max-width: initial;
+    }
+
+    .klaviyo_condensed_styling .klaviyo_submit_button,
+    .klaviyo_styling .klaviyo_submit_button {
+        font-size: 19.03px;
+        margin: 10px 0 10px;
+        background: transparent;
+        text-transform: uppercase;
+        color: #000;
+        padding: 0px;
+    }
+
+    .klaviyo_condensed_styling .klaviyo_submit_button:hover,
+    .klaviyo_styling .klaviyo_submit_button:hover,
+    .klaviyo_helptext.klaviyo_gdpr_text a:hover {
+        color: #b64230;
+    }
+
+    .klaviyo_condensed_styling .klaviyo_form_actions,
+    .klaviyo_styling .klaviyo_form_actions {
+        text-align: center;
+    }
+
+    input#k_id_email {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        -moz-background-clip: padding;
+        -o-background-clip: padding-box;
+        -webkit-background-clip: padding;
+        background-clip: padding-box;
+        -moz-border-radius: 0;
+        -webkit-border-radius: 0;
+        border-radius: 0;
+        -webkit-appearance: none;
+        border: 0;
+        margin: 0;
+        outline: 0;
+        padding: 0;
+        text-align: left;
+        vertical-align: top;
+        font-size: 13px;
+        color: #000;
+        background: transparent;
+        width: auto;
+    }
+
+/*--><!]]>*/
+</style><script>
+<!--//--><![CDATA[// ><!--
+
+    var customValidator = {};
+    customValidator.option = "createToaster";
+    customValidator.validatorSettings = {
+        rules: {
+            email: {
+                required: true,
+            },
+            country: {
+                required: true
+            }
+        },
+        messages: {
+            email: {
+                required: "Email address required ",
+                email: "Please enter a valid email address"
+            },
+            country: {
+                required: "Country field is required"
+            }
+        }
+    };
+
+    var showLightboxMobile = function () {
+        var lbParent = "body";
+        var $lightBoxContent = jQuery(lbParent + " " + "#lightBoxContent.lightBoxContent.tkt.show_toaster");
+        $lightBoxContent.prependTo("body").show();
+        // jQuery("div#block-block-746 script").prependTo("body");
+    };
+
+    jQuery(window).load(function () {
+        if (jQuery(window).width() < 768) {
+            jQuery(".touch #lightBoxContent.lightBoxContent.tklb .lightBoxClose.turnKeyClose a").click(function () {
+
+                jQuery("#lightBoxContent.lightBoxContent.tklb").remove();
+
+            });
+        }
+
+        jQuery('.turnKeyClose.close').click(function () {
+            jQuery("#lightBoxContent.lightBoxContent.tkt").removeClass('show_toaster').addClass('hide_toaster');
+            $.cookie("turnkeyPassCookie", 1);
+        });
+
+    });
+
+
+    jQuery(window).bind("load", function () {
+        WMG.TurnKey.init(customValidator);
+    });
+
+    var omniVars = {};
+
+    if (localStorage.getItem('signup') == 'true') {
+        //$jq18('#subForm').hide();
+    }
+
+
+//--><!]]>
+</script>      </div>
+      
+    </div>
+    
+    <div class="bottom"><div class="bottom-inset-1 tb-terminal"><div class="bottom-inset-2 tb-terminal"></div></div></div>
+  </div>
+</div>
+  </div>
+</div>
+                                                  </div>
+                                              </div>
+                      
+                    </div> <!-- /.box tb-terminal -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div> <!-- /#main -->
+
+           <!-- /*postcontent -->
+
+        </div>
+      </div> <!-- /#content -->
+        
+              <div id="footer" class="wrapper-footer wrapper clearfix tb-scope">
+        
+          <div id="footer-deco-top" class="deco-footer-top deco-footer deco-top deco tb-scope tb-scope-prefer">
+            <div class="width deco-width inner tb-terminal">
+              <div class="layer-a layer"></div>
+              <div class="layer-b layer"></div>
+              <div class="layer-c layer"></div>
+              <div class="layer-d layer"></div>
+            </div>
+          </div>
+          
+          <div id="footer-deco-bottom" class="deco-footer-bottom deco-footer deco-bottom deco tb-scope tb-scope-prefer">
+            <div class="width deco-width inner tb-terminal">
+              <div class="layer-a layer"></div>
+              <div class="layer-b layer"></div>
+              <div class="layer-c layer"></div>
+              <div class="layer-d layer"></div>
+            </div>
+          </div>
+        
+                      <div id="prefooter" class="stack-prefooter stack-pre stack clearfix tb-scope">
+              <div class="stack-width inset-1 inset tb-terminal tb-prefooter-1">
+                <div class="inset-2 inset tb-terminal tb-prefooter-2">
+                  <div class="inset-3 inset tb-terminal">
+                    <div class="inset-4 inset tb-terminal">
+                    
+                                              
+                      <div class="box col-1 clearfix tb-terminal">
+                      
+                                                  <div class="col-first col only last tb-height-balance tb-terminal">
+                            <div id="prefooter-first-region" class="tb-region tb-scope">
+                                <div class="region region-prefooter-first">
+    
+<div id="block-menu-menu-home-one-page-linked" class="block block-menu block-none clearfix">
+  <div class="inner tb-terminal">
+    <div class="top"><div class="top-inset-1 tb-terminal"><div class="top-inset-2 tb-terminal"></div></div></div>
+  
+    <div class="middle tb-terminal">
+        
+            
+            
+              
+      <div class="content">
+        <ul class="menu"><li class="first leaf level-1 menu-link-24836"><a href="http://mshinoda.com/music" title="">01._audio</a></li>
+<li class="leaf level-1 menu-link-24806"><a href="/tour" title="">02._tour</a></li>
+<li class="leaf level-1 menu-link-27976"><a href="/video" title="">03._video</a></li>
+<li class="leaf level-1 menu-link-29591"><a href="http://mshnd.co/StoreWE" title="">04._shop</a></li>
+<li class="leaf level-1 menu-link-32306"><a href="/connect" title="">05._connect</a></li>
+<li class="last leaf active-trail level-1 menu-link-32056"><a href="/posttraumatic" title="" class="active-trail active">06._post traumatic</a></li>
+</ul>      </div>
+      
+    </div>
+    
+    <div class="bottom"><div class="bottom-inset-1 tb-terminal"><div class="bottom-inset-2 tb-terminal"></div></div></div>
+  </div>
+</div>
+
+<div id="block-block-461" class="block block-block clearfix">
+  <div class="inner tb-terminal">
+    <div class="top"><div class="top-inset-1 tb-terminal"><div class="top-inset-2 tb-terminal"></div></div></div>
+  
+    <div class="middle tb-terminal">
+        
+            
+            
+              
+      <div class="content">
+        <div class="copy-text"> © <span> 2021 Mike Shinoda. All Rights Reserved </span> </div> 
+<div class="pp-tos"><a target="_blank" class="footer-terms-of-service" href="https://www.warnerrecords.com/terms-of-use">Terms</a> <a class="footer-privacy-policy" target="_blank" href="https://www.warnerrecords.com/privacy-policy">Privacy Policy</a> <a class="footer-privacy-policy choices" target="_blank" href="http://www.warnerrecords.com/privacy-policy/#adchoices">Ad Choices</a><br class="mobileBrk" /><a class="policy" href="https://www.wminewmedia.com/cookies-policy/" target="_blank">Cookies Policy</a><a class="ot-sdk-show-settings" style="cursor:pointer">Cookies Settings</a></div>
+
+
+<style>
+<!--/*--><![CDATA[/* ><!--*/
+
+.stack-preheader .col {
+    min-height: 0 !important;
+}
+body {
+overflow-x:hidden;
+}
+@media only screen and (max-width: 767px){
+.flex-control-nav.flex-control-paging {
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+}
+}
+
+/*--><!]]>*/
+</style>      </div>
+      
+    </div>
+    
+    <div class="bottom"><div class="bottom-inset-1 tb-terminal"><div class="bottom-inset-2 tb-terminal"></div></div></div>
+  </div>
+</div>
+  </div>
+                            </div>
+                          </div>
+                                                
+                                                
+                                                
+                                                
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+                
+                        
+        </div> <!-- /#footer -->
+            
+    </div> <!-- /.lining -->
+  </div> <!-- /.page-width -->
+</div> <!-- /#page -->
+    
+  <script type="text/javascript" src="https://www.mikeshinoda.com/sites/g/files/g2000007296/f/js/js_7Ukqb3ierdBEL0eowfOKzTkNu-Le97OPm-UqTS5NENU.js"></script>
+<script type="text/javascript" src="https://www.mikeshinoda.com/sites/g/files/g2000007296/f/js/js_Os5wEJDH361U1lG-YQ4gndx-P8a3OUl55tO6WkyX2rg.js"></script>
+<script type="text/plain" src="https://libraries.wmgartistservices.com/custom-js/Twitter-Button-Script.js" class="optanon-category-C0003"></script>
+<script type="text/javascript" src="https://www.mikeshinoda.com/sites/g/files/g2000007296/f/js/js_jjrJ416fWC-XZyX4MMJAoHPI6qUVzp4sC6OnZaFm54c.js"></script>
+<script type="text/plain" src="https://apis.google.com/js/platform.js" class="optanon-category-C0003"></script>
+<script type="text/javascript" src="https://www.mikeshinoda.com/sites/g/files/g2000007296/f/js/js_UTvbC60drIaENVGobO-dXgNO2vZ2LMJUYQLGn6Dnq4o.js"></script>
+
+  <!--[if IE ]>
+  </div>
+  <![endif]-->
+  
+  <!--[if IE 8]>
+  </div>
+  <![endif]-->
+  
+  <!--[if IE 7]>
+  </div>
+  <![endif]-->
+  
+  <!--[if lt IE 7]>
+  </div>
+  <![endif]-->
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"NRJS-1888dd77a01fc8c6df6","applicationID":"277410493","transactionName":"YwYDMBdXD0dYVUNYXlpMIAcRXw5aFkBeVEZHPBEFAlM=","queueTime":0,"applicationTime":658,"atts":"T0EARl9NHEk=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script></body>
+</html>
