@@ -1,2 +1,451 @@
+<!DOCTYPE html>
+<html>
+<head>
 
-okkkkkk
+  <link rel="stylesheet" href="/stylesheets/bootstrap.css">
+  <link rel="stylesheet" href="/stylesheets/general.css">
+  <link rel="stylesheet" href="/stylesheets/builder.css">
+  <meta charset="utf-8">
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"eb70720532","applicationID":"3447627","transactionName":"ewkKQEddVVRVQU0FUlUDS0RZU0A=","queueTime":0,"applicationTime":22,"agent":""}</script>
+<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"eb70720532",applicationID:"3447627"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n){return function(){return o(t,[u.now()].concat(f(arguments)),e?null:this,n),e?void 0:this}}var o=t("handle"),a=t(8),f=t(9),c=t("ee").get("tracer"),u=t("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(t,e){s[e]=i(p+e,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),t,n],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],n),t}finally{c.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(l+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){function r(){return f.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,f=t(10);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],4:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],5:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?d("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&d("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||d("cls",[t])})}function a(t){if(t instanceof m&&!g){var e=Math.round(t.timeStamp),n={type:t.type};e<=p.now()?n.fid=p.now()-e:e>p.offset&&e<=Date.now()?(e-=p.offset,n.fid=p.now()-e):e=p.now(),g=!0,d("timing",["fi",e,n])}}function f(t){d("pageHide",[p.now(),t])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var c,u,s,d=t("handle"),p=t("loader"),l=t(7),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){c=new PerformanceObserver(r);try{c.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,h=["click","keydown","mousedown","pointerdown","touchstart"];h.forEach(function(t){document.addEventListener(t,a,!1)})}l(f)}},{}],6:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],7:[function(t,e,n){function r(t){function e(){t(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,e,!1)}e.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],8:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],9:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],10:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,c,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var f=e(i),c=v(n),u=c.length,s=0;s<u;s++)c[s].apply(f,r);var p=d[w[n]];return p&&p.push([b,n,r,f]),f}}function o(t,e){y[t]=v(t).concat(e)}function m(t,e){var n=y[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function v(t){return y[t]||[]}function g(t){return p[t]=p[t]||i(n)}function h(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var y={},w={},b={on:o,addEventListener:o,removeEventListener:m,emit:n,get:g,listeners:v,context:e,buffer:h,abort:f,aborted:!1};return b}function o(t){return u(t,c,a)}function a(){return new r}function f(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var c="nr@context",u=t("gos"),s=t(8),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!R++){var t=M.info=NREUM.info,e=v.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();c(E,function(e,n){t[e]||(t[e]=n)});var n=a();f("mark",["onload",n+M.offset],null,"api"),f("timing",["load",n]);var r=v.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===v.readyState&&o()}function o(){f("mark",["domContent",a()+M.offset],null,"api")}var a=t(3),f=t("handle"),c=t(8),u=t("ee"),s=t(6),d=t(4),p=t(2),l=p.getConfiguration("ssl")===!1?"http":"https",m=window,v=m.document,g="addEventListener",h="attachEvent",y=m.XMLHttpRequest,w=y&&y.prototype,b=!d(m.location);NREUM.o={ST:setTimeout,SI:m.setImmediate,CT:clearTimeout,XHR:y,REQ:m.Request,EV:m.Event,PR:m.Promise,MO:m.MutationObserver};var x=""+location,E={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1209.min.js"},O=y&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),M=e.exports={offset:a.getLastTimestamp(),now:a,origin:x,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(5),v[g]?(v[g]("DOMContentLoaded",o,!1),m[g]("load",r,!1)):(v[h]("onreadystatechange",i),m[h]("onload",r)),f("mark",["firstbyte",a.getLastTimestamp()],null,"api");var R=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,c,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,c],s],t)}f(n+"start",[o,a,c],s,u);try{return p=e.apply(a,o)}catch(m){throw f(n+"err",[o,a,m],s,u),m}finally{f(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var f,c,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)c=e[u],f=t[c],a(f)||(t[c]=n(f,s?c+r:r,i,c,o))}function f(n,r,o,a){if(!m||e){var f=m;m=!0;try{t.emit(n,r,o,e,a)}catch(c){i([c,n,r,o],t)}m=f}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function f(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function c(t,e,n){var r=t[e];t[e]=f(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(9),p="nr@original",l=Object.prototype.hasOwnProperty,m=!1;e.exports=r,e.exports.wrapFunction=f,e.exports.wrapInPlace=c,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+  <title>Flowlab Game Creator - Go throught the door (made by Alexander)</title>
+  <meta name="description" content="Flowlab is an online game creator.  Make your own games to share with friends.">
+  <meta name="author" content="Ken Railey">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="follow" />
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300" rel="stylesheet" type="text/css">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@flowlabio">
+  <meta name="twitter:title" content="Go throught the door (made by Alexander)">
+  <meta name="twitter:description" content="why is it so big">
+  <meta name="twitter:image" content="https://flowlab.io/assets/users/10/user_1036837/game_1753948/screenshot.png">
+ 
+  <meta property="og:title" content="Flowlab.io - Go throught the door (made by Alexander)"/> 
+  <meta property="og:type" content="game"/> 
+  <meta property="og:image" content="/assets/users/10/user_1036837/game_1753948/screenshot.png"/> 
+  <meta property="og:url" content="http://flowlab.io/game/play/1753948"/> 
+  <meta property="og:site_name" content="Flowlab.io"/> 
+  <meta property="fb:app_id" content="269904359790196"/> 
+
+
+  <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+  <!--[if lt IE 9]>
+  <script src="/javascripts/html5.js"></script>
+  <![endif]-->
+  <link rel="shortcut icon" type="image/png" href="/images/favicon.png" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/images/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/images/apple-touch-icon-114x114.png">
+  <script src="/javascripts/jquery-1.8.3.min.js"></script>
+
+  <script src="/javascripts/bootstrap.min.js"></script>
+  <script src="/javascripts/bootbox.min.js"></script>
+  <script src="/javascripts/game_screen.js"></script>
+  <script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.21.2.js"></script>
+  <script src="/javascripts/rtc-pubnub.js"></script>
+  <script src="/javascripts/rtc-xirsys.js"></script>
+  <script src="/javascripts/flowAudio.js"></script>
+
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/solid.css" integrity="sha384-wnAC7ln+XN0UKdcPvJvtqIH3jOjs9pnKnq9qX68ImXvOGz2JuFoEiCjT8jyZQX2z" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/brands.css" integrity="sha384-nT8r1Kzllf71iZl81CdFzObMsaLOhqBU1JD2+XoAALbdtWaXDOlWOZTR4v1ktjPE" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/fontawesome.css" integrity="sha384-HbmWTHay9psM8qyzEKPc8odH4DsOuzdejtnr+OFtDmOcIVnhgReQ4GZBH7uwcjf6" crossorigin="anonymous">
+	<meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	
+	<link rel="shortcut icon" type="image/png" href="./favicon.png">
+	
+	<script type="text/javascript" src="/html5/bin/lib/howler.min.js"></script>
+	<script type="text/javascript" src="/html5/bin/lib/pako.min.js"></script>
+	<script type="text/javascript" src="/html5/bin/lib/FileSaver.min.js"></script>
+
+	<script type="text/javascript" src="/html5/bin/Flowlab.js?v=172"></script>
+	
+	<script>
+		window.addEventListener ("touchmove", function (event) { event.preventDefault (); }, { capture: false, passive: false });
+		if (typeof window.devicePixelRatio != 'undefined' && window.devicePixelRatio > 2) {
+			var meta = document.getElementById ("viewport");
+			meta.setAttribute ('content', 'width=device-width, initial-scale=' + (2 / window.devicePixelRatio) + ', user-scalable=no');
+		}
+    // don't leave page on backspace
+    window.addEventListener('keydown',function(e){if(e.keyIdentifier=='U+0008'||e.keyIdentifier=='Backspace'||e.keyCode==8){if(e.target==document.body){e.preventDefault();return false;}}},true);
+    flowAudio = new FlowAudio();
+	</script>
+	
+	<style>
+  :root { 
+    --lightTextColor: #5E7385;
+  }
+  html,body { 
+    margin: 0; 
+    padding: 0; 
+    height: 100%; 
+    color: #5E7385;
+  }
+		#openfl-content { background: #000000; width: 100%; height: 100%; }
+    @font-face {                                                                
+      font-family: 'D-DIN';                                                     
+      src: url('/html5/bin/assets/D-DIN.eot?#iefix') format('embedded-opentype'),          
+      url('/html5/bin/assets/D-DIN.woff') format('woff'),                                  
+      url('/html5/bin/assets/D-DIN.ttf') format('truetype'),                               
+      url('/html5/bin/assets/D-DIN.svg#D-DIN') format('svg');                              
+      font-weight: normal;                                                      
+      font-style: normal;                                                       
+    }   
+    body {
+        background: #efefef;
+    }
+    .full_frame {
+        position:absolute;
+        bottom:0;
+        top:0;
+        width:100%;
+        padding-bottom:0;
+        overflow:hidden;
+    }
+    .wrapper_frame {
+        margin-top: 40px;
+        background-color:white;
+        padding-left:10px;
+        padding-right:10px;
+        padding-top:10px;
+        padding-bottom: 28px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 1024px;
+        height: 848px;
+    }
+    .game_description {
+        padding-left:4px;
+        padding-right:4px;
+        margin-top: 12px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 1034px;
+        -webkit-border-radius: 0px;
+        -moz-border-radius: 0px;
+        border-radius: 0px;
+        background: #fff;
+    }
+
+    #description_data {
+        padding:30px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .edit_mode {
+        display:none;
+    }
+
+    .display_mode { }
+
+    #editor_wrapper {
+        padding:10px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    #editor_wrapper textarea {
+        width: 80%;
+        height: 100px;
+    }
+
+    #main {
+        width:100%;
+    }
+    #builder{
+        width: 1024px;
+        height: 768px;
+        outline:none;
+    }
+    #game_author {
+        margin-top:-12px;
+        margin-bottom:6px;
+    }
+    .navbar-static-top .container {
+      width:100%;
+    }
+    /* hide navigation on phones */
+    @media (max-width: 767px) { 
+      .navbar {
+        display:none;
+      }
+    }
+    .fatal-error {
+      color:#fff;
+      font-weight: normal;
+      font-size: 12px;
+      background-color: #ec6952;
+      /* border-radius: 6px; */
+      padding:10px;
+    }
+    .theme-form {
+      padding:10px;
+      padding-top: 30px;
+      background:#fff;
+      margin-left:auto;
+      margin-right:auto;
+        width: 1024px;
+    }
+    .theme-form input {
+      width: 100px;
+    }
+    h2 {
+      font-size: 32px;
+    }
+    .appstore-btn {
+      margin-top: 12px;
+      padding: 6px;
+      height: 40px;
+    }
+</style>
+
+
+
+
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-34045214-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+     })();
+    function trackEvent(category, action, label) {
+      _gaq.push(['_trackEvent', category, action, label]);
+    }
+  </script>
+  <script type="text/javascript" src="/javascripts/application.js"></script>
+</head>
+<body>
+        <div class="navbar navbar-static-top">
+      <div class="navbar-inner">
+        <div class="container">
+
+          <a class="brand" href="/">
+             <img src="/images/logo.png" width="119" height="26" style="padding-top:6px;-webkit-filter: drop-shadow(0 0 1px #253340); filter: drop-shadow(0 0 1px #253340);"/>
+          </a>
+          <ul class="nav">
+            <li class=""><a href="/">Home</a></li>
+            <li class=""><a href="/game/browse">Games</a></li>
+            <li class=""><a href="/resources">Help</a></li>
+            <li class=""><a href="https://community.flowlab.io">Forums</a></li>
+            <li class=""><a href="/pricing">Pricing</a></li>
+            <!-- <li><a href="http://blog.flowlab.io/">Blog</a></li> -->
+            <li class=""><a href="/education/teachers">Education</a></li>
+          </ul>
+
+          <div class="pull-right">
+
+        
+          <ul class="nav">
+              <li> <a href="/users/sign_up"><span class="signup-btn">Sign Up Free</span></a></li>
+              <li> <a href="/users/sign_in">Log In</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+    
+
+  
+<div id="game" class="center">
+  <div id="game_frame" class="wrapper_frame ">
+    <div id="builder" oncontextmenu="return false;"></div>
+    <div id="game_info">
+      <h3 class="subheader" id="game_title" style="padding-top:4px;color:var(--lightTextColor);">Go throught the door (made by Alexander)</h3>
+        <div id="game_author" style="color:var(--lightTextColor);">
+          <i id="html5_icon" class="fab fa-html5" style="padding-right:4px; color:#58b158;"></i> 
+          By: <a href="/users/profile/1036837" tabindex="-1">dawdwave</a>
+        </div>
+      <div style="color:var(--lightTextColor);">
+        <i class="fas fa-play-circle"></i>
+        25 Plays
+          <i class="fas fa-heart" style="padding-left:8px;"></i>
+      </div>
+    </div>
+</div>
+<div id="itch"></div>
+<div id="appstore_links"></div>
+<div class="center game_description">
+<div id="description_data" class=""><p>why is it so big</p>
+</div>
+</div>
+
+
+<div class="btn-toolbar" id="toolbar">
+    <div class="btn-group">
+      <div id="edit_btn" onClick="openEditor();" class="btn"> <i class="fas fa-edit"></i> Edit Game</div>
+    </div>
+</div>
+<h4 id="screenshot-confirm" class="hidden">screenshot has been uploaded</h4>
+
+
+<script type="text/javascript">
+
+  var rtcPubNub = new RtcPubNub();
+  var rtcXirsys = new RtcXirsys();
+
+  lime.embed ("Flowlab", "builder", 0, 0, { 
+    rootPath: "/html5/bin", 
+    parameters: { 
+      auth_token: "",
+      game: "1753948",
+      splash: "",
+      uid: "",
+      uname: "",
+      mode: "play",
+      chrome: !!window.chrome,
+      membership: "",
+      viewW: "1024",
+      viewH: "768"
+    }
+  });
+
+  window.addEventListener('keydown', function(e) {
+    // prevent space and arrow up/down from scrolling page
+    if((e.keyCode == 32 || e.keyCode == 38 || e.keyCode == 40)
+      && e.target == document.body) {
+      e.preventDefault();
+    }
+  });
+
+  // prevent page from moving around with mouse wheel
+  document.getElementById("builder").onwheel = function(event){
+    event.preventDefault();
+  };
+
+  var pageTheme = null;
+  var startTheme;
+
+  //
+  // apply theme to page if available
+  //
+  function applyTheme() {
+    if (!pageTheme || pageTheme == "") {
+      return;
+    }
+    if (pageTheme.bg_color) {
+      $('body').css('background-color', pageTheme.bg_color);
+    }
+    if (pageTheme.fg_color) {
+      $('.wrapper_frame').css('background-color', pageTheme.fg_color);
+      $('.game_description').css('background-color', pageTheme.fg_color);
+      $('#edit-theme').css('background-color', pageTheme.fg_color);
+    }
+    if (pageTheme.text_color) {
+      $('body').css('color', pageTheme.text_color);
+      document.documentElement.style.setProperty("--lightTextColor",pageTheme.text_color); 
+    }
+    if (pageTheme.hide_nav) {
+      $('.navbar-inner').css('visibility',"hidden");
+      $('.brand').css('visibility',"visible");
+    } else {
+      $('.navbar-inner').css('visibility',"visible");
+    }
+    if (pageTheme.bg_img) {
+      var url = 'https://flowlab-io-user-theme.s3.amazonaws.com/'+1036837+'u/game_'+1753948+'/background/game_theme_bg';
+      console.log(url);
+      $('body').css('background-image', "url('"+ url +"?v="+Math.floor(Date.now())+"')");
+      $('body').css('background-position-x', pageTheme.bg_pos_x);
+      $('body').css('background-position-y', pageTheme.bg_pos_y);
+      $('body').css('background-repeat', 
+        (pageTheme.bg_repeat_x ? "repeat":"no-repeat")
+        +" "+
+        (pageTheme.bg_repeat_y ? "repeat":"no-repeat")
+      );
+      $('body').css('background-size', pageTheme.bg_stretch ? "cover":"");
+    } else {
+      $('body').css('background-image', "");
+    }
+    if (pageTheme.font_id) {
+      if (!document.getElementById(pageTheme.font_id)) {
+        var head = document.getElementsByTagName('head')[0];
+        var link = document.createElement('link');
+        link.id = pageTheme.font;
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'https://fonts.googleapis.com/css?family='+pageTheme.font_id;
+        link.media = 'all';
+        head.appendChild(link);
+      }
+      document.documentElement.style.setProperty("--font1",pageTheme.font_name); 
+      document.documentElement.style.setProperty("--font2",pageTheme.font_name); 
+    }
+    if (pageTheme.apple_store_url || pageTheme.google_store_url) {
+      var btns = "";
+      if (pageTheme.apple_store_url) {
+
+        // sanitize
+        var regex1 = /app\/(\w+)/;
+        var apple_id = pageTheme.apple_store_url.match(regex1);
+        if (apple_id) {
+          apple_id = apple_id[1];
+          var appstore_url = "https://apps.apple.com/us/app/" + apple_id;
+          btns = '<a href="'+appstore_url+'" target="_blank"><img class="appstore-btn" src="/images/apple_appstore.png" /></a>';
+        }
+      }
+      if (pageTheme.google_store_url) {
+
+        // sanitize
+        var regex2 = /apps\/([^"]+)/;
+        var google_id = pageTheme.google_store_url.match(regex2); 
+        if (google_id) {
+          google_id = google_id[1];
+          var playstore_url = "https://play.google.com/store/apps/" + google_id;
+          btns += "<a href='"+playstore_url+"' target='_blank'><img class='appstore-btn' src='/images/google_appstore.png'/></a>"
+        }
+      }
+      $('#appstore_links').html(btns);
+    }
+    function decodeEntities(encodedString) {
+      var textArea = document.createElement('textarea');
+      textArea.innerHTML = encodedString;
+      return textArea.value;
+    }
+    if (pageTheme.itch_widget) {
+
+      // sanitize
+      var regex3 = /embed\/([^"]+)/;
+      var regex4 = /width="(\d+)"/;
+      var regex5 = /height="(\d+)"/;
+
+      var itch_id = pageTheme.itch_widget.match(regex3); 
+      if (itch_id) {
+        itch_id = itch_id[1];
+        var iframe = document.createElement("iframe");
+
+        var width = pageTheme.itch_widget.match(regex4)[1];
+        var height = pageTheme.itch_widget.match(regex5)[1];
+
+        iframe.setAttribute("src", "https://itch.io/embed/"+decodeEntities(itch_id));
+
+        iframe.style.width = width+"px";
+        iframe.style.height = height+"px";
+        iframe.style.border = "0";
+        iframe.style["margin-top"] = "26px";
+        iframe.style["margin-bottom"] = "8px";
+
+        var container = document.getElementById("itch");
+        while (itch.firstChild) {
+          itch.removeChild(itch.firstChild);
+        }
+        itch.appendChild(iframe);
+      }
+    }
+  }
+  $(function() { applyTheme(); });
+
+</script>
+
+
+</body>
+</html>
